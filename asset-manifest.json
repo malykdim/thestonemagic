@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/thestonemagic/static/css/main.dda44d19.chunk.css",
+    "main.js": "/thestonemagic/static/js/main.ae28f3be.chunk.js",
+    "main.js.map": "/thestonemagic/static/js/main.ae28f3be.chunk.js.map",
+    "runtime-main.js": "/thestonemagic/static/js/runtime-main.01582994.js",
+    "runtime-main.js.map": "/thestonemagic/static/js/runtime-main.01582994.js.map",
+    "static/js/2.49687533.chunk.js": "/thestonemagic/static/js/2.49687533.chunk.js",
+    "static/js/2.49687533.chunk.js.map": "/thestonemagic/static/js/2.49687533.chunk.js.map",
+    "static/js/3.d26355f7.chunk.js": "/thestonemagic/static/js/3.d26355f7.chunk.js",
+    "static/js/3.d26355f7.chunk.js.map": "/thestonemagic/static/js/3.d26355f7.chunk.js.map",
+    "index.html": "/thestonemagic/index.html",
+    "static/css/main.dda44d19.chunk.css.map": "/thestonemagic/static/css/main.dda44d19.chunk.css.map",
+    "static/js/2.49687533.chunk.js.LICENSE.txt": "/thestonemagic/static/js/2.49687533.chunk.js.LICENSE.txt",
+    "static/media/logo.41f161de.svg": "/thestonemagic/static/media/logo.41f161de.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.01582994.js",
+    "static/js/2.49687533.chunk.js",
+    "static/css/main.dda44d19.chunk.css",
+    "static/js/main.ae28f3be.chunk.js"
+  ]
+}
