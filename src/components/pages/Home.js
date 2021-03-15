@@ -1,6 +1,6 @@
 import logo from '../images/logo.svg';
 import Gallery from './Gallery';
-import  './Home.css';
+import  './Home.scss';
 
 const Main = () => {
     return (

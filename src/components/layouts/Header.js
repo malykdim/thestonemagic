@@ -1,4 +1,4 @@
-import  './Header.css';
+import  './Header.scss';
 import Logo from './Logo.js';
 import Navbar from './Navbar.js';
 

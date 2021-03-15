@@ -1,0 +1,97 @@
+/* Base*/
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* Animations */
+@keyframes App-logo-spin {
+    from {
+        transform: skew(0deg);
+    }
+    to {
+        transform: skew(30deg, 20deg);
+    }
+}
+/* Typography */
+/* Utilities */
+
+/* ************************** */
+/* Abstracts */
+
+/* Variables */
+$color-dark: #282c34;
+$color-light: #e3e0db;
+
+$color-red: #5A2324;
+$color-orange: rgba(141, 76, 50, 1);
+$color-yellow: rgba(161, 135, 95, 1);
+$color-green:rgba(103, 107, 83, 1);
+$color-brown:rgba(49, 37, 37, 1);
+
+/* Mixins */
+/* Functions */
+
+/* ************************** */
+/* Components */
+
+/* Logo */
+/* Navbar */
+/* Grid-Gallery */
+/* Card */
+
+
+/* ************************** */
+/* Layout */
+
+/* in each separate scss component */
+/* Header */
+/* Footer */
+
+/* ************************** */
+/* Pages */
+
+/* in each separate scss component */
+/* Home */
+/* Gallery */
+/* Contact */
+/* Login */
+/* Edit */
+/* Error 404 */
+/* etc */
+
+/* ************************** */
+/* Media Queries */
+
+/* in each separate scss component */
+
+/* TV / Huge */
+/* Desktop / 1920 */
+/* Laptop / 1200 */
+/* Tablet / 900 */
+/* Phone / 600 */
+
+/* ************************** */
+/* Themes */
+
+/* Light */
+/* Dark */
+/* Custom */
+
+/* ************************** */
+/* Vendors */
+
+/*** Bootstrap ***/
+/*** An Icon System ***/
+@import url('https://use.fontawesome.com/releases/v5.15.1/css/all.css');
+/*** An Animation Framework ***/
+
+/* ************************** */

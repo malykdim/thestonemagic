@@ -1,20 +1,24 @@
+@import '../main.scss';
+
 .App-header {
-    background-color: #fff;
+    background-color: white;
     min-height: 15vh;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     font-size: calc(10px + 2vmin);
-    color: #282c34;
+    color: $color-dark;
+    
+    h1 {
+        color: $color-dark;
+        line-height: 1.5em;
+        font-weight: 500;
+        letter-spacing: .03em;
+    }
 }
 
-.App-header h1 {
-    color: #282c34;
-    line-height: 1.5em;
-    font-weight: 500;
-    letter-spacing: .03em;
-}
+
 
 @media all and (max-width: 1200px) {
     .App-header {

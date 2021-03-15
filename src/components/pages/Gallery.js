@@ -1,5 +1,5 @@
 import Card from './Card'
-import './Gallery.css'
+import './Gallery.scss'
 
 const Gallery = () => {
     return (

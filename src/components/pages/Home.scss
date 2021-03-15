@@ -1,0 +1,35 @@
+@import '../main.scss';
+
+.App-main {
+    margin: 3rem 0;
+    
+    h2, p {
+        font-size: calc(10px + 2vmin);
+        color: $color-dark;
+        line-height: 1.5em;
+        font-weight: 600;
+        letter-spacing: .03em;
+    }
+    
+    .App-logo {
+        height: 40vmin;
+        pointer-events: none;
+        margin: 3rem 0;
+    }
+    
+    .App-link {
+        color: $color-dark;
+        margin: .8em;
+    }
+} 
+
+
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+
+

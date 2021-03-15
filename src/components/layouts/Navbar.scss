@@ -1,20 +1,24 @@
+@import '../main.scss';
+
 .App-header--nav {
     display: flex;
     align-items: center;
     justify-content: center;
+    
+    ul {
+        display: flex;
+        list-style: none;
+        padding-inline-start: 0;
+    
+        li a {
+            padding: 2rem;
+            text-decoration: none;
+            color: $color-dark;
+        }
+    }
+    
 }
 
-.App-header--ul {
-    display: flex;
-    list-style: none;
-    padding-inline-start: 0;
-}
-
-.App-header--ul li a {
-    padding: 2rem;
-    text-decoration: none;
-    color: #282c34;
-}
 
 @media all and (min-width: 1200px) {
     .App-header--ul {
