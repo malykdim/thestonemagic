@@ -5,6 +5,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    display: none;
 }
 
 .logo img {
@@ -12,4 +13,5 @@
     width: 100%;
     display: block;
     object-fit: cover;
+    
 }

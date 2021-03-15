@@ -1,8 +1,49 @@
+.App-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .App-footer p {
     font-style: italic;
     font-size: calc(2px + 2vmin);
     color: #282c34;
     font-weight: 400;
     letter-spacing: .03em;
+    
 }
 
+.App-footer a {
+    font-style: italic;
+    font-size: calc(2px + 2vmin);
+    color: #282c34;
+    font-weight: 400;
+    letter-spacing: .03em;
+    padding: 2rem;
+    text-decoration: none;
+    
+}
+
+@media all and (max-width: 1200px) {
+    .App-footer {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+}
+
+@media all and (max-width: 900px) {
+    .App-footer {
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+}
+
+@media all and (max-width: 600px) {
+    .App-footer {
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+}
