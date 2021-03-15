@@ -1,6 +1,6 @@
-import logo from './logo.svg';
-import Gallery from '../pages/Gallery';
-import  './Main.css';
+import logo from '../images/logo.svg';
+import Gallery from './Gallery';
+import  './Home.css';
 
 const Main = () => {
     return (
@@ -19,9 +19,10 @@ const Main = () => {
             <p>
                 In Development Stage...
             </p>   
-            <Gallery />     
+                
         </main>    
     )
 }
+
 
 export default Main;

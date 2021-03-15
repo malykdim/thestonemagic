@@ -1,0 +1,36 @@
+.App-header--nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.App-header--ul {
+    display: flex;
+    list-style: none;
+    padding-inline-start: 0;
+}
+
+.App-header--ul li a {
+    padding: 2rem;
+    text-decoration: none;
+    color: #282c34;
+}
+
+@media all and (min-width: 1200px) {
+    .App-header--ul {
+        align-items: center;
+    }
+    
+}
+
+@media all and (max-width: 599px) {
+    .App-header--ul {
+        flex-direction: column;
+        align-items: center;
+        justify-content: stretch;
+    }
+    
+    .App-header--ul li {
+        margin: .5rem 0;
+    }
+}

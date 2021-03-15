@@ -2,9 +2,9 @@
     background-color: #fff;
     min-height: 15vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     font-size: calc(10px + 2vmin);
     color: #282c34;
 }
@@ -16,25 +16,26 @@
     letter-spacing: .03em;
 }
 
-.App-header--nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.App-header--ul {
-    display: flex;
-    list-style: none;
-}
-
-.App-header--ul li a {
-    padding: 2rem;
-    text-decoration: none;
-    color: #282c34;
-}
-
-@media all and (max-width: 599px) {
-    .App-header--ul {
-        flex-direction: column;
+@media all and (max-width: 1200px) {
+    .App-header {
+        flex-direction: row;
+        justify-content: space-between;
     }
+    
+}
+
+@media all and (max-width: 900px) {
+    .App-header {
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+}
+
+@media all and (max-width: 600px) {
+    .App-header {
+        flex-direction: column;
+        justify-content: center;
+    }
+    
 }
