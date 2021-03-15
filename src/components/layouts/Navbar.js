@@ -8,7 +8,7 @@ class Navbar extends Component {
                 <ul className="App-header--ul">
                     <li>
                         <a href="../pages/Home.js">
-                            Home
+                            <i class="fas fa-home"></i>
                         </a>
                     </li>
                     <li>

@@ -8,7 +8,10 @@ const Footer = () => {
             <p>
                 &copy; All rights reserved
             </p>
-            <a href="../pages/Login.js" className="login">Log In</a>   
+            <a href="../pages/Login.js" className="login">
+                {/* <i class="fas fa-sign-in-alt"></i> */}
+                Log In                
+            </a>   
         </footer>    
     )
 }

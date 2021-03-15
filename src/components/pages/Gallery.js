@@ -7,9 +7,9 @@ const Gallery = () => {
         <main className="App-gallery">
             <section className="gallery">
             
-            <Card>Mosaic 1</Card>
-            <Card>Mosaic 2</Card>
-            <Card>Mosaic 3</Card>
+            <Card title='Mosaic 1'>Mosaic 1</Card>
+            <Card title='Mosaic 2'>Mosaic 2</Card>
+            <Card title='Mosaic 3'>Mosaic 3</Card>
             
             </section>
             <p>
