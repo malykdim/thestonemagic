@@ -6,7 +6,8 @@ const Main = () => {
     return (
         <main className="App-main">
             <h2>
-                Exquisite Mosaics made by<br/>
+                Exquisite Mosaic Panels <br/>
+                made by<br/>
                 <a className="App-link" href="https://www.facebook.com/vladimir.damynov/" target="_blank"  rel="noopener noreferrer" >
                     <span>Vladimir Damyanov</span>
                 </a>
