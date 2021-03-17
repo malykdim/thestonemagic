@@ -2,7 +2,7 @@ import logo from '../images/logo.svg';
 import Gallery from './Gallery';
 import  './Home.scss';
 
-const Main = () => {
+const Home = () => {
     return (
         <main className="App-main">
             <h2>
@@ -26,4 +26,4 @@ const Main = () => {
 }
 
 
-export default Main;
+export default Home;
