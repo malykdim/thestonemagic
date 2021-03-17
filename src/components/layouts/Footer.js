@@ -1,7 +1,7 @@
 import Logo from  './Logo';
 import  './Footer.scss';
 
-const Footer = () => {
+const Footer = (props) => {
     return (
         <footer  className="App-footer">
             <Logo />

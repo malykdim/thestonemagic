@@ -1,14 +1,7 @@
-// module revealing pattern
-function getAll() {
-    const gallery = 'http://localhost:5000/gallery';
-    
-    return fetch(gallery)
-    .then(res => res.json())
-    .catch(error => {
-        console.error(`vizualiziraj ${error}`); // toaster message
-    });
+import api from './api';
+
+export const getAll = () => {
+    return fetch(api.gallery)
+        .then(res => res.json())
+        .catch(error => console.log(error));
 }
-
-// ako iskam private function / pomoshtna funkciq wytre za modula 
-
-export default getAll;

@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import galleryService from '../../services/galleryService';
+import * as galleryService from '../../services/galleryService';
 
 import './Card.scss'
 

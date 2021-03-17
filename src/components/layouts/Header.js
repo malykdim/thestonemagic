@@ -1,8 +1,8 @@
 import  './Header.scss';
-import Logo from './Logo.js';
+// import Logo from './Logo.js';
 import Navbar from './Navbar.js';
 
-const Header = () => {
+const Header = (props) => {
     return (
         <header className="App-header">
             

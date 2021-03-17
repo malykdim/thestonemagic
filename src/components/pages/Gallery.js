@@ -1,6 +1,6 @@
 
 import { Component } from 'react';
-import galleryService from '../../services/galleryService';
+import * as galleryService from '../../services/galleryService';
 import Card from './Card';
 import './Gallery.scss';
 
@@ -9,7 +9,7 @@ class Gallery extends Component {
             super(props)
             
             this.state = { // 1, 5
-                cards: []
+                gallery: []
             }
         }
         
@@ -19,28 +19,28 @@ class Gallery extends Component {
         
         componentDidMount() { // 3
             galleryService.getAll()
-            .then(cards => {
-                this.setState(() => ({cards})); // 4
+            .then(gallery => {
+                this.setState(() => ({gallery})); // 4
             });
         }
         
         render() { // 2, 6
             
-            if (this.state.cards.length === 0) {
+            if (this.state.gallery.length === 0) {
                 return <span>Loading Gallery...</span>
             }
             
             return ( 
                 <main className="App-gallery">
-                    
+                    <h2>Gallery</h2>
                     <section className="gallery">
-                    {this.state.cards.map((card) => 
-                        <Card // 7
+                    {this.state.gallery.map((card) => 
+                        <Card 
                             key={card.id} 
                             caption={card.caption} 
                             author={card.author} 
                             clickHandler={() => this.cardClicked(card.caption)}
-                        />
+                        /> // 7
                     )}
                     </section>
                     

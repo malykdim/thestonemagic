@@ -1,7 +1,8 @@
 import { Component } from 'react';
-import { Route, Link, NavLink, Redirect, Switch } from 'react-router-dom' ;
+import { Route, Switch } from 'react-router-dom' ;
 
-// import galleryService from '../../services/galleryService';
+import * as galleryService from './services/galleryService';
+// import {getAll} from './services/galleryService';
 
 import Header from './components/layouts/Header';
 import Home from './components/pages/Home';
@@ -16,7 +17,7 @@ class App extends Component {
         super(props);
         
         this.state = {
-            mosaics: {},
+            mosaics: [],
             selectedMosaic: null
         }
         
@@ -24,10 +25,10 @@ class App extends Component {
     }
     
     componentDidMount() {
-        // galleryService.getAll()
-        //     .then(cards => {
-        //         this.setState(() => ({cards})); // 4
-        //     });
+        galleryService.getAll()
+            .then(mosaics => {
+                this.setState({mosaics}); // 4
+            });
     }
     
     onMenuItemClick(id) {
@@ -47,13 +48,15 @@ class App extends Component {
             <div className="App">
                 <Header />
                 <Switch >
-                    
-                    <Route path="/contact" component={Contact}/>
-                    <Route path="/gallery" component={Gallery}/>
-                    <Route path="/login" component={Login}/>
-                    <Route path="/" component={Home}>
-                        <Home pictures={this.getMosaic()}/>
+                    {/* <Route path="/" component={Home}>
+                        {/* <Home pictures={this.getMosaic()}/> */}
+                    {/* </Route> */} 
+                    <Route path="/contact" component={Contact} />
+                    <Route path="/gallery" gallery={this.state.gallery}>
+                        {Gallery}
                     </Route>
+                    <Route path="/login" component={Login} />
+                    
                 </Switch>                
                 <Footer/>        
             </div>

@@ -1,5 +1,5 @@
 import logo from '../images/logo.svg';
-import Gallery from './Gallery';
+// import Gallery from './Gallery';
 import  './Home.scss';
 
 const Home = () => {
