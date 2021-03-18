@@ -12,6 +12,10 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
+.App {
+    text-align: center;
+}
+
 /* Animations */
 @keyframes App-logo-spin {
     from {
@@ -55,6 +59,22 @@ $color-brown:rgba(49, 37, 37, 1);
 /* in each separate scss component */
 /* Header */
 /* Footer */
+.App-main {
+    margin: 3rem 0;
+    
+    h2, p {
+        font-size: calc(10px + 2vmin);
+        color: $color-dark;
+        line-height: 1.5em;
+        font-weight: 600;
+        letter-spacing: .03em;
+    }
+    
+    .App-link {
+        color: $color-dark;
+        margin: .8em;
+    }
+}
 
 /* ************************** */
 /* Pages */

@@ -46,16 +46,16 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <Header />
-                <Switch >
-                    {/* <Route path="/" component={Home}>
+                <Header/>
+                <Switch>
+                    {/* <Route path="/" component={Home}>*/}
                         {/* <Home pictures={this.getMosaic()}/> */}
-                    {/* </Route> */} 
+                    {/* </Route>  */}
+                    {/* <Route path="/gallery"> */}
+                        {/* {Gallery /* gallery={this.state.gallery} */} */}
+                    {/* </Route>  */}
                     <Route path="/contact" component={Contact} />
-                    <Route path="/gallery" gallery={this.state.gallery}>
-                        {Gallery}
-                    </Route>
-                    <Route path="/login" component={Login} />
+                    {/* <Route path="/login" component={Login} /> */}
                     
                 </Switch>                
                 <Footer/>        
