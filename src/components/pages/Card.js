@@ -1,32 +1,11 @@
-import { Component } from 'react';
-import * as galleryService from '../../services/galleryService';
-
 import './Card.scss'
+import { useState } from 'react';
 
-class Card extends Component {
-    constructor(props) {
-        super(props)
-        
-        this.state = { // 1, 5
-            panel: [],
-            description: []
-        }
-    }
-    
-    cardClicked(caption) {
-        console.log(`Implement preview for ${caption}!`);
-    }
-    
-    componentDidMount() { // 3
-        galleryService.getAll()
-        .then(cards => {
-            this.setState(() => ({cards})); // 4
-        });
-    }
-    
-    render(props) {
-        return (
-        <div className="card">
+const Card = (props) => {
+    let [expanded, setExpanded] = useState(null);
+
+    return(
+        <div className="card" onClick={() => props.clickHandler(props.caption)}>
             <div className="showcase">
                 <figure>
                     <figcaption>
@@ -34,20 +13,17 @@ class Card extends Component {
                     </figcaption>
                 </figure>
             </div>
-            <div className="description">
+            <div className="description" onClick={() => setExpanded(1)}>
                 <p className="created">
-                    {props.created}
+                    {props.author}
                 </p>
                 <p className="dimensions">
-                    {props.dimensions}
-                </p>
-                <p className="materials">
-                    {props.materials}
+                    {props.caption}
                 </p>
             </div>
+            {expanded === 1 && <h1>it works</h1>}
         </div>
-        );
-    }
-}
+    );
+};
 
 export default Card;

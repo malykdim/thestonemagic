@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Route, NavLink } from 'react-router-dom' ;
 import './Navbar.scss';
 
 class Navbar extends Component {
@@ -7,19 +8,19 @@ class Navbar extends Component {
             <nav className="App-header--nav">
                 <ul className="App-header--ul">
                     <li>
-                        <a href="../pages/Home.js">
-                            <i class="fas fa-home"></i>
-                        </a>
+                        <NavLink to="/" >
+                            <i className="fas fa-home"></i>
+                        </NavLink>
                     </li>
                     <li>
-                        <a href="../pages/Gallery.js">
+                        <NavLink to="/gallery" >
                             Gallery
-                        </a>
+                        </NavLink>
                     </li>
                     <li>
-                        <a href="../pages/Contact.js">
+                        <NavLink to="/contact" >
                             Contact
-                        </a>
+                        </NavLink>
                     </li>
                 </ul>
             </nav>   

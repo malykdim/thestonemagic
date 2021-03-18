@@ -1,4 +1,5 @@
 import Logo from  './Logo';
+import { Link } from 'react-router-dom';
 import  './Footer.scss';
 
 const Footer = (props) => {
@@ -8,10 +9,10 @@ const Footer = (props) => {
             <p>
                 &copy; All rights reserved
             </p>
-            <a href="../pages/Login.js" className="login">
+            <Link to="/login" className="login">
                 {/* <i class="fas fa-sign-in-alt"></i> */}
                 Log In                
-            </a>   
+            </Link>   
         </footer>    
     )
 }

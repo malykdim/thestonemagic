@@ -20,7 +20,7 @@ class Gallery extends Component {
         componentDidMount() { // 3
             galleryService.getAll()
             .then(gallery => {
-                this.setState(() => ({gallery})); // 4
+                this.setState({gallery: gallery}); // 4
             });
         }
         
