@@ -9,7 +9,7 @@ const Card = (props) => {
             <div className="showcase">
                 <figure>
                     <figcaption>
-                        {props.children}
+                        {props.picture}
                     </figcaption>
                 </figure>
             </div>

@@ -32,12 +32,12 @@ code {
 /* Abstracts */
 
 /* Variables */
-$color-dark: #282c34;
-$color-light: #e3e0db;
+$color-dark: rgba(40, 44, 52, 1);
+$color-light: rgba(226, 223, 218, .2);
 
 $color-red: #5A2324;
 $color-orange: rgba(141, 76, 50, 1);
-$color-yellow: rgba(161, 135, 95, 1);
+$color-yellow: rgba(230, 204, 165, 0.1);
 $color-green:rgba(103, 107, 83, 1);
 $color-brown:rgba(49, 37, 37, 1);
 
@@ -60,7 +60,8 @@ $color-brown:rgba(49, 37, 37, 1);
 /* Header */
 /* Footer */
 .App-main {
-    margin: 3rem 0;
+    margin: 2rem 0;
+    height: 70vh;
     
     h2, p {
         font-size: calc(10px + 2vmin);

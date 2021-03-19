@@ -4,10 +4,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-left: 2rem;
     
     p {
         font-style: italic;
-        font-size: calc(2px + 2vmin);
+        font-size: calc(1.5px + 2vmin);
         color: $color-dark;
         font-weight: 400;
         letter-spacing: .03em;    
@@ -24,7 +25,14 @@
     }
 }
 
-
+@media all and (max-width: 1920px) {
+    .App-footer {
+        // height: ;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+}
 
 @media all and (max-width: 1200px) {
     .App-footer {
@@ -36,8 +44,10 @@
 
 @media all and (max-width: 900px) {
     .App-footer {
-        flex-direction: column;
-        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        height: 10vh;
     }
     
 }

@@ -27,6 +27,12 @@
     
 }
 
+@media all and (min-width: 900px) {
+    .App-header--nav {
+        margin-bottom: 2rem;
+    }    
+}
+
 @media all and (max-width: 599px) {
     .App-header--ul {
         flex-direction: column;

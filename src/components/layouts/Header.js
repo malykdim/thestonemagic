@@ -7,7 +7,7 @@ const Header = (props) => {
         <header className="App-header">
             
             <h1>The Stone Magic</h1>
-            <Navbar /* onMenuItemClick={this.onMenuItemClick} */ />    
+            <Navbar />    
         </header>    
     )
 }

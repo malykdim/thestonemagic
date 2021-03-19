@@ -1,4 +1,4 @@
-
+@import '../main.scss';
 
 .App-main {
     
@@ -18,5 +18,37 @@
     }
 }
 
+@media all and (max-width: 1920px) {
+    .App-main {
+        
+        .App-logo {
+            height: 30vmin;
+            pointer-events: none;
+            margin: 1.5rem 0;
+        }
+    }
+}
 
+@media all and (max-width: 900px) {
+    .App-main {
+        height: 68vh;
+        margin-top: 2rem;
+        margin-bottom: 0;
+        .App-logo {
+            height: 35vmin;
+            pointer-events: none;
+            margin: 1.5rem 0;
+        }
+    }
+}
 
+@media all and (max-width: 600px) {
+    .App-main {
+        
+        .App-logo {
+            height: 35vmin;
+            pointer-events: none;
+            margin: 1.5rem 0;
+        }
+    }
+}

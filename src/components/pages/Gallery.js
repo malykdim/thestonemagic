@@ -31,12 +31,13 @@ class Gallery extends Component {
             }
             
             return ( 
-                <main className="App-gallery">
+                <main className="App-main">
                     <h2>Gallery</h2>
                     <section className="gallery">
                     {this.state.gallery.map((card) => 
                         <Card 
-                            key={card.id} 
+                            key={card.id}
+                            picture={card.picture} 
                             caption={card.caption} 
                             author={card.author} 
                             clickHandler={() => this.cardClicked(card.caption)}

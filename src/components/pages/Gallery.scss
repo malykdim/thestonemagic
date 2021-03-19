@@ -1,5 +1,11 @@
-.App-gallery {
+@import '../main.scss';
+
+.App-main {
+    background: $color-light;
     .gallery {
+        width: 80%;        
+        margin: 0 auto;
+        
         display: flex;
         flex-wrap: wrap;
         align-items: center;
