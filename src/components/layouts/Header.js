@@ -3,11 +3,12 @@ import  './Header.scss';
 import Navbar from './Navbar.js';
 
 const Header = (props) => {
+    
     return (
         <header className="App-header">
             
-            <h1>The Stone Magic</h1>
-            <Navbar />    
+            <h1>{props.title}</h1>
+            <Navbar icon="fas fa-home"/>    
         </header>    
     )
 }

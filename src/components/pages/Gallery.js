@@ -19,10 +19,17 @@ class Gallery extends Component {
         
         componentDidMount() { // 3
             galleryService.getAll()
-            .then(gallery => {
-                this.setState({gallery: gallery}); // 4
-            });
+            .then(res => 
+                this.setState({gallery: res}) 
+            );
         }
+        
+        /* componentDidUpdate() {
+            galleryService.getAll()
+            .then(res => 
+                this.setState({gallery: res}) 
+            );
+        } */
         
         render() { // 2, 6
             
@@ -37,9 +44,7 @@ class Gallery extends Component {
                     {this.state.gallery.map((card) => 
                         <Card 
                             key={card.id}
-                            picture={card.picture} 
-                            caption={card.caption} 
-                            author={card.author} 
+                            {...card} 
                             clickHandler={() => this.cardClicked(card.caption)}
                         /> // 7
                     )}

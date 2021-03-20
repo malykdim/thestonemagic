@@ -1,15 +1,23 @@
 import React, {Component} from 'react';
-import { Route, NavLink } from 'react-router-dom' ;
+import { Route, NavLink, Link } from 'react-router-dom' ;
 import './Navbar.scss';
 
 class Navbar extends Component {
+    constructor(props) {
+        super(props);
+    }
+    
+    static defaultProps = {
+        icon: 'fas fa-home'
+    }
+    
     render() {
         return (
             <nav className="App-header--nav">
                 <ul className="App-header--ul">
                     <li>
                         <NavLink to="/" >
-                            <i className="fas fa-home"></i>
+                            <i className={this.props.icon}></i>
                         </NavLink>
                     </li>
                     <li>

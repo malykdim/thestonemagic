@@ -46,11 +46,12 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <Header/>
+                <Header title="The Stone Magic"/>
                 <Switch>
                     <Route path="/" exact component={Home}>
                         {/* <Home pictures={this.getMosaic()}/> */}
                     </Route> 
+                    <Route path="/thestonemagic" component={Home} />
                     <Route path="/gallery" component={Gallery}>
                         {/* {Gallery /* gallery={this.state.gallery} */} 
                     </Route> 
