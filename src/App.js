@@ -12,14 +12,7 @@ import Login from './components/pages/Login';
 import Footer from './components/layouts/Footer';
 
 class App extends Component {
-    // constructor(props) {
-    //     super(props);
-        
-    //     this.state = {
-    //         mosaics: [],
-    //         selectedMosaic: null
-    //     }
-        
+    
     //     this.onMenuItemClick = this.onMenuItemClick.bind(this);
     // }
     
@@ -40,7 +33,6 @@ class App extends Component {
     //     } else {
     //         return [this.state.mosaics.find(m => m.id === this.state.selectedMosaic)];
     //     }
-    // }
     
     render() {
         return (
@@ -51,12 +43,9 @@ class App extends Component {
                         {/* <Home pictures={this.getMosaic()}/> */}
                     </Route> 
                     <Route path="/thestonemagic" component={Home} />
-                    <Route path="/gallery" component={Gallery}>
-                        {/* {Gallery /* gallery={this.state.gallery} */} 
-                    </Route> 
+                    <Route path="/gallery" component={Gallery}/>
                     <Route path="/contact" component={Contact} />
-                    <Route path="/login" component={Login} />
-                    
+                    <Route path="/login" component={Login} />                    
                 </Switch>                
                 <Footer icon="fas fa-sign-in-alt"/>        
             </div>
