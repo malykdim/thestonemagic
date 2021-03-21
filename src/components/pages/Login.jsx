@@ -1,7 +1,8 @@
-import { Link } from 'react-router-dom' ;
+import { Route } from 'react-router-dom' ;
+import Edit from './Edit' ;
+
 import '../main.scss';
 import './Login.scss';
-import Edit from './Edit' ;
 
 const Login = () => {
     
@@ -15,7 +16,7 @@ const Login = () => {
     function login() {
         // after successfull authentication
         return (
-            <Link to="/edit" component={Edit} />
+            <Route path="/edit" component={Edit}/>
         )
     }
     
