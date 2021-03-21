@@ -13,8 +13,8 @@ class Gallery extends Component {
             }
         }
         
-        cardClicked(caption) {
-            console.log(`Implement preview for ${caption}!`);
+        cardClicked(id) {
+            console.log(`Implement overlay for each ${id}!`);
         }
         
         componentDidMount() { // 3

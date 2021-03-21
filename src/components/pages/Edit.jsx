@@ -1,4 +1,6 @@
-import { Component } from 'react';
+import { Component } from 'react' ;
+import { Link } from 'react-router-dom' ;
+import Gallery from './Gallery' ;
 
 import '../main.scss';
 import './Edit.scss';
@@ -20,6 +22,8 @@ class Edit extends Component {
                 
                 <form action="#" className="form-edit">
                 </form>
+                
+                <Link to="/gallery" component={Gallery} />
                 
                 <p>
                     In Development Stage...

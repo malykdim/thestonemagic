@@ -1,6 +1,6 @@
-import  './Header.scss';
 // import Logo from './Logo.js';
 import Navbar from './Navbar.js';
+import  './Header.scss';
 
 const Header = (props) => {
     

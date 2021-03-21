@@ -2,7 +2,7 @@
 
 .App-header {
     background-color: white;
-    min-height: 15vh;
+    min-height: 10vh;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -17,11 +17,16 @@
         letter-spacing: .03em;
         padding-left: 2rem;
     }
+    
+    i {
+        font-size: calc(10px + 2vmin);
+        color: $color-dark;
+    }
 }
 
 @media all and (max-width: 1920px) {
     .App-header {
-        max-height: 8vh;
+        max-height: 4vh;
         font-size: calc(6px + 2vmin);
         flex-direction: row;
         justify-content: space-between;
@@ -30,6 +35,8 @@
     h1 {
         font-weight: 400;
     }
+    
+    
 }
 
 @media all and (max-width: 1200px) {

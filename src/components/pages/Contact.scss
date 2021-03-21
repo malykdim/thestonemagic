@@ -2,10 +2,18 @@
 
 .App-main {
     .form-contact {
-        width: 50%;
+        width: 20%;
         margin: 0 auto;
         display: flex;
         flex-direction: column;
+        
+        input {
+            margin: .2rem;
+        }
+        
+        textarea {
+            margin: .5rem auto
+        }
     }
 }
 
@@ -13,4 +21,23 @@
     // .App-logo {
     //     animation: App-logo-spin infinite 20s linear;
     // }
+}
+
+@media all and (max-width: 1920px) {
+    .App-main {
+        .form-contact {
+            width: 32%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            
+            input {
+                margin: .2rem;
+            }
+            
+            textarea {
+                margin: .5rem auto
+            }
+        }
+    }
 }

@@ -1,8 +1,7 @@
 import { Component } from 'react';
 import { Route, Switch } from 'react-router-dom' ;
 
-import * as galleryService from './services/galleryService';
-// import {getAll} from './services/galleryService';
+// import * as galleryService from './services/galleryService';
 import  './App.scss';
 
 import Header from './components/layouts/Header';
@@ -59,7 +58,7 @@ class App extends Component {
                     <Route path="/login" component={Login} />
                     
                 </Switch>                
-                <Footer/>        
+                <Footer icon="fas fa-sign-in-alt"/>        
             </div>
         );
     }
