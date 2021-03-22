@@ -1,38 +1,41 @@
 import './Card.scss'
-import { useState, useEffect } from 'react';
+import { useState, useEffect} from 'react';
 import * as galleryService from '../../services/galleryService'; 
 
 const Card = ({
     match,
-    
-    
+    caption,
+    picture,
+    author,
+    created,
+    dimensions,
     clickHandler
 }) => {
     let [expanded, setExpanded] = useState(null);
     
     let [card, setCard] = useState({});
     
-    useEffect(() => {
-        galleryService.getOne(match.params.id)
-        .then(res => setCard(res));
-    }, [match]);
+    // useEffect(() => {
+    //     galleryService.getOne(match.params.id)
+    //     .then(res => setCard(res));
+    // }, [match]);
     
     return(
         <div className="card" onClick={() => clickHandler(card.caption)}>
             <div className="showcase" onClick={() => setExpanded(1)}>
                 <figure>
-                    <img src={card.picture} alt="mosaic"/>
+                    <img src={picture} alt="mosaic"/>
                     <figcaption>
-                    "{card.caption}" by {card.author}                       
+                    "{caption}" by {author}                       
                     </figcaption>
                 </figure>
             </div>
             <div className="description" >
                 <p className="created">
-                    {card.created}
+                    {created}
                 </p>
                 <p className="dimensions">
-                    {card.dimensions}
+                    {dimensions}
                 </p>
             </div>
             {expanded === 1 && <h1>it works</h1>}
