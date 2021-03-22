@@ -1,8 +1,23 @@
 @import '../main.scss';
 
 form {
-    width: 600px;
+    width: 700px;
+    margin: 0 auto;
     fieldset {
         margin: 1rem;
+        
+        input {
+            margin: 0 .5rem;
+        }
     }
+}
+
+a {
+    font-style: italic;
+    font-size: calc(2px + 2vmin);
+    color: $color-dark;
+    font-weight: 400;
+    letter-spacing: .03em;
+    padding: 2rem;
+    text-decoration: none;    
 }

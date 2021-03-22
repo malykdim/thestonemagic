@@ -1,4 +1,4 @@
-import { Route } from 'react-router-dom' ;
+import { Link } from 'react-router-dom' ;
 import Edit from './Edit' ;
 
 import '../main.scss';
@@ -13,12 +13,12 @@ const Login = () => {
         // show the submit button below 
     }
     
-    function login() {
+    /* function login() {
         // after successfull authentication
         return (
-            <Route path="/edit" component={Edit}/>
+            <Link path="/edit" component={Edit}/>
         )
-    }
+    } */
     
     return (
         <main className="App-main">
@@ -36,7 +36,7 @@ const Login = () => {
                         <input type="text" name="pass" placeholder="" />
                         <label htmlFor="pass"></label>
                         <input type="text" name="pass" placeholder="" />
-                        <button className="toggle" onClick={login()}>
+                        <button className="toggle" /* onClick={login()} */>
                             Register
                         </button>
                     </form>
@@ -51,12 +51,18 @@ const Login = () => {
                     <input type="text" name="email" placeholder="Email: someone@somewhere.com"/>
                     <label htmlFor="pass"></label>
                     <input type="text" name="pass" placeholder="Password: ********"/>
-                    <button className="toggle" onClick={toggle()}>
+                    <button className="toggle" /* onClick={toggle()} */>
                         Login
                     </button>
                 </form>
             </div>
-
+            
+            
+            
+            <Link to="/edit" className="edit">Edit</Link>
+            
+            
+            
             <p>
                 In Development Stage...
             </p>

@@ -9,6 +9,7 @@ import Home from './components/pages/Home';
 import Gallery from './components/pages/Gallery';
 import Contact from './components/pages/Contact';
 import Login from './components/pages/Login';
+import Edit from './components/pages/Edit';
 import Footer from './components/layouts/Footer';
 
 class App extends Component {
@@ -46,6 +47,7 @@ class App extends Component {
                     <Route path="/gallery" component={Gallery}/>
                     <Route path="/contact" component={Contact} />
                     <Route path="/login" component={Login} />                    
+                    <Route path="/edit" component={Edit} />                    
                 </Switch>                
                 <Footer icon="fas fa-sign-in-alt"/>        
             </div>

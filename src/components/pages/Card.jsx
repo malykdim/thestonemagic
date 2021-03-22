@@ -21,10 +21,10 @@ const Card = ({
     // }, [match]);
     
     return(
-        <div className="card" onClick={() => clickHandler(card.caption)}>
+        <div className="card" onClick={() => clickHandler(caption)}>
             <div className="showcase" onClick={() => setExpanded(1)}>
                 <figure>
-                    <img src={picture} alt="mosaic"/>
+                    <img src={picture} alt="panneaux"/>
                     <figcaption>
                     "{caption}" by {author}                       
                     </figcaption>

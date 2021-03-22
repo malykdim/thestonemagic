@@ -23,10 +23,10 @@ class Edit extends Component {
                 
                 <form action="#" className="form-edit">
                     <fieldset className="left">
+                        <span>Добави снимка:</span>
                         <label htmlFor="picture"></label>
                         <input type="file" name="picture" />
                         {/* <input type="submit" value="Submit"> */}
-                        <span>Добави снимка</span>
                     </fieldset>
                     <fieldset className="right">
                         <label htmlFor="panneaux-name">Име на Паното:</label>
@@ -37,8 +37,10 @@ class Edit extends Component {
                         <span>Автор:</span>                                
                         <input type="radio" id="vladimir" name="author" value="Vladimir"/>                        
                         <label for="vladimir">Владимир</label>                                
-                        <input type="radio" id="female" name="author" value="Damyan"/>
-                        <label for="Damyan">Дамян</label>
+                        <input type="radio" id="damyan" name="author" value="Damyan"/>
+                        <label for="damyan">Дамян</label>
+                        <input type="radio" id="konstantin" name="author" value="Konstantin"/>
+                        <label for="konstantin">Константин</label>
                     </fieldset>
                     <fieldset>
                         <span>Създадена:</span>
