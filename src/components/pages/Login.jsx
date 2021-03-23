@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom' ;
-import Edit from './Edit' ;
+// import Edit from './Edit' ;
 
 import '../main.scss';
 import './Login.scss';
@@ -21,47 +21,41 @@ const Login = () => {
     } */
     
     return (
-        <main className="App-main">
+        <main className="AppMain">
             
-            <div className="register">
-                <button className="toggle" onClick={toggle()}>
-                    Register
-                </button>
+            <h2>Register / Login</h2>
+            
+            <button className="toggle" onClick={toggle()}>
+                Register
+            </button>
                 
-                <div className="form">
-                    <form action="#" className="form-register">
-                        <label htmlFor="email"></label>
-                        <input type="text" name="email" />
-                        <label htmlFor="pass"></label>
-                        <input type="text" name="pass" placeholder="" />
-                        <label htmlFor="pass"></label>
-                        <input type="text" name="pass" placeholder="" />
-                        <button className="toggle" /* onClick={login()} */>
-                            Register
-                        </button>
-                    </form>
-                </div>                
-            </div>
-            
-            <h2>Login Page</h2>
-            
-            <div className="form">
-                <form action="#" className="form-login">
-                    <label htmlFor="email"></label>
-                    <input type="text" name="email" placeholder="Email: someone@somewhere.com"/>
+            <div className="AppMain-Forms">
+                
+                <form className="FormRegister">
+                    <label htmlFor="email">Email:</label>
+                    <input type="text" name="email" id="email"/>
+                    <label htmlFor="pass">Password:</label>
+                    <input type="text" name="pass" id="pass" placeholder="" />
                     <label htmlFor="pass"></label>
-                    <input type="text" name="pass" placeholder="Password: ********"/>
+                    <input type="text" name="pass" placeholder="" />
+                    <button className="toggle" /* onClick={login()} */>
+                        Register
+                    </button>
+                </form>
+                
+                <form className="FormLogin">
+                    <label htmlFor="email">Email:</label>
+                    <input type="text" id="email" name="email" placeholder="someone@somewhere.com"/>
+                    <label htmlFor="pass">Password:</label>
+                    <input type="text" id="pass" name="pass" placeholder="Password: ********"/>
                     <button className="toggle" /* onClick={toggle()} */>
                         Login
                     </button>
                 </form>
-            </div>
+                
+            </div>              
             
-            
-            
-            <Link to="/edit" className="edit">Edit</Link>
-            
-            
+            <Link to="/edit" className="Edit">Edit</Link>
             
             <p>
                 In Development Stage...

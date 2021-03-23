@@ -1,7 +1,6 @@
 @import '../main.scss';
 
-.App-main {
-    
+.AppMain {
     .App-logo {
         height: 40vmin;
         pointer-events: none;
@@ -10,8 +9,6 @@
     
 } 
 
-
-
 @media (prefers-reduced-motion: no-preference) {
     .App-logo {
         animation: App-logo-spin infinite 20s linear;
@@ -19,7 +16,7 @@
 }
 
 @media all and (max-width: 1920px) {
-    .App-main {
+    .AppMain {
         
         .App-logo {
             height: 30vmin;
@@ -30,7 +27,7 @@
 }
 
 @media all and (max-width: 900px) {
-    .App-main {
+    .AppMain {
         height: 68vh;
         margin-top: 2rem;
         margin-bottom: 0;
@@ -43,7 +40,7 @@
 }
 
 @media all and (max-width: 600px) {
-    .App-main {
+    .AppMain {
         
         .App-logo {
             height: 35vmin;

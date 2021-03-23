@@ -4,14 +4,14 @@ import  './Footer.scss';
 
 const Footer = (props) => {
     return (
-        <footer  className="App-footer">
+        <footer  className="AppFooter">
             <Logo />
             <p>
                 &copy; All rights reserved
             </p>
-            <Link to="/login" className="login">
+            <Link to="/login" className="Login">
                 {/* Login */}
-                <i class={props.icon}></i>
+                <i className={props.icon}></i>
                                 
             </Link>   
         </footer>    

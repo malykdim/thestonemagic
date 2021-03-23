@@ -13,8 +13,8 @@ class Navbar extends Component {
     
     render() {
         return (
-            <nav className="App-header--nav">
-                <ul className="App-header--ul">
+            <nav className="AppHeader-Nav">
+                <ul className="AppHeader-Nav-Ul">
                     <li>
                         <NavLink to="/" >
                             <i className={this.props.icon}></i>

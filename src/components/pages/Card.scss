@@ -1,26 +1,26 @@
 @import '../main.scss';
 
-.card {
+.Card {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     
-    .showcase {
+    &-Showcase {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         
-        figure img {
+        .Figure img {
             width: 100%;
             height: 100%;
             display: block;
         }
     }
     
-    .description {
+    &-Description {
         display: flex;
         flex-direction: column;
         align-items: center;

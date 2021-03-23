@@ -15,10 +15,10 @@ class Contact extends Component {
     render() {
         
         return (
-            <main className="App-main">
+            <main className="AppMain">
                 <h2>Contact Page</h2>
                 
-                <form action="#" className="form-contact">
+                <form  className="AppMain-FormContact">
                     <label htmlFor="fullName"></label>
                     <input type="text" name="fullName" placeholder="Full Name"/>
                     <label htmlFor="email"></label>
@@ -33,7 +33,6 @@ class Contact extends Component {
                 In Development Stage...
                 </p>
             </main>
-        
         )
     }
 }

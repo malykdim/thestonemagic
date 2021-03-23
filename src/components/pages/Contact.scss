@@ -1,7 +1,7 @@
 @import '../main.scss';
 
-.App-main {
-    .form-contact {
+.AppMain {
+    &-FormContact {
         width: 20%;
         margin: 0 auto;
         display: flex;
@@ -24,8 +24,8 @@
 }
 
 @media all and (max-width: 1920px) {
-    .App-main {
-        .form-contact {
+    .AppMain {
+        &-FormContact {
             width: 32%;
             margin: 0 auto;
             display: flex;

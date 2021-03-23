@@ -17,97 +17,97 @@ class Edit extends Component {
     render() {
 
         return (
-            <main className="App-main">
+            <main className="AppMain">
                 
                 <h2>Edit Page</h2>
                 
-                <form action="#" className="form-edit">
+                <form className="FormEdit">
                     <fieldset className="left">
-                        <span>Добави снимка:</span>
-                        <label htmlFor="picture"></label>
-                        <input type="file" name="picture" />
+                        {/* <span>Добави снимка:</span> */}
+                        <label htmlFor="picture">Добави снимка:</label>
+                        <input type="file" id="picture" name="picture" />
                         {/* <input type="submit" value="Submit"> */}
                     </fieldset>
                     <fieldset className="right">
                         <label htmlFor="panneaux-name">Име на Паното:</label>
-                        <input type="text" name="panneaux-name" placeholder=""/>
+                        <input type="text" id="panneaux-name" name="panneaux-name" placeholder=""/>
                         
                     </fieldset>
                     <fieldset className="inline">
                         <span>Автор:</span>                                
                         <input type="radio" id="vladimir" name="author" value="Vladimir"/>                        
-                        <label for="vladimir">Владимир</label>                                
+                        <label htmlFor="vladimir">Владимир</label>                                
                         <input type="radio" id="damyan" name="author" value="Damyan"/>
-                        <label for="damyan">Дамян</label>
+                        <label htmlFor="damyan">Дамян</label>
                         <input type="radio" id="konstantin" name="author" value="Konstantin"/>
-                        <label for="konstantin">Константин</label>
+                        <label htmlFor="konstantin">Константин</label>
                     </fieldset>
                     <fieldset>
-                        <span>Създадена:</span>
+                        <label htmlFor="created">Създадена:</label>
                         <input type="date" name="created" id="created"/>
                     </fieldset>
                     <fieldset>
                         <legend>Размери на паното:</legend>
-                        <label for="marbel">Широчина: </label>
-                        <input type="number" name="width"/>
-                        <label for="marbel">Височина: </label>
-                        <input type="number" name="height" id=""/>
+                        <label htmlFor="width">Широчина: </label>
+                        <input type="number" name="width" id="width"/>
+                        <label htmlFor="height">Височина: </label>
+                        <input type="number" name="height" id="height"/>
                         
                         <input type="radio" id="cm" name="unit" value="cm"/>
-                        <label for="cm">cm</label>
+                        <label htmlFor="cm">cm</label>
                         
                         <input type="radio" id="inch" name="unit" value="inch"/>
-                        <label for="inch">inch</label>
+                        <label htmlFor="inch">inch</label>
                     </fieldset>
                     <fieldset>
                         <legend>Използвани материали:</legend>
                         <input type="checkbox" id="marbel" name="marbel" value="Marbel"/>
-                        <label for="marbel">Мрамор </label>
+                        <label htmlFor="marbel">Мрамор </label>
                         
                         <input type="checkbox" id="amethyst" name="amethyst" value="Аmethyst"/>
-                        <label for="amethyst">Аметист</label>
+                        <label htmlFor="amethyst">Аметист</label>
                         
                         <input type="checkbox" id="agate" name="agate" value="Аgate"/>
-                        <label for="agate">Ахат</label>
+                        <label htmlFor="agate">Ахат</label>
                         
                         <input type="checkbox" id="jasper" name="jasper" value="Jasper"/>
-                        <label for="jasper">Яспис</label>
+                        <label htmlFor="jasper">Яспис</label>
                         
                         <input type="checkbox" id="tiger's eye" name="tiger's eye" value="Tiger's eye"/>
-                        <label for="tiger's eye">Тигрово око</label>
+                        <label htmlFor="tiger's eye">Тигрово око</label>
                         
                         <input type="checkbox" id="mountain crystal" name="mountain crystal" value="Mountain crystal"/>
-                        <label for="mountain crystal">Планински кристал</label><br/>
+                        <label htmlFor="mountain crystal">Планински кристал</label><br/>
                         
                         <input type="checkbox" id="labrador" name="labrador" value="Labrador"/>
-                        <label for="labrador">Лабрадор</label>
+                        <label htmlFor="labrador">Лабрадор</label>
                         
                         <input type="checkbox" id="pyryt" name="pyryt" value="Pyryt"/>
-                        <label for="pyryt">Пирит</label>
+                        <label htmlFor="pyryt">Пирит</label>
                         
                         <input type="checkbox" id="firestone" name="firestone" value="Firestone"/>
-                        <label for="firestone">Огнен камък</label>
+                        <label htmlFor="firestone">Огнен камък</label>
                         
                         <input type="checkbox" id="onyx" name="onyx" value="Onyx"/>
-                        <label for="onyx">Оникс</label><br/>
+                        <label htmlFor="onyx">Оникс</label><br/>
                         
                         <input type="checkbox" id="jade" name="jade" value="Jade"/>
-                        <label for="jade">Нефрит</label>
+                        <label htmlFor="jade">Нефрит</label>
                         
                         <input type="checkbox" id="malachite" name="malachite" value="malachite"/>
-                        <label for="malachite">Малахит</label>
+                        <label htmlFor="malachite">Малахит</label>
                         
                         <input type="checkbox" id="citrine" name="citrine" value="citrine"/>
-                        <label for="citrine">Цитрин</label>
+                        <label htmlFor="citrine">Цитрин</label>
                         
                         <input type="checkbox" id="quartz" name="quartz" value="quartz"/>
-                        <label for="quartz">Кварц</label>
+                        <label htmlFor="quartz">Кварц</label>
                         
                         <input type="checkbox" id="obsidian" name="obsidian" value="obsidian"/>
-                        <label for="obsidian">Обсидиан</label>
+                        <label htmlFor="obsidian">Обсидиан</label>
                         
                         <input type="checkbox" id="serpentine" name="serpentine" value="serpentine"/>
-                        <label for="serpentine">Серпентин</label>
+                        <label htmlFor="serpentine">Серпентин</label>
                         
                         <br/>
                         <br/>

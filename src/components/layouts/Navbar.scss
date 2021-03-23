@@ -1,11 +1,11 @@
 @import '../main.scss';
 
-.App-header--nav {
+.AppHeader-Nav {
     display: flex;
     align-items: center;
     justify-content: center;
     
-    ul {
+    &-Ul {
         display: flex;
         list-style: none;
         padding-inline-start: 0;

@@ -12,10 +12,6 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-.App {
-    text-align: center;
-}
-
 /* Animations */
 @keyframes App-logo-spin {
     from {
@@ -58,22 +54,65 @@ $color-brown:rgba(49, 37, 37, 1);
 
 /* in each separate scss component */
 /* Header */
-/* Footer */
-.App-main {
+.AppMain {
     margin: 2rem 0;
-    height: 70vh;
+    max-height: 70vh;
     
-    h2, p {
+    h2 {
         font-size: calc(10px + 2vmin);
         color: $color-dark;
         line-height: 1.5em;
         font-weight: 600;
         letter-spacing: .03em;
+        
+        span {
+            font-weight: 600;
+            font-size: calc(10px + 2vmin);
+        }
     }
     
-    .App-link {
+    p {
+        font-size: calc(8px + 2vmin);
+        color: $color-dark;
+        line-height: 1.0em;
+        font-weight: 500;
+        letter-spacing: .03em;
+    }
+    /* Footer */
+    
+    .AppLink {
         color: $color-dark;
         margin: .8em;
+    }
+}
+
+.form {
+    background: $color-yellow;
+    width: 25%;
+    margin: 0 auto 3rem auto;
+    
+    fieldset {
+        margin: 1rem;
+
+        input {
+            margin: 0 0.5rem;
+        }
+    }
+    
+    input {
+        margin: .2rem;
+    }
+    
+    button {
+        width: 90%;
+        margin: .5rem auto;
+    }
+    
+    a {
+        display: inline-block;
+        padding: 2rem;
+        text-decoration: none;
+        color: $color-dark;
     }
 }
 

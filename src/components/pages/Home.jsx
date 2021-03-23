@@ -18,24 +18,19 @@ class Home extends Component {
     
     render() {
         return (
-            <main className="App-main">
+            <main className="AppMain">
                 <h2>
                     Exquisite Mosaic Panneaux <br/>
                     made by<br/>
-                    <a className="App-link" href="https://www.facebook.com/vladimir.damynov/" target="_blank"  rel="noopener noreferrer" >
+                    <a className="AppLink" href="https://www.facebook.com/vladimir.damynov/" target="_blank"  rel="noopener noreferrer" >
                         <span>Vladimir Damyanov</span>
                     </a>
                     and
-                    <a className="App-link" href="https://www.facebook.com/damyan.damyanov.509/" target="_blank"  rel="noopener noreferrer" >
+                    <a className="AppLink" href="https://www.facebook.com/damyan.damyanov.509/" target="_blank"  rel="noopener noreferrer" >
                     <span>Damyan Damyanov</span>
                     </a>            
                 </h2>
                 <img src={logo} className="App-logo" alt="logo" />
-                {/* <Route path="/gallery" component={Gallery}>
-                        {this.state.mosaics.map(card => (
-                            <Picture />
-                        ))} 
-                </Route> */}
                 <p>
                     In Development Stage...
                 </p>   

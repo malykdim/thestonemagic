@@ -1,6 +1,7 @@
-import './Card.scss'
 import { useState, useEffect} from 'react';
 import * as galleryService from '../../services/galleryService'; 
+
+import './Card.scss';
 
 const Card = ({
     match,
@@ -21,16 +22,16 @@ const Card = ({
     // }, [match]);
     
     return(
-        <div className="card" onClick={() => clickHandler(caption)}>
-            <div className="showcase" onClick={() => setExpanded(1)}>
-                <figure>
-                    <img src={picture} alt="panneaux"/>
+        <div className="Card" onClick={() => clickHandler(caption)}>
+            <div className="Card-Showcase" onClick={() => setExpanded(1)}>
+                <figure className="Figure">
+                    <img src={process.env.PUBLIC_URL + {picture}} alt="panneaux"></img>
                     <figcaption>
                     "{caption}" by {author}                       
                     </figcaption>
                 </figure>
             </div>
-            <div className="description" >
+            <div className="Card-Description" >
                 <p className="created">
                     {created}
                 </p>
