@@ -1,7 +1,7 @@
 
 import { Component } from 'react';
 import * as galleryService from '../../services/galleryService';
-import Card from './Card';
+import Card from '../parts/Card';
 import './Gallery.scss';
 
 class Gallery extends Component {

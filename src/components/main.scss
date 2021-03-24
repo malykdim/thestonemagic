@@ -28,7 +28,6 @@ code {
     }
 }
 /* Typography */
-/* Utilities */
 
 /* ************************** */
 /* Abstracts */
@@ -46,20 +45,10 @@ $color-brown:rgba(49, 37, 37, 1);
 /* Mixins */
 /* Functions */
 
-/* ************************** */
-/* Components */
-
-/* Logo */
-/* Navbar */
-/* Grid-Gallery */
-/* Card */
-
+/* *** Components: *********************** */
 
 /* ************************** */
-/* Layout */
-
-/* in each separate scss component */
-/* Header */
+/* Layout - Header, Footer - in each separate scss component* */
 .AppMain {
     margin: 0;
     min-height: 85vh;
@@ -84,7 +73,7 @@ $color-brown:rgba(49, 37, 37, 1);
     }
     
     p {
-        font-size: calc(8px + 2vmin);
+        font-size: calc(8px + 1.5vmin);
         color: $color-dark;
         line-height: 1.0em;
         font-weight: 500;
@@ -99,6 +88,16 @@ $color-brown:rgba(49, 37, 37, 1);
     }
 }
 
+/* ************************** */
+/* Pages - in each separate scss component */
+/* Home *//* Gallery *//* Contact *//* Login *//* Edit *//* Error 404 *//* etc */
+
+/* ************************** */
+/* Parts - in each separate scss component */
+/* Logo */
+/* Navbar */
+/* Grid-Gallery */
+/* Card */
 .form {
     background: $color-yellow;
     width: 25%;
@@ -129,42 +128,22 @@ $color-brown:rgba(49, 37, 37, 1);
     }
 }
 
-/* ************************** */
-/* Pages */
-
-/* in each separate scss component */
-/* Home */
-/* Gallery */
-/* Contact */
-/* Login */
-/* Edit */
-/* Error 404 */
-/* etc */
+/* Utilities */
 
 /* ************************** */
-/* Media Queries */
+/* Media Queries - in each separate scss component */
 
-/* in each separate scss component */
-
-/* TV / Huge */
-/* Desktop / 1920 */
-/* Laptop / 1200 */
-/* Tablet / 900 */
-/* Phone / 600 */
+/* TV / Huge *//* Desktop / 1920 *//* Laptop / 1200 *//* Tablet / 900 *//* Phone / 600 */
 
 /* ************************** */
-/* Themes */
-
-/* Light */
-/* Dark */
-/* Custom */
+/* Themes - Light, Dark, Custom */
 
 /* ************************** */
 /* Vendors */
 
-/*** Bootstrap ***/
+/*** Bootstrap - not using in this project ***/
 /*** An Icon System ***/
 @import url('https://use.fontawesome.com/releases/v5.15.1/css/all.css');
-/*** An Animation Framework ***/
+/*** An Animation Framework - not using in this project ***/
 
 /* ************************** */
