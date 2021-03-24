@@ -25,7 +25,7 @@ const Card = ({
         <div className="Card" onClick={() => clickHandler(caption)}>
             <div className="Card-Showcase" onClick={() => setExpanded(1)}>
                 <figure className="Figure">
-                    <img src={process.env.PUBLIC_URL + {picture}} alt="panneaux"></img>
+                    <img src="/public/art-9-sun.jpg" alt="panneaux"></img>
                     <figcaption>
                     "{caption}" by {author}                       
                     </figcaption>
