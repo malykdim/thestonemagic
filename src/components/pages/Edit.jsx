@@ -21,7 +21,7 @@ class Edit extends Component {
                 
                 <h2>Edit Page</h2>
                 
-                <form className="FormEdit">
+                <form className="FormEdit form">
                     <fieldset className="left">
                         {/* <span>Добави снимка:</span> */}
                         <label htmlFor="picture">Добави снимка:</label>
@@ -64,20 +64,14 @@ class Edit extends Component {
                         <input type="checkbox" id="marbel" name="marbel" value="Marbel"/>
                         <label htmlFor="marbel">Мрамор </label>
                         
+                        <input type="checkbox" id="mountain crystal" name="mountain crystal" value="Mountain crystal"/>
+                        <label htmlFor="mountain crystal">Планински кристал</label>
+                        
                         <input type="checkbox" id="amethyst" name="amethyst" value="Аmethyst"/>
                         <label htmlFor="amethyst">Аметист</label>
                         
-                        <input type="checkbox" id="agate" name="agate" value="Аgate"/>
-                        <label htmlFor="agate">Ахат</label>
-                        
                         <input type="checkbox" id="jasper" name="jasper" value="Jasper"/>
                         <label htmlFor="jasper">Яспис</label>
-                        
-                        <input type="checkbox" id="tiger's eye" name="tiger's eye" value="Tiger's eye"/>
-                        <label htmlFor="tiger's eye">Тигрово око</label>
-                        
-                        <input type="checkbox" id="mountain crystal" name="mountain crystal" value="Mountain crystal"/>
-                        <label htmlFor="mountain crystal">Планински кристал</label><br/>
                         
                         <input type="checkbox" id="labrador" name="labrador" value="Labrador"/>
                         <label htmlFor="labrador">Лабрадор</label>
@@ -85,11 +79,14 @@ class Edit extends Component {
                         <input type="checkbox" id="pyryt" name="pyryt" value="Pyryt"/>
                         <label htmlFor="pyryt">Пирит</label>
                         
+                        <input type="checkbox" id="tiger's eye" name="tiger's eye" value="Tiger's eye"/>
+                        <label htmlFor="tiger's eye">Тигрово око</label>
+                        
                         <input type="checkbox" id="firestone" name="firestone" value="Firestone"/>
                         <label htmlFor="firestone">Огнен камък</label>
                         
                         <input type="checkbox" id="onyx" name="onyx" value="Onyx"/>
-                        <label htmlFor="onyx">Оникс</label><br/>
+                        <label htmlFor="onyx">Оникс</label>
                         
                         <input type="checkbox" id="jade" name="jade" value="Jade"/>
                         <label htmlFor="jade">Нефрит</label>
@@ -99,18 +96,22 @@ class Edit extends Component {
                         
                         <input type="checkbox" id="citrine" name="citrine" value="citrine"/>
                         <label htmlFor="citrine">Цитрин</label>
-                        
-                        <input type="checkbox" id="quartz" name="quartz" value="quartz"/>
-                        <label htmlFor="quartz">Кварц</label>
-                        
+
                         <input type="checkbox" id="obsidian" name="obsidian" value="obsidian"/>
                         <label htmlFor="obsidian">Обсидиан</label>
                         
                         <input type="checkbox" id="serpentine" name="serpentine" value="serpentine"/>
                         <label htmlFor="serpentine">Серпентин</label>
                         
+                        <input type="checkbox" id="quartz" name="quartz" value="quartz"/>
+                        <label htmlFor="quartz">Кварц</label>
+                        
+                        <input type="checkbox" id="agate" name="agate" value="Аgate"/>
+                        <label htmlFor="agate">Ахат</label>
                         <br/>
-                        <br/>
+                        
+                    </fieldset>
+                    <fieldset>
                         <span>Изчисти избраните полета:</span>
                         <input type="reset" value="Изчисти"/>
                     </fieldset>

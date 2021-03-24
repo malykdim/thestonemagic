@@ -31,26 +31,44 @@ const Login = () => {
                 
             <div className="AppMain-Forms">
                 
-                <form className="FormRegister">
-                    <label htmlFor="email">Email:</label>
-                    <input type="text" name="email" id="email"/>
-                    <label htmlFor="pass">Password:</label>
-                    <input type="text" name="pass" id="pass" placeholder="" />
-                    <label htmlFor="pass"></label>
-                    <input type="text" name="pass" placeholder="" />
-                    <button className="toggle" /* onClick={login()} */>
-                        Register
-                    </button>
+                <form className="FormRegister form">
+                    <fieldset>
+                        <label htmlFor="fullName">Full Name:</label>
+                        <input type="text" name="fullName" id="fullName"/>
+                    </fieldset>
+                    <fieldset>
+                        <label htmlFor="email">Email:</label>
+                        <input type="text" name="email" id="email"/>
+                    </fieldset>
+                    <fieldset>
+                        <label htmlFor="pass">Password:</label>
+                        <input type="text" name="pass" id="pass" placeholder="" />
+                    </fieldset>
+                    <fieldset>
+                        <label htmlFor="pass"></label>
+                        <input type="text" name="pass" placeholder="" />
+                    </fieldset>
+                    <fieldset>
+                        <button className="toggle" /* onClick={login()} */>
+                            Register
+                        </button>
+                    </fieldset>
                 </form>
                 
-                <form className="FormLogin">
-                    <label htmlFor="email">Email:</label>
-                    <input type="text" id="email" name="email" placeholder="someone@somewhere.com"/>
-                    <label htmlFor="pass">Password:</label>
-                    <input type="text" id="pass" name="pass" placeholder="Password: ********"/>
-                    <button className="toggle" /* onClick={toggle()} */>
+                <form className="FormLogin form">
+                    <fieldset>
+                        <label htmlFor="email">Email:</label>
+                        <input type="text" id="email" name="email" placeholder="someone@somewhere.com"/>
+                    </fieldset>
+                    <fieldset>
+                        <label htmlFor="pass">Password:</label>
+                        <input type="text" id="pass" name="pass" placeholder="Password: ********"/>
+                    </fieldset>
+                    <fieldset>
+                        <button className="toggle" /* onClick={toggle()} */>
                         Login
-                    </button>
+                        </button>
+                    </fieldset>
                 </form>
                 
             </div>              

@@ -39,7 +39,7 @@ $color-light: rgba(226, 223, 218, .2);
 $color-red: #5A2324;
 $color-orange: rgba(141, 76, 50, 1);
 $color-yellow: rgba(230, 204, 165, 0.1);
-$color-green:rgba(103, 107, 83, 1);
+$color-green:rgba(103, 107, 83, .05);
 $color-brown:rgba(49, 37, 37, 1);
 
 /* Mixins */
@@ -99,24 +99,35 @@ $color-brown:rgba(49, 37, 37, 1);
 /* Grid-Gallery */
 /* Card */
 .form {
-    background: $color-yellow;
+    
     width: 25%;
-    margin: 0 auto 3rem auto;
+    margin: 0 auto ;
+    
+    display: flex;
+    flex-direction: column;
     
     fieldset {
-        margin: 1rem;
-
+        margin: .5rem;
+        background: $color-light ;
+        border-radius: 5px;
+        text-align: left;
+        padding: 1rem 0 1rem 2rem;
+        
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: left;
+        
         input {
             margin: 0 0.5rem;
+            padding: .5rem;
+            
         }
     }
     
-    input {
-        margin: .2rem;
-    }
     
     button {
-        width: 90%;
+        width: 100%;
         margin: .5rem auto;
     }
     
