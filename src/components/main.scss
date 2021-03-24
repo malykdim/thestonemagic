@@ -123,13 +123,15 @@ $color-brown:rgba(49, 37, 37, 1);
             padding: .5rem;
             
         }
+        
+        button {
+            width: 100%;
+            margin: .5rem auto;
+        }
     }
     
     
-    button {
-        width: 100%;
-        margin: .5rem auto;
-    }
+    
     
     a {
         display: inline-block;

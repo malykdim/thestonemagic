@@ -2,12 +2,27 @@
 
 .AppMain {
     &-Forms {
+        width: 60%;
         .FormRegister {
             display: none;
         }
         
         .FormLogin {
-            display: block;
+            width: 30%;
+            
+            fieldset {
+                
+                input {
+                    margin: 0 0.5rem;
+                    padding: .5rem;
+                    width: 70%;
+                }
+                
+                button {
+                    width: 100%;
+                    margin: 0 auto;
+                }
+            }
         }
     }
 }

@@ -23,11 +23,8 @@ const Login = () => {
     return (
         <main className="AppMain">
             
-            <h2>Register / Login</h2>
+            <h2>Login</h2>
             
-            <button className="toggle" onClick={toggle()}>
-                Register
-            </button>
                 
             <div className="AppMain-Forms">
                 
@@ -50,6 +47,10 @@ const Login = () => {
                     </fieldset>
                     <fieldset>
                         <button className="toggle" /* onClick={login()} */>
+                            Register
+                        </button>
+                        
+                        <button className="toggle" onClick={toggle()}>
                             Register
                         </button>
                     </fieldset>
