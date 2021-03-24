@@ -63,6 +63,10 @@ $color-brown:rgba(49, 37, 37, 1);
 .AppMain {
     margin: 0;
     min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     
     h2 {
         font-size: calc(10px + 2vmin);
@@ -71,7 +75,7 @@ $color-brown:rgba(49, 37, 37, 1);
         font-weight: 600;
         letter-spacing: .03em;
         margin: 0;
-        padding: 5rem;
+        padding: 5rem 0;
         
         span {
             font-weight: 600;
@@ -85,6 +89,7 @@ $color-brown:rgba(49, 37, 37, 1);
         line-height: 1.0em;
         font-weight: 500;
         letter-spacing: .03em;
+        padding: 5rem 0;
     }
     /* Footer */
     
