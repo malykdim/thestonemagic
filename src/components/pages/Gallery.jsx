@@ -11,6 +11,8 @@ class Gallery extends Component {
             this.state = { // 1, 5
                 gallery: []
             }
+            
+            // props.match.params.mosaicName
         }
         
         cardClicked(id) {
@@ -23,13 +25,6 @@ class Gallery extends Component {
                 this.setState({gallery: res}) 
             );
         }
-        
-        /* componentDidUpdate() {
-            galleryService.getAll()
-            .then(res => 
-                this.setState({gallery: res}) 
-            );
-        } */
         
         render() { // 2, 6
             
@@ -45,7 +40,7 @@ class Gallery extends Component {
                         <Card 
                             key={card.id}
                             {...card} 
-                            clickHandler={() => this.cardClicked(card.caption)}
+                            // clickHandler={() => this.cardClicked(card.caption)}
                         /> // 7
                     )}
                     </section>

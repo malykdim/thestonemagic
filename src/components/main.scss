@@ -51,7 +51,7 @@ $color-brown:rgba(49, 37, 37, 1);
 /* Layout - Header, Footer - in each separate scss component* */
 .AppMain {
     margin: 0;
-    min-height: 85vh;
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -64,7 +64,7 @@ $color-brown:rgba(49, 37, 37, 1);
         font-weight: 600;
         letter-spacing: .03em;
         margin: 0;
-        padding: 5rem 0;
+        padding: 3rem 0 2rem;
         
         span {
             font-weight: 600;
@@ -78,9 +78,8 @@ $color-brown:rgba(49, 37, 37, 1);
         line-height: 1.0em;
         font-weight: 500;
         letter-spacing: .03em;
-        padding: 5rem 0;
-    }
-    /* Footer */
+        padding: 2rem 0;
+    }    
     
     .AppLink {
         color: $color-dark;
@@ -94,15 +93,11 @@ $color-brown:rgba(49, 37, 37, 1);
 
 /* ************************** */
 /* Parts - in each separate scss component */
-/* Logo */
-/* Navbar */
-/* Grid-Gallery */
-/* Card */
+/* Logo *//* Navbar *//* Grid-Gallery *//* Card */
+
 .form {
-    
     width: 25%;
     margin: 0 auto ;
-    
     display: flex;
     flex-direction: column;
     
@@ -112,7 +107,6 @@ $color-brown:rgba(49, 37, 37, 1);
         border-radius: 5px;
         text-align: left;
         padding: 1rem 0 1rem 2rem;
-        
         display: flex;
         flex-wrap: wrap;
         align-items: center;
@@ -130,9 +124,6 @@ $color-brown:rgba(49, 37, 37, 1);
         }
     }
     
-    
-    
-    
     a {
         display: inline-block;
         padding: 2rem;
@@ -145,8 +136,47 @@ $color-brown:rgba(49, 37, 37, 1);
 
 /* ************************** */
 /* Media Queries - in each separate scss component */
-
-/* TV / Huge *//* Desktop / 1920 *//* Laptop / 1200 *//* Tablet / 900 *//* Phone / 600 */
+/* TV / Huge *//* Desktop / 1920 */
+@media all and (max-width: 900px) {
+    .AppMain {
+        margin: 0;
+        min-height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        
+        h2 {
+            font-size: calc(10px + 2vmin);
+            color: $color-dark;
+            line-height: 1.5em;
+            font-weight: 600;
+            letter-spacing: .03em;
+            margin: 0;
+            padding: 3rem 0 2rem;
+            
+            span {
+                font-weight: 600;
+                font-size: calc(10px + 2vmin);
+            }
+        }
+        
+        p {
+            font-size: calc(8px + 1.5vmin);
+            color: $color-dark;
+            line-height: 1.0em;
+            font-weight: 500;
+            letter-spacing: .03em;
+            padding: 2rem 0;
+        }    
+        
+        .AppLink {
+            color: $color-dark;
+            margin: .8em;
+        }
+    }
+}
+/* Laptop / 1200 *//* Tablet / 900 *//* Phone / 600 */
 
 /* ************************** */
 /* Themes - Light, Dark, Custom */

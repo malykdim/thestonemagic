@@ -7,8 +7,10 @@
     
     &-Ul {
         display: flex;
-        list-style: none;
+        align-items: center;
+        list-style: none;        
         padding-inline-start: 0;
+        margin-bottom: 0;
     
         li a {
             padding: 2rem;
@@ -19,28 +21,27 @@
     
 }
 
-
 @media all and (min-width: 1200px) {
-    .App-header--ul {
+    .AppHeader-Nav-Ul {
         align-items: center;
     }
     
 }
 
-@media all and (min-width: 900px) {
-    .App-header--nav {
+/* @media all and (min-width: 900px) {
+    .AppHeader-Nav-Ul {
         margin-bottom: 2rem;
     }    
-}
+} */
 
 @media all and (max-width: 599px) {
-    .App-header--ul {
+    .AppHeader-Nav-Ul {
         flex-direction: column;
         align-items: center;
         justify-content: stretch;
     }
     
-    .App-header--ul li {
+    .AppHeader-Nav-Ul li {
         margin: .5rem 0;
     }
 }

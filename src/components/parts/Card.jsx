@@ -1,5 +1,6 @@
 import { useState, useEffect} from 'react';
-import * as galleryService from '../../services/galleryService'; 
+import * as galleryService from '../../services/galleryService';
+import { Link } from 'react-router-dom'; 
 
 import './Card.scss';
 
@@ -10,10 +11,10 @@ const Card = ({
     author,
     created,
     dimensions,
-    clickHandler
+    clickHandler,
+    url
 }) => {
-    let [expanded, setExpanded] = useState(null);
-    
+    let [expanded, setExpanded] = useState(null);    
     let [card, setCard] = useState({});
     
     // useEffect(() => {
@@ -22,10 +23,12 @@ const Card = ({
     // }, [match]);
     
     return(
-        <div className="Card" onClick={() => clickHandler(caption)}>
-            <div className="Card-Showcase" onClick={() => setExpanded(1)}>
+        <div className="Card">
+            <div className="Card-Showcase">
                 <figure className="Figure">
-                    <img src="/public/art-9-sun.jpg" alt="panneaux"></img>
+                    <Link to={url}>
+                        <img src={picture} alt={caption} />
+                    </Link>
                     <figcaption>
                     "{caption}" by {author}                       
                     </figcaption>

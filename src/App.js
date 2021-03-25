@@ -44,7 +44,8 @@ class App extends Component {
                         {/* <Home pictures={this.getMosaic()}/> */}
                     </Route> 
                     <Route path="/thestonemagic" component={Home} />
-                    <Route path="/gallery" component={Gallery}/>
+                    <Route path="/gallery" exact component={Gallery}/>
+                    {/* <Route path="/gallery/:mosaicName" component={Mosaic}/> */}
                     <Route path="/contact" component={Contact} />
                     <Route path="/login" component={Login} />                    
                     <Route path="/edit" component={Edit} />                    

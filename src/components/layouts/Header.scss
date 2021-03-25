@@ -2,7 +2,7 @@
 
 .AppHeader {
     background-color: white;
-    max-height: 10vh;
+    min-height: 10vh;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -26,7 +26,7 @@
 
 @media all and (max-width: 1920px) {
     .AppHeader {
-        max-height: 4vh;
+        max-height: 8vh;
         font-size: calc(6px + 2vmin);
         flex-direction: row;
         justify-content: space-between;
@@ -35,8 +35,6 @@
     h1 {
         font-weight: 400;
     }
-    
-    
 }
 
 @media all and (max-width: 1200px) {
@@ -49,19 +47,24 @@
 
 @media all and (max-width: 900px) {
     .AppHeader {
+        max-height: 15vh;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         
         h1 {
-            padding-top: 3rem;
+            padding-top: .8rem;
+            padding-bottom: .6rem;
             padding-left: 0; 
             margin-bottom: 0;           
-        }        
+        }       
     }
 }
 
 @media all and (max-width: 600px) {
     .AppHeader {
+        max-height: 50vh;
+        
         flex-direction: column;
         justify-content: center;
         margin-bottom: 0;

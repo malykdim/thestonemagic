@@ -1,6 +1,7 @@
 @import '../main.scss';
 
 .AppMain {
+    min-height: 80vh;
     .App-logo {
         height: 40vmin;
         pointer-events: none;
@@ -16,8 +17,7 @@
 }
 
 @media all and (max-width: 1920px) {
-    .AppMain {
-        
+    .AppMain {        
         .App-logo {
             height: 30vmin;
             pointer-events: none;

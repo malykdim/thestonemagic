@@ -2,7 +2,7 @@
 
 .AppMain {
     &-Forms {
-        width: 60%;
+        width: 750px;
         .FormRegister {
             display: none;
         }
@@ -12,11 +12,11 @@
             
             fieldset {
                 
-                input {
+                /* input {
                     margin: 0 0.5rem;
                     padding: .5rem;
                     width: 70%;
-                }
+                } */
                 
                 button {
                     width: 100%;
