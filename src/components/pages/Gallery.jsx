@@ -35,7 +35,7 @@ class Gallery extends Component {
             return ( 
                 <main className="AppMain">
                     <h2>Gallery</h2>
-                    <section className="AppMain-Gallery">
+                    <section className="AppMain-Gallery"> {/* container */}
                     {this.state.gallery.map((card) => 
                         <Card 
                             key={card.id}

@@ -23,18 +23,18 @@ const Card = ({
     // }, [match]);
     
     return(
-        <div className="Card">
-            <div className="Card-Showcase">
-                <figure className="Figure">
-                    <Link to={url}>
+        <div className="Card"> {/* gallery-container */}
+            <div className="Card-Showcase"> 
+                <figure className="Figure"> 
+                    <Link to={url}> {/* image */}
                         <img src={picture} alt={caption} />
                     </Link>
-                    <figcaption>
+                    <figcaption> {/* text */}
                     "{caption}" by {author}                       
                     </figcaption>
                 </figure>
             </div>
-            <div className="Card-Description" >
+            {/* <div className="Card-Description" >
                 <p className="created">
                     {created}
                 </p>
@@ -42,7 +42,7 @@ const Card = ({
                     {dimensions}
                 </p>
             </div>
-            {expanded === 1 && <h1>it works</h1>}
+            {expanded === 1 && <h1>it works</h1>} */}
         </div>
     );
 };
