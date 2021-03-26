@@ -39,6 +39,7 @@ class Gallery extends Component {
                     {this.state.gallery.map((card) => 
                         <Card 
                             key={card.id}
+                            gridClass={card.gridClass}
                             {...card} 
                             // clickHandler={() => this.cardClicked(card.caption)}
                         /> // 7

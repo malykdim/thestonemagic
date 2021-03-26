@@ -8,6 +8,7 @@ const Card = ({
     match,
     caption,
     picture,
+    gridClass,
     author,
     created,
     dimensions,
@@ -23,7 +24,7 @@ const Card = ({
     // }, [match]);
     
     return(
-        <div className="Card"> {/* gallery-container */}
+        <div className={gridClass}> {/* gallery-container */}
                 <figure className="Figure"> {/* gallery-item */}
                     <div className="image-container"> {/* image */}
                         <Link to={url} > 
