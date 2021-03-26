@@ -24,16 +24,17 @@ const Card = ({
     
     return(
         <div className="Card"> {/* gallery-container */}
-            <div className="Card-Showcase"> 
-                <figure className="Figure"> 
-                    <Link to={url}> {/* image */}
-                        <img src={picture} alt={caption} />
-                    </Link>
+                <figure className="Figure"> {/* gallery-item */}
+                    <div className="image-container"> {/* image */}
+                        <Link to={url} > 
+                            <img src={picture} alt={caption} />
+                        </Link>
+                    </div>
+                    
                     <figcaption> {/* text */}
                     "{caption}" by {author}                       
                     </figcaption>
                 </figure>
-            </div>
             {/* <div className="Card-Description" >
                 <p className="created">
                     {created}
