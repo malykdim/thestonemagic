@@ -10,9 +10,9 @@ class Home extends Component {
         
         this.state = {
             mosaics: [],
-            onHover() {
-                console.log('animation ends');
-            }
+            // onHover() {
+            //     console.log('animation ends');
+            // }
         }
     }
     

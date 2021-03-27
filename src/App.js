@@ -7,6 +7,7 @@ import  './App.scss';
 import Header from './components/layouts/Header';
 import Home from './components/pages/Home';
 import Gallery from './components/pages/Gallery';
+import Panneaux from './components/pages/Panneaux';
 import Contact from './components/pages/Contact';
 import Login from './components/pages/Login';
 import Edit from './components/pages/Edit';
@@ -45,7 +46,7 @@ class App extends Component {
                     </Route> 
                     <Route path="/thestonemagic" component={Home} />
                     <Route path="/gallery" exact component={Gallery}/>
-                    {/* <Route path="/gallery/:mosaicName" component={Mosaic}/> */}
+                    <Route path="/gallery/:url" exact component={Panneaux}/>
                     <Route path="/contact" component={Contact} />
                     <Route path="/login" component={Login} />                    
                     <Route path="/edit" component={Edit} />                    
