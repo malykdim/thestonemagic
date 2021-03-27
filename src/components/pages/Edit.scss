@@ -2,9 +2,13 @@
 
 .AppMain {
     .FormEdit {
-        width: 750px;
+        width: 1400px;
         margin: 0 auto;
         
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-rows: repeat(3, 150px);
+        grid-gap: 1rem;
     }
 
     a {
@@ -15,5 +19,22 @@
         letter-spacing: 0.03em;
         padding: 2rem;
         text-decoration: none;
+    }
+    
+    .flexRow {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .flexColumn {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+    .logout {
+        padding: 1.6rem 6rem;
+        font-size: 1.2em;
     }
 }

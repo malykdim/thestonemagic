@@ -20,6 +20,17 @@ const Login = () => {
         )
     } */
     
+    const onSubmitLoginHandler = (e) => {
+        e.preventDefault();
+        
+        const inputEmail = e.target.email.value;
+        const inputPassword = e.target.pass.value;
+        
+        
+        console.log(inputEmail);
+        console.log(inputPassword);
+    }
+    
     return (
         <main className="AppMain">
             
@@ -28,7 +39,7 @@ const Login = () => {
                 
             <div className="AppMain-Forms">
                 
-                <form className="FormRegister form">
+                <form  className="FormRegister form">
                     <fieldset>
                         <label htmlFor="fullName">Full Name:</label>
                         <input type="text" name="fullName" id="fullName"/>
@@ -56,10 +67,10 @@ const Login = () => {
                     </fieldset>
                 </form>
                 
-                <form className="FormLogin form">
+                <form onSubmit={onSubmitLoginHandler} className="FormLogin form">
                     <fieldset>
                         <label htmlFor="email">Email:</label>
-                        <input type="text" id="email" name="email" placeholder="someone@somewhere.com"/>
+                        <input type="email" id="email" name="email" placeholder="someone@somewhere.com"/>
                     </fieldset>
                     <fieldset>
                         <label htmlFor="pass">Password:</label>
