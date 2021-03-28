@@ -32,22 +32,22 @@ class Contact extends Component {
                 
                 <form  onSubmit={onSubmitContactHandler} className="AppMain-FormContact form">
                     <fieldset>
-                        <label htmlFor="fullName">Full Name:</label>
-                        <input type="text" name="fullName" placeholder="Full Name"/>
+                        <label htmlFor="fullName">Name</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="Full Name"/>
                     </fieldset>
                     <fieldset>
-                        <label htmlFor="email">Email:</label>
-                        <input type="email" name="email" placeholder="Email"/>
+                        <label htmlFor="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Email"/>
                     </fieldset>
                     <fieldset>
-                        <label htmlFor="topic">Topic:</label>
-                        <input type="text" name="topic" placeholder="Topic"/>
+                        <label htmlFor="topic">Topic</label>
+                        <input type="text" id="topic" name="topic" placeholder="Topic"/>
                     </fieldset>
                     <fieldset>
-                        <textarea name="content" id="content" cols="64" rows="15"></textarea>
+                        <textarea name="content" id="content" cols="75" rows="12"></textarea>
                     </fieldset>
                     <fieldset>
-                        <input type="submit" value="Send"/>
+                        <input type="submit" className="send" value="Send"/>
                     </fieldset>    
                 </form>
                 

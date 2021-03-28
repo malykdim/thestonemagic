@@ -41,15 +41,15 @@ const Login = () => {
                 
                 <form  className="FormRegister form">
                     <fieldset>
-                        <label htmlFor="fullName">Full Name:</label>
+                        <label htmlFor="fullName">Full Name</label>
                         <input type="text" name="fullName" id="fullName"/>
                     </fieldset>
                     <fieldset>
-                        <label htmlFor="email">Email:</label>
+                        <label htmlFor="email">Email</label>
                         <input type="text" name="email" id="email"/>
                     </fieldset>
                     <fieldset>
-                        <label htmlFor="pass">Password:</label>
+                        <label htmlFor="pass">Password</label>
                         <input type="text" name="pass" id="pass" placeholder="" />
                     </fieldset>
                     <fieldset>
@@ -74,7 +74,7 @@ const Login = () => {
                     </fieldset>
                     <fieldset>
                         <label htmlFor="pass">Password:</label>
-                        <input type="text" id="pass" name="pass" placeholder="Password: ********"/>
+                        <input type="text" id="pass" name="pass" placeholder="********"/>
                     </fieldset>
                     <fieldset>
                         <button className="toggle" /* onClick={toggle()} */>

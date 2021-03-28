@@ -108,7 +108,6 @@ $color-brown:rgba(49, 37, 37, 1);
 /* Logo *//* Navbar *//* Card */
 
 .form {
-    width: 25%;
     margin: 0 auto ;
     display: flex;
     flex-direction: column;
@@ -118,7 +117,7 @@ $color-brown:rgba(49, 37, 37, 1);
         background: $color-light ;
         border-radius: 5px;
         text-align: left;
-        padding: 1rem 0 1rem 2rem;
+        padding: 1rem 2rem;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
@@ -131,7 +130,7 @@ $color-brown:rgba(49, 37, 37, 1);
         }
         
         button {
-            width: 100%;
+            width: 80%;
             margin: .5rem auto;
         }
     }
