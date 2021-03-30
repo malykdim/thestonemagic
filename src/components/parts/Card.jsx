@@ -22,17 +22,19 @@ const Card = ({
     //     galleryService.getOne(match.params.id)
     //     .then(res => setCard(res));
     // }, [match]);
+    const mosaicPreview = url.split('/gallery/');
+    console.log(mosaicPreview);
     
     return(
-        <div className={gridClass}> {/* gallery-container */}
-                <figure className="Figure"> {/* gallery-item */}
-                    <div className="image-container"> {/* image */}
+        <div className={gridClass}> 
+                <figure className="Figure"> 
+                    <div className="image-container"> 
                         <Link to={url} > 
                             <img src={picture} alt={caption} />
                         </Link>
                     </div>
                     
-                    <figcaption> {/* text */}
+                    <figcaption> 
                     "{caption}" by {author}                       
                     </figcaption>
                 </figure>
