@@ -89,7 +89,6 @@ class Edit extends Component {
                     
                     
                     <fieldset className="left w-1 h-3">
-                        {/* <span>Добави снимка:</span> */}
                         <label htmlFor="uploadPicture">Добави снимка</label>
                         <input type="file" id="picture" name="uploadPicture" /* onChange={this.onSubmitChangeHandler} */ />
                         {/* <input type="submit" value="Submit"> */}

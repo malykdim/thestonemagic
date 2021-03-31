@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# The Stone Magic | Магията на Камъка
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Virtual gallery for exquisite mosaic panneaux by the authors Vladimir Damyanov and Damyan Damyanov.
 
-## Available Scripts
+Виртуална галерия за изящни мозаечни пана на авторите Владимир и Дамян Дамянови. 
 
-In the project directory, you can run:
+(https://malykdim.github.io/thestonemagic/)
 
-### `npm start`
+## Public part (accessible without authentication) | Публична част (достъпна без аутентикация)
+Public access to the gallery:
+  * Home page with navigation to the gallery and the contact page,
+  * Gallery with all available exquisite mosaic panneaux, where each panneaux can be accessed separately with details,
+  * The Contact page consists of form for sending messages. 
+    **(On occasion, when an actual exposure of the gallery is taken place, a google map will be attached, pointing to the Art Gallery's address.)**
+  * Links to the authors' facebook
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Свободен достъп до галерията за посетители:
+ * Начална страница, от която може да бъде достъпена галерията и навигацията,
+ * Галерия с всички налични пана, от която може да бъде достъпено всяко пано по отделно,
+ * От навигацията се стига до страницата за контакт с авторите, където има форма за изпращане на съобщения
+ **Note: (В случаите на изложение на творбите, ще бъде прикрепена карта, посочваща адреса на Художествената галерия.)**
+ * Връзки към facebook на авторите 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Private part (available for registered users) | 
+ * The registration and login page is meant for others only. 
+ * After successful authentication, an internal gallery update page is accessed.
 
-### `npm test`
+ * Страницата за регистрация и вход е предвидена само за авторите.
+ * След успешна идентификация се получава достъп до вътрешна страница за актуализация на галерията.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Functionality | Функционалност 
+ * New panneaux can be added to the gallery,
+ * Information for each panneaux can be edited,
+ * Mosaic panneaux can be removed from the gallery.
 
-### `npm run build`
+ * Към галерията могат да бъдат добавяни нови пана,
+ * Информацията за всяко пано може да бъде редактирана,
+ * Могат да бъдат отстранявани мозаечни пана от галерията.
+ 
+### Technical information
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+ * HTML5, Sass, JavaScript, React
+ * Responsive Web Application with friendly UX
+ * GitHub Pages, Back4app
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Social Links
 
-### `npm run eject`
+Learn more about Vladimir Damynov (https://www.facebook.com/vladimir.damynov/).
+Learn more about Damyan Damyanov (https://www.facebook.com/damyan.damyanov.509/).
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
