@@ -1,6 +1,6 @@
 
 import { Component } from 'react';
-import * as galleryService from '../../services/galleryService';
+import request from '../../services/ajax.js';
 import Card from '../parts/Card';
 import './Gallery.scss';
 
@@ -12,18 +12,14 @@ class Gallery extends Component {
                 gallery: []
             }
             
-            // props.match.params.mosaicName
-        }
-        
-        cardClicked(id) {
-            console.log(`Implement overlay for each ${id}!`);
         }
         
         componentDidMount() { // 3
-            galleryService.getAll()
-            .then(res => 
-                this.setState({gallery: res}) 
-            );
+            request('/classes/Gallery', 'GET')
+                .then(response => {
+                    this.setState({gallery: response.results});
+                    console.log('gallery', this.state.gallery);
+                });
         }
         
         render() { // 2, 6
@@ -35,21 +31,17 @@ class Gallery extends Component {
             return ( 
                 <main className="AppMain">
                     <h2>Gallery</h2>
-                    <section className="AppMain-Gallery"> {/* container */}
+                    <section className="AppMain-Gallery"> 
                     {this.state.gallery.map((card) => 
                         <Card 
-                            key={card.id}
-                            gridClass={card.gridClass}
-                            {...card} 
-                            // clickHandler={() => this.cardClicked(card.caption)}
+                        key={card.objectId}
+                        {...card} 
                         /> // 7
                     )}
-                    </section>
-                    
+                    </section>                    
                     <p>
                         In Development Stage...
-                    </p>
-                    
+                    </p>                    
                 </main>                
             )
         }            

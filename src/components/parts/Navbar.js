@@ -3,9 +3,6 @@ import { NavLink } from 'react-router-dom' ;
 import './Navbar.scss';
 
 class Navbar extends Component {
-    constructor(props) {
-        super(props);
-    }
     
     static defaultProps = {
         icon: 'fas fa-home'

@@ -1,9 +1,6 @@
 import { Component } from 'react';
 import { Route, Switch } from 'react-router-dom' ;
 
-// import * as galleryService from './services/galleryService';
-import  './App.scss';
-
 import Header from './components/layouts/Header';
 import Home from './components/pages/Home';
 import Gallery from './components/pages/Gallery';
@@ -12,44 +9,27 @@ import Login from './components/pages/Login';
 import Edit from './components/pages/Edit';
 import Panneaux from './components/pages/Panneaux';
 import Footer from './components/layouts/Footer';
+import  './App.scss';
 
 class App extends Component {
-    
-    //     this.onMenuItemClick = this.onMenuItemClick.bind(this);
-    // }
-    
-    
-    // onMenuItemClick(id) {
-    //     this.setState({selectedMosaic: id});
-    // }
-    
-    // getMosaic() {
-    //     if(!this.state.selectedMosaic) {
-    //         return this.state.mosaics;
-    //     } else {
-    //         return [this.state.mosaics.find(m => m.id === this.state.selectedMosaic)];
-    //     }
     
     render() {
         return (
             <div className="App">
                 <Header title="The Stone Magic"/>
                 <Switch>
-                    <Route path="/" exact component={Home}>
-                        {/* <Home pictures={this.getMosaic()}/> */}
-                    </Route> 
+                    <Route path="/" exact component={Home}/>
                     <Route path="/thestonemagic" component={Home} />
                     <Route path="/gallery" exact component={Gallery}/>
                     <Route path="/contact" component={Contact} />
-                    <Route path="/login" component={Login} />                    
-                    <Route path="/edit" component={Edit} />                    
-                    <Route path="/gallery/:url" exact component={Panneaux}/>
+                    <Route path="/login" component={Login} />
+                    <Route path="/edit" component={Edit} />
+                    <Route path="/gallery/:url" exact component={Panneaux} />
                 </Switch>                
                 <Footer icon="fas fa-sign-in-alt"/>        
             </div>
         );
     }
-    
 }
 
 export default App;

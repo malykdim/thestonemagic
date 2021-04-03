@@ -1,6 +1,7 @@
 import { Component } from 'react' ;
 import { Route } from 'react-router-dom' ;
 import Gallery from './Gallery' ;
+import  { isLogged } from '../../services/ajax';
 
 import '../main.scss';
 import './Edit.scss';
@@ -16,6 +17,13 @@ class Edit extends Component {
         this.onChangeHandler = this.onChangeHandler.bind(this);
     }
     
+    componentDidMount() {
+        // request('/aggregate/Gallery', 'GET', '');
+        if (!isLogged()) {
+            this.props.history.push('/login');
+        }
+    }
+    
     onSubmitEditHandler(e) {
         e.preventDefault();
         
@@ -25,34 +33,17 @@ class Edit extends Component {
         const inputWidth = e.target.width.value;
         const inputHeight = e.target.height.value;
         const inputUnit = e.target.unit.value;
-        // const gridClass = (inputWidth, inputHeight, inputUnit) => {
-        //     if ((inputWidth) === (inputHeight)) {
-        //         const gridClass = 'w-1 h-1';
-        //         return gridClass;
-        //     } else if ((inputWidth) > (inputHeight)) {
-        //         const gridClass = 'w-2 h-1';
-        //         return gridClass;
-        //     } else if ((inputWidth) < (inputHeight)) {
-        //         const gridClass = 'w-1 h-2';
-        //         return gridClass;
-        //     }
-        // }
-        const inputMaterials = [];
+        const inputMaterials = '';
         
         const data = {
             url: `/gallery/${inputPanneauxName.toLowerCase()}`,
             caption: inputPanneauxName,
             author: inputAuthor,
-            description: {
-                created: inputDate,
-                dimensions: {
-                    width: inputWidth,
-                    height: inputHeight,
-                    unit: inputUnit
-                },
-                materials: [...inputMaterials]
-            },
-            // gridClass: gridClass()
+            created: inputDate,
+            width: inputWidth,
+            height: inputHeight,
+            unit: inputUnit,
+            materials: [...inputMaterials]
         }
         
         const result = data.JSON.stringify;
@@ -70,16 +61,20 @@ class Edit extends Component {
         this.setState({[e.target.name]: e.target.value});
     };
     
-    // logout(e) {
-    //     console.log('Logout');
-    // };
+// await galleryService.createPanneaux({
+//     "url": "/classes/Gallery/horizon",
+//     "picture": "/thestonemagic/images/art-6-horizon.jpg",
+//     "gridClass": "Card w-1 h-1",
+//     "caption": "Horizon",
+//     "author": "Vladimir Damyanov",
+//     "created": "2009",
+//     "width": "75cm", 
+//     "height": "75cm",
+//     "materials": "amethyst, agate, jasper, tiger's eye, mountain crystal, labrador, pyryt, firestone, onyx, marble"
+// })
+    
         
     render() {
-
-        
-        
-        
-        
         return (
             <main className="AppMain">
                 
@@ -215,7 +210,7 @@ class Edit extends Component {
                     
                 </form>
                 
-                <button /* onClick={logout} */ className="logout">
+                <button onClick={this.logout} className="logout">
                     Logout
                 </button>
                 

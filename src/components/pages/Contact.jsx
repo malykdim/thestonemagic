@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import { Route} from 'react-router-dom' ;
+// import { Route} from 'react-router-dom' ;
 import '../main.scss';
 import './Contact.scss';
 

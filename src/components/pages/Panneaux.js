@@ -1,7 +1,7 @@
 import { Component } from 'react';
-import * as galleryService from '../../services/galleryService';
 
 import  './Panneaux.scss';
+import request from '../../services/ajax';
 
 class Panneaux extends Component {
     constructor(props) {
@@ -15,10 +15,12 @@ class Panneaux extends Component {
     }
     
     componentDidMount() { // 3
-        galleryService.getOne()
-        .then(res => 
-            this.setState({mosaic: res}) 
-        );
+        let url = this.props.history.location.pathname.split('/');
+        let mosaicName = url[url.length - 1];
+        request('/classes/Gallery', 'GET', `?where=${JSON.stringify({"url": mosaicName})}`)
+            .then(res => {
+                this.setState({mosaic: res.results[0]});
+            });
     }
     
     render() {
@@ -34,29 +36,24 @@ class Panneaux extends Component {
                 <section className="AppMain-Panneaux"> 
                 
                 <div className="PanneauxDescriptionContainer w-1 h-3">
-                        <h3 className="caption">Sun {/* {mosaic.caption} */}</h3>
+                        <h3 className="caption">{this.state.mosaic.caption}</h3>
                         <span>by</span>
-                        <h3 className="author">Vladimir Damyanov {/* {mosaic.author} */}</h3>
-                        <p className="created">2019 {/* {mosaic.created} */}</p>
+                        <h3 className="author">{this.state.mosaic.author}</h3>
+                        <p className="created">{this.state.mosaic.created}</p>
                     </div>
                 
                     <div className="PanneauxImageContainer w-4 h-3">
                         <div className="imageWrapper">
-                            <img src="#"/* {mosaic.picture} */ alt="mosaic"/* {mosaic.caption} */ />
+                            <img src={this.state.mosaic.picture}  alt={this.state.mosaic.caption} />
                         </div>
                     </div>
                     
                     <div className="PanneauxDescriptionContainer w-1 h-3">
-                        <p className="dimensions">75cm x 75cm {/* {mosaic.dimensions} */}</p>
-                        <p className="materials">Materials used {/* {mosaic.materials} */}</p>
-                        <span>agate, marbel, malachite, labrador, mountain crystal, citrine</span>
+                        <p className="dimensions">{this.state.mosaic.dimensions}</p>
+                        <p className="materials">{this.state.mosaic.materials}</p>
                     </div>
                     
                 </section>
-                
-                <p>
-                    In Development Stage...
-                </p>
                         
             </main>
         )        

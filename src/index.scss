@@ -1,4 +1,4 @@
-@import './components/main.scss';/* 
+@import './components/main.scss';
 /* Base*/
 body {
     margin: 0;
@@ -16,3 +16,210 @@ code {
 .App {
     text-align: center;
 }
+
+/* Base*/
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* Animations */
+@keyframes App-logo-spin {
+    from {
+        transform: skew(0deg);
+    }
+    to {
+        transform: skew(30deg, 20deg);
+    }
+}
+
+@keyframes move-down {
+    0% {
+        top: 40%;
+    }
+    50% {
+        top: 65%;
+    }
+    100% {
+        top: 80%;
+    }
+}
+/* Typography */
+
+/* ************************** */
+/* Abstracts */
+
+
+/* Mixins */
+/* Functions */
+
+/* *** Components: *********************** */
+
+/* ************************** */
+/* Layout - Header, Footer - in each separate scss component* */
+.AppMain {
+    margin: 0;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+    h2 {
+        font-size: calc(10px + 2vmin);
+        color: $color-dark;
+        line-height: 1.5em;
+        font-weight: 600;
+        letter-spacing: .03em;
+        margin: 0;
+        padding: 3rem 0 2rem;
+        
+        span {
+            font-weight: 600;
+            font-size: calc(10px + 2vmin);
+        }
+    }
+    
+    p {
+        font-size: calc(8px + 1.5vmin);
+        color: $color-dark;
+        line-height: 1.0em;
+        font-weight: 500;
+        letter-spacing: .03em;
+        padding: 2rem 0;
+    }    
+    
+    .AppLink {
+        color: $color-dark;
+        margin: .8em;
+    }
+}
+
+/* ************************** */
+/* Pages - in each separate scss component */
+/* Home *//* Gallery *//* Contact *//* Login *//* Edit *//* Error 404 *//* etc */
+
+/* ************************** */
+/* Parts - in each separate scss component */
+/* Logo *//* Navbar *//* Card */
+
+.form {
+    margin: 0 auto ;
+    display: flex;
+    flex-direction: column;
+    
+    fieldset {
+        margin: .5rem;
+        background: $color-light ;
+        border-radius: 5px;
+        text-align: left;
+        padding: 1rem 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: left;
+        
+        input {
+            margin: 0 0.5rem;
+            padding: .5rem;
+            
+        }
+        
+        button {
+            width: 80%;
+            margin: .5rem auto;
+        }
+    }
+    
+    a {
+        display: inline-block;
+        padding: 2rem;
+        text-decoration: none;
+        color: $color-dark;
+    }
+}
+
+/* Utilities */
+/* Grid-Gallery */
+.w-1 {grid-column: span 1;}
+.w-2 {grid-column: span 2;}
+.w-3 {grid-column: span 3;}
+.w-4 {grid-column: span 4;}
+.w-5 {grid-column: span 5;}
+.w-6 {grid-column: span 6;}
+.h-1 {grid-row: span 1;}
+.h-2 {grid-row: span 2;}
+.h-3 {grid-row: span 3;}
+.h-4 {grid-row: span 4;}
+.h-5 {grid-row: span 5;}
+.h-6 {grid-row: span 6;}
+/* ************************** */
+/* Media Queries - in each separate scss component */
+/* TV / Huge *//* Desktop / 1920 */
+@media all and (max-width: 900px) {
+    .AppMain {
+        margin: 0;
+        min-height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        
+        h2 {
+            font-size: calc(10px + 2vmin);
+            color: $color-dark;
+            line-height: 1.5em;
+            font-weight: 600;
+            letter-spacing: .03em;
+            margin: 0;
+            padding: 3rem 0 2rem;
+            
+            span {
+                font-weight: 600;
+                font-size: calc(10px + 2vmin);
+            }
+        }
+        
+        p {
+            font-size: calc(8px + 1.5vmin);
+            color: $color-dark;
+            line-height: 1.0em;
+            font-weight: 500;
+            letter-spacing: .03em;
+            padding: 2rem 0;
+        }    
+        
+        .AppLink {
+            color: $color-dark;
+            margin: .8em;
+        }
+    }
+}
+/* Laptop / 1200 *//* Tablet / 900 *//* Phone / 600 */
+
+/* ************************** */
+/* Themes - Light, Dark, Custom */
+
+/* ************************** */
+/* Vendors */
+
+/*** Bootstrap - not using in this project ***/
+/*** An Icon System ***/
+@import url('https://use.fontawesome.com/releases/v5.15.1/css/all.css');
+/*** An Animation Framework - not using in this project ***/
+
+/* ************************** */
