@@ -69,11 +69,11 @@ const Login = () => {
                 <form onSubmit={onSubmitLoginHandler} className="FormLogin form">
                     <fieldset>
                         <label htmlFor="email">Email:</label>
-                        <input type="email" id="email" name="email" placeholder="someone@mail.com"/>
+                        <input type="email" id="email" name="email" placeholder=""/>
                     </fieldset>
                     <fieldset>
                         <label htmlFor="pass">Password:</label>
-                        <input type="password" id="pass" name="pass" placeholder="******"/>
+                        <input type="password" id="pass" name="pass" placeholder=""/>
                     </fieldset>
                     <fieldset>
                         <button className="toggle">
