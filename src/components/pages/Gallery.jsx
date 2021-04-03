@@ -30,7 +30,7 @@ class Gallery extends Component {
             
             return ( 
                 <main className="AppMain">
-                    <h2>Gallery</h2>
+                    {/* <h2>Gallery</h2> */}
                     <section className="AppMain-Gallery"> 
                     {this.state.gallery.map((card) => 
                         <Card 
@@ -39,9 +39,9 @@ class Gallery extends Component {
                         /> // 7
                     )}
                     </section>                    
-                    <p>
+                    {/* <p>
                         In Development Stage...
-                    </p>                    
+                    </p>                     */}
                 </main>                
             )
         }            

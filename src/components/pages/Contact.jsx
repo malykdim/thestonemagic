@@ -50,10 +50,6 @@ class Contact extends Component {
                         <input type="submit" className="send" value="Send"/>
                     </fieldset>    
                 </form>
-                
-                <p>
-                In Development Stage...
-                </p>
             </main>
         )
     }

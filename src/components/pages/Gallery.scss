@@ -3,9 +3,10 @@
 .AppMain {
     background: $color-light;
     
-    &-Gallery {/* container */
+    &-Gallery {
         width: 90%;        
         margin: 0 auto;
+        padding: 3rem 0;
         
         display: grid;
         grid-template-columns: repeat(6, 1fr);
@@ -18,7 +19,7 @@
 @media all and (max-width: 599) {
     .AppMain {
         
-        &-Gallery {/* container */
+        &-Gallery {
             width: 100%;        
             
             grid-template-columns: repeat(1, 1fr);

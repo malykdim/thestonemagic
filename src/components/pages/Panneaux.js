@@ -11,10 +11,12 @@ class Panneaux extends Component {
             mosaic: {}
         }
         
-        // props.match.params.mosaicName
     }
     
     componentDidMount() { // 3
+        // this.props.match.params.mosaicName
+        // let mosaicName = this.props.match.params.mosaicName;
+        // let url = mosaicName;
         let url = this.props.history.location.pathname.split('/');
         let mosaicName = url[url.length - 1];
         request('/classes/Gallery', 'GET', `?where=${JSON.stringify({"url": mosaicName})}`)
@@ -31,7 +33,7 @@ class Panneaux extends Component {
         return (
             <main className="AppMain">
                 
-                <h2>Exquisite Mosaic Panneaux</h2>
+                {/* <h2>Exquisite Mosaic Panneaux</h2> */}
                 
                 <section className="AppMain-Panneaux"> 
                 

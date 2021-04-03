@@ -1,7 +1,5 @@
 import { Component } from 'react';
 import logo from './logo.svg';
-// import Picture from './components/parts/Picture';
-// import Gallery from './Gallery';
 import  './Home.scss';
 
 class Home extends Component {
@@ -10,9 +8,6 @@ class Home extends Component {
         
         this.state = {
             mosaics: [],
-            // onHover() {
-            //     console.log('animation ends');
-            // }
         }
     }
     
@@ -20,26 +15,22 @@ class Home extends Component {
         return (
             <main className="AppMain">
                 <h2>
-                    Exquisite Mosaic Panneaux <br/>
-                    made by<br/>
+                    Exquisite Mosaic Panneaux
+                </h2>
+                <img src={logo} className="App-logo" alt="logo" />
+                <span></span>
+                <p>
                     <a className="AppLink" href="https://www.facebook.com/vladimir.damynov/" target="_blank"  rel="noopener noreferrer" >
                         <span>Vladimir Damyanov</span>
                     </a>
-                    and
+                    &amp;
                     <a className="AppLink" href="https://www.facebook.com/damyan.damyanov.509/" target="_blank"  rel="noopener noreferrer" >
                     <span>Damyan Damyanov</span>
-                    </a>            
-                </h2>
-                <img src={logo} className="App-logo" alt="logo" />
-                <p>
-                    In Development Stage...
+                    </a>
                 </p>   
-                    
             </main>    
         )
     }
-    
 }
-
 
 export default Home;
