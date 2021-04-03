@@ -49,7 +49,7 @@ class Panneaux extends Component {
                     </div>
                     
                     <div className="PanneauxDescriptionContainer w-1 h-3">
-                        <p className="dimensions">{this.state.mosaic.dimensions}</p>
+                        <p className="dimensions">{this.state.mosaic.width} x {this.state.mosaic.height}</p>
                         <p className="materials">{this.state.mosaic.materials}</p>
                     </div>
                     

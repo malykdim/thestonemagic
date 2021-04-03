@@ -20,7 +20,7 @@ const Card = ({
     
     
     return(
-        <div className={gridClass}> 
+        <div className="Card"> 
                 <figure className="Figure"> 
                     <div className="image-container"> 
                         <Link to={'/gallery/' + url} > 
