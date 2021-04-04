@@ -11,7 +11,7 @@
         
         &:hover {
             img {
-                transform: scale(1.5);
+                transform: scale(1.1);
             }
             
             figcaption {
@@ -24,8 +24,8 @@
         }
         
         .image-container {/* image */
-            width: 100%;
             height: 100%;
+            width: 100%;
             overflow: hidden;
             
             a {
@@ -36,7 +36,7 @@
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
-                    object-position: 50% 50%;
+                    object-position: center;
                     transition: .5s ease-in-out;                    
                     cursor: pointer;
                     
@@ -50,7 +50,7 @@
         figcaption {/* text */
             opacity: 0;
             position: absolute;
-            top: 80%;
+            top: 88%;
             left: 50%;
             transform: translate(-50%, -50%);
             color: white;
@@ -58,7 +58,7 @@
             pointer-events: none;
             z-index: 4;
             transition: .3s ease-in-out;
-            -webkit-backdrop-filter: blur(.3em) saturate(.2);
+            -webkit-backdrop-filter: blur(.3em) saturate(.8);
             backdrop-filter: blur(.3em) saturate(.8);
         }
         

@@ -14,9 +14,9 @@ class Panneaux extends Component {
     }
     
     componentDidMount() { // 3
-        // this.props.match.params.mosaicName
+
         // let mosaicName = this.props.match.params.mosaicName;
-        // let url = mosaicName;
+        // let url = this.props.match.params.url;
         let url = this.props.history.location.pathname.split('/');
         let mosaicName = url[url.length - 1];
         request('/classes/Gallery', 'GET', `?where=${JSON.stringify({"url": mosaicName})}`)
@@ -37,20 +37,21 @@ class Panneaux extends Component {
                 
                 <section className="AppMain-Panneaux"> 
                 
-                <div className="PanneauxDescriptionContainer w-1 h-3">
+                    <div className="PanneauxDescriptionContainer w-1 h-4">
                         <h3 className="caption">{this.state.mosaic.caption}</h3>
                         <span>by</span>
                         <h3 className="author">{this.state.mosaic.author}</h3>
                         <p className="created">{this.state.mosaic.created}</p>
                     </div>
                 
-                    <div className="PanneauxImageContainer w-4 h-3">
+                    <div className="PanneauxImageContainer w-4 h-4">
                         <div className="imageWrapper">
                             <img src={this.state.mosaic.picture}  alt={this.state.mosaic.caption} />
                         </div>
                     </div>
                     
-                    <div className="PanneauxDescriptionContainer w-1 h-3">
+                    <div className="PanneauxDescriptionContainer w-1 h-4">
+                        
                         <p className="dimensions">{this.state.mosaic.width} x {this.state.mosaic.height}</p>
                         <p className="materials">{this.state.mosaic.materials}</p>
                     </div>
