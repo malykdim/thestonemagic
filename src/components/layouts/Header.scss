@@ -64,10 +64,12 @@
 
 @media all and (max-width: 600px) {
     .AppHeader {
-        max-height: 50vh;
+        height: 30vh;
+        max-height: 80vh;
         
         flex-direction: column;
-        justify-content: center;
+        align-items: space-between;
+        justify-content: stretch;
         margin-bottom: 0;
     }
     

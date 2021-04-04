@@ -37,7 +37,7 @@ class Panneaux extends Component {
                 
                 <section className="AppMain-Panneaux"> 
                 
-                    <div className="PanneauxDescriptionContainer w-1 h-4">
+                    <div className="PanneauxDescriptionContainer w-1 h-4 positionTop">
                         <h3 className="caption">{this.state.mosaic.caption}</h3>
                         <span>by</span>
                         <h3 className="author">{this.state.mosaic.author}</h3>
@@ -50,7 +50,7 @@ class Panneaux extends Component {
                         </div>
                     </div>
                     
-                    <div className="PanneauxDescriptionContainer w-1 h-4">
+                    <div className="PanneauxDescriptionContainer w-1 h-4 positionBottom">
                         
                         <p className="dimensions">{this.state.mosaic.width} x {this.state.mosaic.height}</p>
                         <p className="materials">{this.state.mosaic.materials}</p>

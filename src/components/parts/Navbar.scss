@@ -6,36 +6,37 @@
     justify-content: center;
     
     &-Ul {
+        width: 100%;
+        height: 100%;
         display: flex;
-        align-items: center;
+        align-items: stretch;
         list-style: none;        
         padding-inline-start: 0;
         margin-bottom: 0;
         
         li {
             margin: .4rem;
-        }
-    
-        li a {
-            padding: 1rem 1.8rem;
-            text-decoration: none;
-            color: $color-dark;
-            font-weight: 600;
-            border-radius: 4px;
-            -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
-            box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
             
-            &:hover {
-                background: $color-light;
-                animation: hover .3s linear;
-            }
-            
-            .active {
-                background: $color-light;
-            }
-        }
-    }
-    
+            a {
+                padding: 1rem 1.8rem;
+                text-decoration: none;
+                color: $color-dark;
+                font-weight: 600;
+                border-radius: 4px;
+                -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+                box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+                
+                &:hover {
+                    background: $color-light;
+                    animation: hover .3s linear;
+                }
+                
+                .active {
+                    background: $color-light;
+                }
+            }            
+        }    
+    }    
 }
 
 @media all and (min-width: 1200px) {
@@ -52,13 +53,47 @@
 } */
 
 @media all and (max-width: 599px) {
-    .AppHeader-Nav-Ul {
+    .AppHeader-Nav {
+        width: 100%;
+        height: 100%;
+        display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: stretch;
-    }
-    
-    .AppHeader-Nav-Ul li {
-        margin: .5rem 0;
+        
+        &-Ul {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: stretch;
+            list-style: none;        
+            padding-inline-start: 0;
+            margin-bottom: 0;
+            
+            li {
+                width: 100%;
+                height: 100%;
+                margin: 1rem 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                
+                a {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    padding: .5rem 0rem;
+                
+                    .active {
+                        background: $color-light;
+                    }
+                }
+            }
+        
+            
+        }
+        
     }
 }

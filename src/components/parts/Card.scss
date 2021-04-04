@@ -58,8 +58,8 @@
             pointer-events: none;
             z-index: 4;
             transition: .3s ease-in-out;
-            -webkit-backdrop-filter: blur(.3em) saturate(.8);
-            backdrop-filter: blur(.3em) saturate(.8);
+            -webkit-backdrop-filter: blur(.1em) saturate(.9);
+            backdrop-filter: blur(.1em) saturate(.9);
         }
         
     }
@@ -67,5 +67,12 @@
     
 }
 
-
+@media all and (max-width: 599px) {
+    .Card {
+        
+        .Figure {            
+            padding: 0;
+        }
+    }
+}
 

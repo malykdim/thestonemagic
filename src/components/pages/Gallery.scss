@@ -16,17 +16,18 @@
     }
 }
 
-@media all and (max-width: 599) {
+@media all and (max-width: 599px) {
     .AppMain {
         
         &-Gallery {
             width: 100%;        
+            padding: 0 0;
             
             grid-template-columns: repeat(1, 1fr);
             grid-gap: 10px;
             
             .w-1, .w-2, .w-3, .w-4, .w-5, .w-6 {
-                grid-column: span 1;
+                grid-column: span 6;
             }
         }
     }

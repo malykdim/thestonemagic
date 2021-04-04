@@ -71,10 +71,13 @@
     
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 599px) {
     .AppFooter {
-        flex-direction: column;
         justify-content: center;
+        
+        a {
+            display: none;
+        }
     }
     
 }
