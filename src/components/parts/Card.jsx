@@ -1,3 +1,4 @@
+import { Component, Suspense } from 'react';
 // import { useState } from 'react';
 // import * as galleryService from '../../services/galleryService';
 import { Link } from 'react-router-dom'; 
@@ -5,16 +6,13 @@ import { Link } from 'react-router-dom';
 import './Card.scss';
 
 const Card = ({
-    match,
     caption,
     picture,
-    gridClass,
     author,
-    created,
-    dimensions,
     clickHandler,
     url
 }) => {
+    
     // let [expanded, setExpanded] = useState(null);    
     // let [card, setCard] = useState({});
     
@@ -23,9 +21,18 @@ const Card = ({
         <div className="Card"> 
                 <figure className="Figure"> 
                     <div className="image-container"> 
-                        <Link to={'/gallery/' + url} > 
+                        <Suspense fallback={
+                            <span className="loading">Loading Panneaux...</span>
+                        }>
+                            {/* <Panneaux /> */}
+                            <Link to={'/gallery/' + url} > 
+                                <img src={picture} alt={caption} />
+                            </Link>
+                        </Suspense>
+                    
+                        {/* <Link to={'/gallery/' + url} > 
                             <img src={picture} alt={caption} />
-                        </Link>
+                        </Link> */}
                     </div>
                     
                     <figcaption> 

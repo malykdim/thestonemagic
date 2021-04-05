@@ -1,7 +1,8 @@
-import {Link} from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
 import './Error.scss';
 
-const Error = (history) => {
+const Error = () => {
+    
     return (
         <main className="AppMain">
             <section className="error">

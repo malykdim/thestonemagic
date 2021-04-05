@@ -1,5 +1,5 @@
-import { Component } from 'react';
-import { Route, Switch } from 'react-router-dom' ;
+import { Component, Suspense } from 'react';
+import { Route, Switch, Redirect } from 'react-router-dom' ;
 
 import Header from './components/layouts/Header';
 import Home from './components/pages/Home';
@@ -8,8 +8,10 @@ import Contact from './components/pages/Contact';
 import Login from './components/pages/Login';
 import Edit from './components/pages/Edit';
 import Panneaux from './components/pages/Panneaux';
+import Error from './components/pages/Error';
 import Footer from './components/layouts/Footer';
 import  './App.scss';
+import { isLogged } from './services/ajax';
 
 class App extends Component {
     
@@ -17,15 +19,19 @@ class App extends Component {
         return (
             <div className="App">
                 <Header title="The Stone Magic"/>
-                <Switch>
-                    <Route path="/" exact component={Home}/>
-                    <Route path="/thestonemagic" component={Home} />
-                    <Route path="/gallery" exact component={Gallery}/>
-                    <Route path="/contact" component={Contact} />
-                    <Route path="/login" component={Login} />
-                    <Route path="/edit" component={Edit} />
-                    <Route path="/gallery/:url" exact component={Panneaux} />
-                </Switch>                
+                <Suspense fallback={<div className="loading">Loading Panneaux...</div>}>
+                    <Switch>
+                        <Route path="/" exact component={Home}/>
+                        <Route path="/thestonemagic" component={Home} />
+                        <Route path="/gallery" exact component={Gallery}/>
+                        <Route path="/contact" component={Contact} />
+                        <Route path="/login" component={Login} />
+                        <Route exact path="/edit" render={(props) => (isLogged ? (<Redirect to="/edit" component={Edit}/>) : (<Home />))} />
+                        <Route path="/gallery/:url" exact component={Panneaux} />
+                        <Route render={(props) => <Error {...props}/>} /> 
+                        {/* <Route render={(match, location, history) => <h1>Error</h1>} />  */}
+                    </Switch>          
+                </Suspense>
                 <Footer icon="fas fa-sign-in-alt"/>        
             </div>
         );

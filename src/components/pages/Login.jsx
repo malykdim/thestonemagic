@@ -34,7 +34,7 @@ const Login = () => {
         <main className="AppMain">
             
             <h2>Login</h2>
-            
+            <h3>For Admins only</h3>
                 
             <div className="AppMain-Forms">
                 
@@ -82,13 +82,17 @@ const Login = () => {
                     </fieldset>
                 </form>
                 
-            </div>              
-            
-            <Link to="/edit" className="Edit">Edit</Link>
+            </div>  
             
             <p>
-                In Development Stage...
-            </p>
+                Please lonin to gain access to Edit Gallery page...
+            </p>            
+            {/* <p>
+                Not registered? 
+                <button className="register">
+                    <Link to="/register" className="Register">Register</Link>
+                </button>
+            </p> */}
             
         </main>
     )

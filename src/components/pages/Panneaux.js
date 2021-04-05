@@ -1,48 +1,33 @@
 import { Component } from 'react';
-
+import { Route } from 'react-router-dom' ;
 import  './Panneaux.scss';
 import request from '../../services/ajax';
 
 class Panneaux extends Component {
     constructor(props) {
         super(props)
-        
-        this.state = { // 1, 5
+        this.state = { 
             mosaic: {}
         }
         
     }
     
-    componentDidMount() { // 3
-
-        // let mosaicName = this.props.match.params.mosaicName;
-        // let url = this.props.match.params.url;
-        let url = this.props.history.location.pathname.split('/');
-        let mosaicName = url[url.length - 1];
-        request('/classes/Gallery', 'GET', `?where=${JSON.stringify({"url": mosaicName})}`)
+    componentDidMount() { 
+        request('/classes/Gallery', 'GET', `?where=${JSON.stringify({"url": this.props.match.params.url})}`)
             .then(res => {
                 this.setState({mosaic: res.results[0]});
             });
     }
     
     render() {
-        if (this.state.mosaic.length === 0) {
+        if (!this.state.mosaic.author) {
             return <span>Loading Panneaux...</span>
         }
         
         return (
             <main className="AppMain">
                 
-                {/* <h2>Exquisite Mosaic Panneaux</h2> */}
-                
                 <section className="AppMain-Panneaux"> 
-                
-                    <div className="PanneauxDescriptionContainer w-1 h-4 positionTop">
-                        <h3 className="caption">{this.state.mosaic.caption}</h3>
-                        <span>by</span>
-                        <h3 className="author">{this.state.mosaic.author}</h3>
-                        <p className="created">{this.state.mosaic.created}</p>
-                    </div>
                 
                     <div className="PanneauxImageContainer w-4 h-4">
                         <div className="imageWrapper">
@@ -52,6 +37,9 @@ class Panneaux extends Component {
                     
                     <div className="PanneauxDescriptionContainer w-1 h-4 positionBottom">
                         
+                        <h3 className="caption">{this.state.mosaic.caption}</h3>
+                        <span>|</span>
+                        <h3 className="author">{this.state.mosaic.author}</h3>
                         <p className="dimensions">{this.state.mosaic.width} x {this.state.mosaic.height}</p>
                         <p className="materials">{this.state.mosaic.materials}</p>
                     </div>

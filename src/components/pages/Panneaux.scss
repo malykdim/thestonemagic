@@ -3,10 +3,11 @@
 
 .AppMain {
     background: $color-light;
+    margin: 0 auto;
     
     &-Panneaux {
         padding: 0rem 0 0rem 0;
-        width: 100vw;  
+        max-width: 70vw;  
         height: 79vh;  
         padding: 0 10vw;
         
@@ -52,6 +53,7 @@
         }
         
         .PanneauxDescriptionContainer {
+            max-width: 30%;
             border-radius: 0 0 4px 4px;
             -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
             box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
@@ -71,7 +73,7 @@
     }
 }
 
-@media all and (max-width: 599px) {
+@media all and (max-width: 600px) {
     .AppMain {
         height: 100%;
         &-Panneaux {

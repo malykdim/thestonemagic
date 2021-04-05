@@ -1,5 +1,5 @@
 
-import { Component } from 'react';
+import { Component, Suspense } from 'react';
 import request from '../../services/ajax.js';
 import Card from '../parts/Card';
 import './Gallery.scss';
@@ -25,7 +25,7 @@ class Gallery extends Component {
         render() { // 2, 6
             
             if (this.state.gallery.length === 0) {
-                return <span>Loading Gallery...</span>
+                return (<span className="loading">Loading Panneaux...</span>)
             }
             
             return ( 
@@ -37,6 +37,10 @@ class Gallery extends Component {
                         key={card.objectId}
                         {...card} 
                         /> // 7
+                        
+                        // <Suspense fallback={<span className="loading">Loading Panneaux...</span>}>
+                        //     <Card />
+                        // </Suspense>
                     )}
                     </section>                    
                     {/* <p>
