@@ -6,7 +6,7 @@ Virtual gallery for exquisite mosaic panneaux by the authors Vladimir Damyanov a
 
 (https://malykdim.github.io/thestonemagic/)
 
-## Public part (accessible without authentication) | Публична част (достъпна без аутентикация)
+## Public part (accessible without authentication) | Публична част 
 Public access to the gallery:
   * Home page with navigation to the gallery and the contact page,
   * Gallery with all available exquisite mosaic panneaux, where each panneaux can be accessed separately with details,
@@ -21,7 +21,7 @@ Public access to the gallery:
  **Note: (В случаите на изложение на творбите, ще бъде прикрепена карта, посочваща адреса на Художествената галерия.)**
  * Връзки към facebook на авторите 
 
-## Private part (available for registered users) | 
+## Private part (available for registered users) | За Администратори
  * The registration and login page is meant for others only. 
  * After successful authentication, an internal gallery update page is accessed.
 
