@@ -1,0 +1,21 @@
+@import '../main.scss';
+
+.AppMain {
+    &-Forms {
+        width: 750px;
+        .FormRegister {
+            width: 70%;
+            
+            fieldset {
+                
+                input {
+                    @include form-input;
+                }
+                
+                .send {
+                    @include form-button;
+                }
+            }
+        }
+    }
+}

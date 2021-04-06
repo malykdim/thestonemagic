@@ -1,4 +1,4 @@
-import { Component, Suspense } from 'react';
+// import { Suspense } from 'react';
 // import { useState } from 'react';
 // import * as galleryService from '../../services/galleryService';
 import { Link } from 'react-router-dom'; 
@@ -21,14 +21,14 @@ const Card = ({
         <div className="Card"> 
                 <figure className="Figure"> 
                     <div className="image-container"> 
-                        <Suspense fallback={
+                        {/* <Suspense fallback={
                             <span className="loading">Loading Panneaux...</span>
                         }>
-                            {/* <Panneaux /> */}
+                            <Panneaux /> */}
                             <Link to={'/gallery/' + url} > 
                                 <img src={picture} alt={caption} />
                             </Link>
-                        </Suspense>
+                        {/* </Suspense> */}
                     
                         {/* <Link to={'/gallery/' + url} > 
                             <img src={picture} alt={caption} />

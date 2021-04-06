@@ -1,5 +1,5 @@
 import { Link, useHistory } from 'react-router-dom' ;
-// import Edit from './Edit' ;
+import Edit from './Edit' ;
 import request from '../../services/ajax';
 
 import '../main.scss';
@@ -37,34 +37,6 @@ const Login = () => {
             <h3>For Admins only</h3>
                 
             <div className="AppMain-Forms">
-                
-                <form  className="FormRegister form">
-                    <fieldset>
-                        <label htmlFor="fullName">Full Name</label>
-                        <input type="text" name="fullName" id="fullName"/>
-                    </fieldset>
-                    <fieldset>
-                        <label htmlFor="email">Email</label>
-                        <input type="text" name="email" id="email"/>
-                    </fieldset>
-                    <fieldset>
-                        <label htmlFor="pass">Password</label>
-                        <input type="text" name="pass" id="pass" placeholder="" />
-                    </fieldset>
-                    <fieldset>
-                        <label htmlFor="pass"></label>
-                        <input type="text" name="pass" placeholder="" />
-                    </fieldset>
-                    <fieldset>
-                        <button className="toggle" /* onClick={login()} */>
-                            Register
-                        </button>
-                        
-                        <button className="toggle" onClick={toggle()}>
-                            Register
-                        </button>
-                    </fieldset>
-                </form>
                 
                 <form onSubmit={onSubmitLoginHandler} className="FormLogin form">
                     <fieldset>
