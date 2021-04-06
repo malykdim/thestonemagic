@@ -13,15 +13,11 @@
             fieldset {
                 
                 input {
-                    margin: 0 0.5rem;
-                    padding: .5rem;
-                    width: 80%;
+                    @include form-input;
                 }
                 
                 button {
-                    width: 100%;
-                    margin: 0 auto;
-                    padding: .8rem;
+                    @include form-button;
                 }
             }
         }
