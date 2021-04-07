@@ -3,23 +3,10 @@
 .AppMain {
     &-Forms {
         width: 750px;
-        .FormRegister {
-            display: none;
-        }
+        background: white;
         
         .FormLogin {
             width: 70%;
-            
-            fieldset {
-                
-                input {
-                    @include form-input;
-                }
-                
-                button {
-                    @include form-button;
-                }
-            }
         }
     }
 }

@@ -4,21 +4,22 @@
     padding: 3rem;
     
     h2 {
-        padding: 3rem;
+        padding: 0 0 2rem ;
         
         
         i {
             font-size: calc(10px + 6vmin);
-            padding: 3rem;
+            padding: 2rem;
         }
     }
         
-    a {
-        margin-top: 3rem;
+    button {
         padding: 1rem 3.8rem;
         text-decoration: none;
         color: $color-dark;
-        font-weight: 600;
+        font-size: calc(10px + 1.5vmin);
+        font-weight: 400;
+        border: 1px solid transparent;
         border-radius: 4px;
         -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
         box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);

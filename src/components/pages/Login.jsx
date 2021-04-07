@@ -1,5 +1,6 @@
-import { Link, useHistory } from 'react-router-dom' ;
-import Edit from './Edit' ;
+// import React from 'react';
+import { useHistory } from 'react-router-dom' ;
+// import UserContext from '../../contexts/UserContext';
 import request from '../../services/ajax';
 
 import '../main.scss';
@@ -24,40 +25,45 @@ const Login = () => {
         request('/login', 'GET', '?email=' + inputEmail + '&password=' + inputPassword)
             .then(res => {
                 if (res.sessionToken) {
-                    // successfully logged in
                     history.push('/edit');
+                } else {
+                    history.push('/thestonemagic');
                 }
             });
     }
     
+    // const contextValue = {
+    //     history: useHistory(),
+    //     onSubmitLoginHandler: onSubmitLoginHandler()
+    // }
+    
     return (
         <main className="AppMain">
             
-            <h2>Login</h2>
             <h3>For Admins only</h3>
                 
-            <div className="AppMain-Forms">
-                
-                <form onSubmit={onSubmitLoginHandler} className="FormLogin form">
-                    <fieldset>
-                        <label htmlFor="email">Email:</label>
-                        <input type="email" id="email" name="email" placeholder=""/>
-                    </fieldset>
-                    <fieldset>
-                        <label htmlFor="pass">Password:</label>
-                        <input type="password" id="pass" name="pass" placeholder=""/>
-                    </fieldset>
-                    <fieldset>
-                        <button className="toggle">
-                            Login
-                        </button>
-                    </fieldset>
-                </form>
-                
+            <div className="AppMain-Forms form">
+                {/* <UserContext.Provider value={contextValue}> */}
+                    <form onSubmit={onSubmitLoginHandler} className="FormLogin form">
+                        <fieldset>
+                            <label htmlFor="email"></label>
+                            <input type="email" id="email" name="email" placeholder="Email"/>
+                        </fieldset>
+                        <fieldset>
+                            <label htmlFor="pass"></label>
+                            <input type="password" id="pass" name="pass" placeholder="Password"/>
+                        </fieldset>
+                        <fieldset>
+                            <button className="toggle">
+                                Login
+                            </button>
+                        </fieldset>
+                    </form>
+                {/* </UserContext.Provider> */}
             </div>  
             
             <p>
-                Please lonin to gain access to Edit Gallery page...
+                Please lonin to gain access to Edit page.
             </p>            
             {/* <p>
                 Not registered? 

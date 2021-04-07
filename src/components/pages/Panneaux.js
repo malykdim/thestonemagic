@@ -1,7 +1,6 @@
 import { Component } from 'react';
-import { Route } from 'react-router-dom' ;
-import  './Panneaux.scss';
 import request from '../../services/ajax';
+import  './Panneaux.scss';
 
 class Panneaux extends Component {
     constructor(props) {
@@ -36,7 +35,6 @@ class Panneaux extends Component {
                     </div>
                     
                     <div className="PanneauxDescriptionContainer w-1 h-4 positionBottom">
-                        
                         <h3 className="caption">{this.state.mosaic.caption}</h3>
                         <span>|</span>
                         <h3 className="author">{this.state.mosaic.author}</h3>

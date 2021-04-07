@@ -2,18 +2,17 @@
 
 .AppMain {
     &-FormContact {
-        width: 40%;
-        
-        input {
-            @include form-input;  
-        }
-        
-        textarea {
-            @include form-textarea;
-        }
+        background: white;margin-bottom: 2rem;
         
         .send {
-            @include form-button;
+            width: 90%;
+            border: 1px solid $color-dark;
+            border-radius: 3px;
+            background: $color-dark;
+            opacity: .7;
+            color: white;
+            font-size: large;
+            padding: .8rem 0;
         }
     }
 }

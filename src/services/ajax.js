@@ -1,6 +1,4 @@
 const api = 'https://parseapi.back4app.com';
-// https://parseapi.back4app.com/users
-// https://parseapi.back4app.com/classes/Gallery
 
 const request = async (url, method, body = '') => {
     try {
@@ -14,6 +12,7 @@ const request = async (url, method, body = '') => {
         if (response.ok === false) {
             const error = await response.json();
             throw new Error(error.message);
+            // 'You need to be logged in order to have access to Edit page'
         }
         
         try {

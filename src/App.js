@@ -1,18 +1,19 @@
 import { Component, Suspense } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom' ;
+import { isLogged } from './services/ajax';
 
 import Header from './components/layouts/Header';
 import Home from './components/pages/Home';
 import Gallery from './components/pages/Gallery';
+import Panneaux from './components/pages/Panneaux';
 import Contact from './components/pages/Contact';
 import Register from './components/pages/Register';
 import Login from './components/pages/Login';
 import Edit from './components/pages/Edit';
-import Panneaux from './components/pages/Panneaux';
 import Error from './components/pages/Error';
 import Footer from './components/layouts/Footer';
 import  './App.scss';
-import { isLogged } from './services/ajax';
+
 
 class App extends Component {
     
@@ -25,13 +26,13 @@ class App extends Component {
                         <Route path="/" exact component={Home}/>
                         <Route path="/thestonemagic" component={Home} />
                         <Route path="/gallery" exact component={Gallery}/>
+                        <Route path="/gallery/:url" exact component={Panneaux} />
                         <Route path="/contact" component={Contact} />
                         <Route path="/register" component={Register} />
                         <Route path="/login" component={Login} />
-                        <Route exact path="/edit" render={() => (isLogged ? (<Redirect to="/edit" component={Edit}/>) : (<Home />))} />
-                        <Route path="/gallery/:url" exact component={Panneaux} />
+                        <Route path="/edit" component={Edit} />
+                        <Route exact path="/edit" render={() => (isLogged ? (<Redirect to="/edit" component={Edit} />) : (<Home />))} />
                         <Route render={(props) => <Error {...props}/>} /> 
-                        {/* <Route render={(match, location, history) => <h1>Error</h1>} />  */}
                     </Switch>          
                 </Suspense>
                 <Footer icon="fas fa-sign-in-alt"/>        
