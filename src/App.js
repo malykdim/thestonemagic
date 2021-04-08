@@ -10,6 +10,7 @@ import Contact from './components/pages/Contact';
 import Register from './components/pages/Register';
 import Login from './components/pages/Login';
 import Edit from './components/pages/Edit';
+import Loader from './components/pages/Loader';
 import Error from './components/pages/Error';
 import Footer from './components/layouts/Footer';
 import  './App.scss';
@@ -21,7 +22,7 @@ class App extends Component {
         return (
             <div className="App">
                 <Header title="The Stone Magic"/>
-                <Suspense fallback={<div className="loading">Loading...</div>}>
+                <Suspense fallback={Loader}>
                     <Switch>
                         <Route path="/" exact component={Home}/>
                         <Route path="/thestonemagic" component={Home} />
