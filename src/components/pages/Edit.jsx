@@ -2,7 +2,7 @@ import { Component } from 'react' ;
 import { Route } from 'react-router-dom' ;
 import Gallery from './Gallery' ;
 import  { isLogged } from '../../services/ajax';
-
+import './EditFunctions';
 import '../main.scss';
 import './Edit.scss';
 
@@ -60,27 +60,14 @@ class Edit extends Component {
         this.setState({[e.target.name]: e.target.value});
     };
     
-// await galleryService.createPanneaux({
-//     "url": "/classes/Gallery/horizon",
-//     "picture": "/thestonemagic/images/art-6-horizon.jpg",
-//     "gridClass": "Card w-1 h-1",
-//     "caption": "Horizon",
-//     "author": "Vladimir Damyanov",
-//     "created": "2009",
-//     "width": "75cm", 
-//     "height": "75cm",
-//     "materials": "amethyst, agate, jasper, tiger's eye, mountain crystal, labrador, pyryt, firestone, onyx, marble"
-// })
+
     
         
     render() {
         return (
             <main className="AppMain">
                 
-                {/* <h2>Edit Page</h2> */}
-                
                 <form className="FormEdit " onSubmit={this.onSubmitEditHandler}>
-                    
                     
                     <fieldset className="left w-1 h-3">
                         <label htmlFor="uploadPicture">{/* Добави снимка */}</label>
@@ -184,25 +171,25 @@ class Edit extends Component {
                     
                     <fieldset className=" right w-1 h-3 flexColumn ">
                         <div className="flexRow">
-                            <input type="reset" name="reset" value="Изчисти"/>
+                            <input type="reset" name="reset" value="Изчисти" className="cta"/>
                             <label htmlFor="reset">
                                 {/* Изчисти формата */}
                             </label>
                         </div>
                         <div className="flexRow">
-                            <input type="reset" name="edit" value="Редактирай"/>
+                            <input type="reset" name="edit" value="Редактирай" className="cta"/>
                             <label htmlFor="edit">
                                 {/* Редактирай данните */}
                             </label>
                         </div>
                         <div className="flexRow">
-                            <input type="reset" name="add" value="Добави"/>
+                            <input type="reset" name="add" value="Добави" className="cta"/>
                             <label htmlFor="add">
                                 {/* Добави паното в галерията */}
                             </label>
                         </div>
                         <div className="flexRow">
-                            <input type="reset" name="delete" value="Изтрий"/>
+                            <input type="reset" name="delete" value="Изтрий" className="cta"/>
                             <label htmlFor="delete">
                                 {/* Изтрий паното от галерията */}
                             </label>
