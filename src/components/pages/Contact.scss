@@ -3,23 +3,30 @@
 .AppMain {
     .content {
         width: 90%;
+        height: 650px;
         display: flex;
+        flex-wrap: nowrap;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
+        overflow: hidden;
         
         margin-bottom: 3rem;
         
-        border: 1px solid $color-dark;
+        border: 1px solid transparent;
         
         .map {
-            border: 1px solid $color-dark;
+            height: 100%;
+            width: 100%;
+            border: 1px solid transparent;
+            
         }
         
         .AppMain-FormContact {
-            background: white;margin-bottom: 2rem;
-            height: 80%;
-            width: 40%;
+            background: white;
+            height: 100%;
+            width: 50%;
             margin: 0;
+            padding-top: 0;            
             
             .send {
                 width: 90%;                

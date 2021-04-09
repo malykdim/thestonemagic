@@ -8,7 +8,6 @@ const Card = ({
     caption,
     picture,
     author,
-    clickHandler,
     url
 }) => {
     

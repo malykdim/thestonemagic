@@ -1,4 +1,7 @@
 import { Component } from 'react';
+import { Link } from 'react-router-dom'; 
+import { Icon, InlineIcon } from '@iconify/react';
+import baselineFacebook from '@iconify-icons/ic/baseline-facebook';
 import logo from './logo.svg';
 import  './Home.scss';
 
@@ -20,13 +23,15 @@ class Home extends Component {
                 <img src={logo} className="App-logo" alt="logo" />
                 <span></span>
                 <p>
-                    <a className="AppLink" href="https://www.facebook.com/vladimir.damynov/" target="_blank"  rel="noopener noreferrer" >
+                    <Link className="AppLink" to="https://www.facebook.com/vladimir.damynov/" target="_blank"  rel="noopener noreferrer" >
+                        <span><Icon icon={baselineFacebook} /></span>
                         <span>Vladimir Damyanov</span>
-                    </a>
+                    </Link>
                     &amp;
-                    <a className="AppLink" href="https://www.facebook.com/damyan.damyanov.509/" target="_blank"  rel="noopener noreferrer" >
+                    <Link className="AppLink" to="https://www.facebook.com/damyan.damyanov.509/" target="_blank"  rel="noopener noreferrer" >
+                    <span><Icon icon={baselineFacebook} /></span>
                     <span>Damyan Damyanov</span>
-                    </a>
+                    </Link>
                 </p>   
             </main>    
         )

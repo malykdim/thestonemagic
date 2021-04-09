@@ -20,11 +20,20 @@ class Contact extends Component {
             const inputEmail = e.target.email.value;
             const inputTopic = e.target.topic.value;
             const inputContent = e.target.content.value;
-            console.log(inputFullName);
-            console.log(inputEmail);
-            console.log(inputTopic);
-            console.log(inputContent);
+            
+            const data = {
+                sender: inputFullName,
+                email: inputEmail,
+                about: inputTopic,
+                message: inputContent
+            }
+            const letter = JSON.stringify(data);
+            console.log(letter);
+            
+            // send to server?
+            // reset fields
         }
+        
         
         const location = {
             address: 'ul. "Hristo G. Danov" 11, 4000 Tsentar, Plovdiv, Bulgaria',
@@ -38,7 +47,7 @@ class Contact extends Component {
                 
                 <section className="content">
                     <div className="map">
-                        <Map location={location} zoomLevel={17}/>
+                        <Map location={location} zoomLevel={17}/>                        
                     </div>
                     
                     <form  onSubmit={onSubmitContactHandler} className="AppMain-FormContact form">
@@ -56,7 +65,7 @@ class Contact extends Component {
                             <input type="text" id="topic" name="topic" placeholder="Topic"/>
                         </fieldset>
                         <fieldset>
-                            <textarea name="content" id="content" cols="75" rows="12"></textarea>
+                            <textarea name="content" id="content" cols="75" rows="8"></textarea>
                         </fieldset>
                         <fieldset>
                             <input type="submit" className="send" value="Send"/>

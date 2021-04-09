@@ -5,7 +5,7 @@ import  './Footer.scss';
 const Footer = (props) => {
     return (
         <footer  className="AppFooter">
-            <Logo />
+            {<Logo />}
             <p>
                 &copy; All rights reserved
             </p>

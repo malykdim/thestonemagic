@@ -10,13 +10,6 @@ const Login = () => {
     
     const history = useHistory();
     
-    function toggle() {
-        // hide the Register button
-        // the Register form 
-        // validate the input
-        // show the submit button below 
-    }
-    
     const onSubmitLoginHandler = (e) => {
         e.preventDefault();
         const inputEmail = e.target.email.value;
@@ -65,12 +58,6 @@ const Login = () => {
             <p>
                 Please lonin to gain access to Edit page.
             </p>            
-            {/* <p>
-                Not registered? 
-                <button className="register">
-                    <Link to="/register" className="Register">Register</Link>
-                </button>
-            </p> */}
             
         </main>
     )
