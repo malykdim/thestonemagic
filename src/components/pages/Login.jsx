@@ -2,6 +2,7 @@
 import { useHistory } from 'react-router-dom' ;
 // import UserContext from '../../contexts/UserContext';
 import request from '../../services/ajax';
+import { setSession } from '../../services/auth';
 
 import '../main.scss';
 import './Login.scss';
@@ -18,10 +19,13 @@ const Login = () => {
         request('/login', 'GET', '?email=' + inputEmail + '&password=' + inputPassword)
             .then(res => {
                 if (res.sessionToken) {
+                    setSession(res.sessionToken);
                     history.push('/edit');
                 } else {
                     history.push('/thestonemagic');
                 }
+            }).catch(err => {
+                
             });
     }
     

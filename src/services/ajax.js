@@ -12,30 +12,19 @@ const request = async (url, method, body = '') => {
         if (response.ok === false) {
             const error = await response.json();
             throw new Error(error.message);
-            // 'You need to be logged in order to have access to Edit page'
         }
         
         try {
             const data = await response.json();
-            if (data.sessionToken) {
-                sessionStorage.setItem('sessionToken', data.sessionToken);
-            }
             return data;
         } catch (err) {
             return response;
         }
         
     } catch (err) {
-        alert(err.message);
+        alert(err);
         throw err;
     }
-};
-
-export const isLogged = () => {
-    if (sessionStorage.getItem('sessionToken')) {
-        return true;
-    }
-    return false;
 };
 
 function getOptions(method = 'GET', body = '') {

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import request from '../../services/ajax.js';
-import GalleryContext from '../../contexts/GalleryContext';
 import Card from '../parts/Card';
 import './Gallery.scss';
 
@@ -22,21 +21,22 @@ class Gallery extends Component {
         }
         
         render() { 
-            const contextValue = {
-                mosaics: this.state.gallery                
-            }
+            // const contextValue = {
+            //     mosaics: this.state.gallery                
+            // }
             
             return ( 
                 <main className="AppMain">
                     <section className="AppMain-Gallery"> 
-                        <GalleryContext.Provider value={contextValue}>
+                        {/* <GalleryContext.Provider value={contextValue}> */}
                             {this.state.gallery.map((card) => 
                                 <Card 
+                                    gallery={this.context}
                                     key={card.objectId}
                                     {...card} 
                                 /> 
                             )}
-                        </GalleryContext.Provider>
+                        {/* </GalleryContext.Provider> */}
                     </section>                    
                 </main>                
             );

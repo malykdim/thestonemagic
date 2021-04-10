@@ -26,7 +26,8 @@ const Info = () => {
             </fieldset>
             
             <fieldset>
-                <label htmlFor="created">Създадена</label>
+                <legend>Създадена</legend>
+                <label htmlFor="created"></label>
                 <input type="date" name="created" id="created"/>
             </fieldset>
             
