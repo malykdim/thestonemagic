@@ -3,10 +3,10 @@ import Materials from './Materials';
 const Info = () => {
     
     return (
-        <> {/* className="info" */}
+        <> 
             <fieldset className="right">
-                <legend>Име на Паното</legend>
-                    <label htmlFor="panneauxName">Име</label>
+                <legend>Panneaux Name</legend>
+                    <label htmlFor="panneauxName">Name</label>
                     <input 
                         type="text" 
                         id="panneauxName" 
@@ -16,27 +16,27 @@ const Info = () => {
             </fieldset>
             
             <fieldset className="inline">
-                <legend>Автор</legend>
+                <legend>Author</legend>
                                                 
                     <input type="radio" id="vladimir" name="author" value="Vladimir" />                        
-                    <label htmlFor="vladimir" className="radio">Владимир</label>
+                    <label htmlFor="vladimir" className="radio">Vladimir</label>
                                                     
                     <input type="radio" id="damyan" name="author" value="Damyan" />
-                    <label htmlFor="damyan" className="radio">Дамян</label>
+                    <label htmlFor="damyan" className="radio">Damyan</label>
             </fieldset>
             
             <fieldset>
-                <legend>Създадена</legend>
+                <legend>Created</legend>
                 <label htmlFor="created"></label>
                 <input type="date" name="created" id="created"/>
             </fieldset>
             
             <fieldset>
-                <legend>Размери на паното</legend>
-                <label htmlFor="width" className="dim">Широчина</label>
+                <legend>Panneaux Dimensions</legend>
+                <label htmlFor="width" className="dim">Width</label>
                 <input type="number" name="width" defaultValue="75" id="width" placeholder="number"/>
                 
-                <label htmlFor="height" className="dim">Височина</label>
+                <label htmlFor="height" className="dim">Height</label>
                 <input type="number" name="height" defaultValue="75" id="height" placeholder="number"/>
                 
                 <input type="radio" id="cm" name="unit" value="cm"/>

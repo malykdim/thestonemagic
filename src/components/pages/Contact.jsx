@@ -29,9 +29,6 @@ class Contact extends Component {
             }
             const letter = JSON.stringify(data);
             console.log(letter);
-            
-            // send to server?
-            // reset fields
         }
         
         

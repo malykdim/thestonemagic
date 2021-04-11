@@ -1,6 +1,4 @@
 import { Component } from 'react';
-import { Icon, InlineIcon } from '@iconify/react';
-import baselineFacebook from '@iconify-icons/ic/baseline-facebook';
 import logo from './logo.svg';
 import  './Home.scss';
 
@@ -23,12 +21,10 @@ class Home extends Component {
                 <span></span>
                 <p>
                     <a className="AppLink" href="https://www.facebook.com/vladimir.damynov/" target="_blank"  rel="noopener noreferrer" >
-                        <span><Icon icon={baselineFacebook} /></span>
                         <span>Vladimir Damyanov</span>
                     </a>
                     <span>&amp;</span>
                     <a className="AppLink" href="https://www.facebook.com/damyan.damyanov.509/" target="_blank"  rel="noopener noreferrer" >
-                    <span><Icon icon={baselineFacebook} /></span>
                     <span>Damyan Damyanov</span>
                     </a>
                 </p>   

@@ -1,5 +1,4 @@
 import React from 'react';
-import GalleryContext from '../../contexts/GalleryContext';
 
 const File = ({
     onSubmitFileHandler
@@ -7,8 +6,8 @@ const File = ({
     return (
 
         <>
-            <legend>Снимка</legend>
-            <label htmlFor="upload-picture">Добави снимка</label>
+            <legend>Picture</legend>
+            <label htmlFor="upload-picture">Add an Image</label>
             <input onChange={onSubmitFileHandler} type="file" id="picture" name="upload-picture" />  
         </>              
 

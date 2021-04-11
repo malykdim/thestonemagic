@@ -1,5 +1,3 @@
-// import { useState } from 'react';
-// import * as galleryService from '../../services/galleryService';
 import { Link } from 'react-router-dom'; 
 
 import './Card.scss';

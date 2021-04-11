@@ -21,10 +21,6 @@ class Gallery extends Component {
         }
         
         render() { 
-            // const contextValue = {
-            //     mosaics: this.state.gallery                
-            // }
-            
             return ( 
                 <main className="AppMain">
                     <section className="AppMain-Gallery"> 

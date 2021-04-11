@@ -1,7 +1,7 @@
 import { useHistory } from 'react-router-dom';
 import isLogged from '../services/auth';
 
-const isAuth = (WrappedComponend) => {
+const isAuth = (WrappedComponent) => {
 
     const Component = (props) => {
         const history = useHistory();
@@ -12,7 +12,7 @@ const isAuth = (WrappedComponend) => {
             return null;
         }
 
-        return <WrappedComponend {...props} />
+        return <WrappedComponent {...props} />
     };
 
     return Component;
