@@ -1,35 +1,21 @@
 import { Component } from 'react';
 // import { Route} from 'react-router-dom' ;
 import Map from '../parts/Map';
+import ContactForm from '../forms/ContactForm';
 import '../main.scss';
 import './Contact.scss';
 
 class Contact extends Component {
-    constructor(props) {
-        super(props);
+    // constructor(props) {
+    //     super(props);
         
-        this.state = {
+    //     this.state = {
             
-        }
-    }
-    
+    //     }
+        
+    // }
+
     render() {
-        const onSubmitContactHandler = (e) => {
-            e.preventDefault();
-            const inputFullName = e.target.fullName.value;
-            const inputEmail = e.target.email.value;
-            const inputTopic = e.target.topic.value;
-            const inputContent = e.target.content.value;
-            
-            const data = {
-                sender: inputFullName,
-                email: inputEmail,
-                about: inputTopic,
-                message: inputContent
-            }
-            const letter = JSON.stringify(data);
-            console.log(letter);
-        }
         
         
         const location = {
@@ -47,27 +33,7 @@ class Contact extends Component {
                         <Map location={location} zoomLevel={17}/>                        
                     </div>
                     
-                    <form  onSubmit={onSubmitContactHandler} className="AppMain-FormContact form">
-                        <h3>Get in touch</h3>
-                        <fieldset>
-                            <label htmlFor="fullName"></label>
-                            <input type="text" id="fullName" name="fullName" placeholder="Full Name"/>
-                        </fieldset>
-                        <fieldset>
-                            <label htmlFor="email"></label>
-                            <input type="email" id="email" name="email" placeholder="Email"/>
-                        </fieldset>
-                        <fieldset>
-                            <label htmlFor="topic"></label>
-                            <input type="text" id="topic" name="topic" placeholder="Topic"/>
-                        </fieldset>
-                        <fieldset>
-                            <textarea name="content" id="content" cols="75" rows="8"></textarea>
-                        </fieldset>
-                        <fieldset>
-                            <input type="submit" className="send" value="Send"/>
-                        </fieldset>    
-                    </form>
+                    <ContactForm />
                 </section>
             </main>
         )

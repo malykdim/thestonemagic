@@ -25,7 +25,7 @@ const Login = () => {
                     history.push('/thestonemagic');
                 }
             }).catch(err => {
-                
+                alert(err);
             });
     }
     
