@@ -1,7 +1,7 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
+import request from '../../services/ajax.js';
 import  { logOut } from '../../services/auth';
 import GalleryContext from '../../contexts/GalleryContext';
-import File from '../forms/File';
 import Info from '../forms/Info';
 import Actions from '../forms/Actions';
 import './EditFunctions';
@@ -13,15 +13,13 @@ class Edit extends Component {
 
         this.state = {
             data: {
-                url: '',
+                picture: '',
                 caption: '',
+                url: '',
                 author: '',
-                created: '',
                 width: '',
                 height: '',
-                unit: '',
                 materials: {},
-                picture: ''
             },
             context: {
                 data: '',
@@ -29,35 +27,72 @@ class Edit extends Component {
             }
         }
         
+        this.onSubmitFormHandler = this.onSubmitFormHandler.bind(this);
         this.onChangeHandler = this.onChangeHandler.bind(this);
+        this.onSelectFileHandler = this.onSelectFileHandler.bind(this);
+        this.fileInput = React.createRef();
         this.onClickLogoutHandler = this.onClickLogoutHandler.bind(this);
     }
+    
+    
     
     onChangeHandler(e) {
         this.setState({[e.target.name]: e.target.value});
     };
     
-    
-    onSubmitFileHandler = (event) => {
-        console.log(event);
-        Array.from(event.target.files).forEach(file => {
-            console.log(file);
-        });
-        this.setState(oldState => oldState.data.picture = `/thestonemagic/images/${event.target.files[0].name}`);
+    onSelectFileHandler = (e) => {
+        e.preventDefault();
+        
+        let filename = this.fileInput.current.files[0].name;
+        
+        return filename;
     };
     
-    checkBoxHandler = (event) => {
-        console.log('event', event);
+    checkBoxHandler = (e) => {
+        // console.log('event', e);
         this.setState(oldState => ({
             materials: {
                 ...oldState.materials,
-                [event.target.name]: (event.target.checked ? true : false)
+                [e.target.name]: (e.target.checked ? true : false)
             }
         }));
         setTimeout(() => {
-            console.log(this.state.materials);
+            // console.log(this.state.materials);
+            console.log('');
         });
+        
+        return this.state.materials;
     };
+    
+    onSubmitFormHandler(e) {
+        e.preventDefault();
+        
+        const p = this.onSelectFileHandler(e);
+        const mosaic = e.target.panneauxName.value;
+        const a = e.target.author.value;
+        const w = e.target.width.value;
+        const h = e.target.height.value;
+        const mat = Object.keys(this.checkBoxHandler(e)).join(', ');
+        
+        let obj = {
+            picture: `/thestonemagic/images/${p}`,
+            caption: mosaic,
+            author: `${a} Damyanov`,
+            url: `${mosaic.toLowerCase()}`,
+            width: w,
+            height: h,
+            materials: mat
+        }
+        
+        // console.log(JSON.stringify(this.state.data));
+        console.log(JSON.stringify(obj));
+        
+        request('/classes/Gallery', 'POST', obj)
+                .then(response => {
+                    alert('New Panneaux added to the Gallery')
+                    console.log(response)
+                });
+    }
     
     onClickLogoutHandler() {
         logOut();
@@ -70,9 +105,11 @@ class Edit extends Component {
             <main className="AppMain">
                     <h2>Edit Page</h2>
                 <GalleryContext.Provider value={this.state.context}>
-                    <form className="FormEdit" onSubmit={this.onSubmitEditHandler}>
+                    <form className="FormEdit" onSubmit={this.onSubmitFormHandler}>
                         <fieldset className="left w-1 h-3">                        
-                            <File onSubmitFileHandler={this.onSubmitFileHandler} />
+                            <legend>Picture</legend>
+                            <label htmlFor="upload-picture">Add an Image</label>
+                            <input ref={this.fileInput} type="file" id="picture" name="upload-picture" />  
                         </fieldset>
                         <div className="info">
                             <Info />

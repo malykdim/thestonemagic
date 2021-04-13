@@ -26,12 +26,6 @@ const Info = () => {
             </fieldset>
             
             <fieldset>
-                <legend>Created</legend>
-                <label htmlFor="created"></label>
-                <input type="date" name="created" id="created"/>
-            </fieldset>
-            
-            <fieldset>
                 <legend>Panneaux Dimensions</legend>
                 <label htmlFor="width" className="dim">Width</label>
                 <input type="number" name="width" defaultValue="75" id="width" placeholder="number"/>
