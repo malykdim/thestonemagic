@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import request from '../../services/ajax.js';
-import  { logOut } from '../../services/auth';
+// import  { logOut } from '../../services/auth';
 import GalleryContext from '../../contexts/GalleryContext';
 import Info from '../forms/Info';
 import Actions from '../forms/Actions';
@@ -95,7 +95,16 @@ class Edit extends Component {
     }
     
     onClickLogoutHandler() {
-        logOut();
+        // logOut();
+        request('/logout', 'POST', {})
+            .then(response => {
+                console.log('You have been successfully logged out')
+                sessionStorage.removeItem('username');
+                sessionStorage.removeItem('sessionToken');
+                sessionStorage.removeItem('userId');
+                console.log(response)
+            });
+        
         this.props.history.push('/');
     };
         
