@@ -33,8 +33,8 @@ const Info = () => {
                 <label htmlFor="height" className="dim">Height</label>
                 <input type="number" name="height" defaultValue="75" id="height" placeholder="number"/>
                 
-                <input type="radio" id="cm" name="unit" value="cm"/>
-                <label htmlFor="cm" className="radio">cm</label>                
+                <input type="radio" id="cm" name="unit" value="cm" defaultChecked/>
+                <label htmlFor="cm" className="radio" >cm</label>                
                 <input type="radio" id="inch" name="unit" value="inch"/>
                 <label htmlFor="inch" className="radio">inch</label>
             </fieldset>
