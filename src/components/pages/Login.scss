@@ -7,6 +7,14 @@
         
         .FormLogin {
             width: 70%;
+            
+            input {
+                
+                :focus {
+                    border: none;
+                }
+                
+            }
         }
     }
 }

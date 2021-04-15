@@ -48,4 +48,8 @@
         font-size: 10vw;
         }
     }
+    
+    @media screen and (min-width: 799px) {
+        display: none;
+    }
 }

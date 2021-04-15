@@ -18,7 +18,6 @@ class Home extends Component {
                     Exquisite Mosaic Panneaux
                 </h2>
                 <img src={logo} className="App-logo" alt="logo" />
-                <span></span>
                 <p>
                     <a className="AppLink" href="https://www.facebook.com/vladimir.damynov/" target="_blank"  rel="noopener noreferrer" >
                         <span>Vladimir Damyanov</span>

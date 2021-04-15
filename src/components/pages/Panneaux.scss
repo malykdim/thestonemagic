@@ -75,19 +75,22 @@
 
 @media all and (max-width: 600px) {
     .AppMain {
-        height: 100%;
+        align-items: stretch;
+        justify-content: stretch;
         &-Panneaux {
-            width: 100vw;  
-            height: 100vh;      
+            width: 100%;
+            min-width: 100%; 
+            height: 68vh;
+            min-height: 63vh;
+            // overflow: hidden;    
             padding: 0 0;
             position: relative;
             
-            flex-direction: column;
             
             .PanneauxImageContainer {
+                height: 50vh;
                 width: 100%;
                 overflow: hidden;
-                border-radius: 0 0 4px 4px;
                 
                 display: flex;
                 align-items: center;
@@ -95,22 +98,13 @@
                 overflow: hidden;
                 
                 .imageWrapper {
-                    width: 100%;
-                    height: 100%;
+                    min-width: 100%;
+                    min-height: 100%;
                     display: flex;
-                    align-items: center;
+                    align-items: stretch;
                     justify-content: stretch;
                     overflow: visible;
                     
-                    img {
-                        width: 100%;
-                        height: 100%;
-                        display: block;
-                        object-fit: contain;
-                        object-position: center;
-                        transition: .5s ease-in-out;
-                        border-radius: 0 0 3px 3px;
-                    }
                 }
                 
                 
@@ -118,51 +112,43 @@
             
             .PanneauxDescriptionContainer {
                 width: 100%;
+                min-width: 100%;
+                height: 18vh;
                 padding-top: .5rem;
                 padding-bottom: .5rem;
                 position: absolute;
-                transform: translate(-50%, -50%);
-                -webkit-backdrop-filter: blur(.3em) saturate(.8);
-                backdrop-filter: blur(.3em) saturate(.8);
-                -webkit-box-shadow: 0px 0px 0px 0px #000000, 0px 0px 0px 0px rgba(0,0,0,0); 
-                box-shadow: 0px 0px 0px 0px #000000, 0px 0px 0px 0px rgba(0,0,0,0);
+                // transform: translate(-50%, -50%);
                 background-color: $color-dark;
-                opacity: .5;
+                opacity: .7;
                 
                 h3 {
-                    padding: 1rem;
-                    color: white;
+                    padding: .5rem;
                     display: inline-block;
+                    color: white;
                 }
                 
                 p {
-                    padding: 2rem 1.2rem .8rem ;
-                    font-style: italic;
-                    color: white;
-                }
-                span {
-                    font-style: italic;
+                    padding: 2rem 1.2rem .4rem ;
                     color: white;
                 }
             }
             
             .positionTop {
-                top: 17.8%;
-                left: 50%;
+                top: 0%;
+                left: 0%;
                 
-                .created, span {
+                span {
                     display: none;
                 }
             }
             
             .positionBottom {
-                top: 84.6%;
-                left: 50%;
+                top: 75%;
+                left: 0%;
                 
                 p {
                     padding-top: .5rem;
                     padding-bottom: 0.5rem;
-                    font-style: normal;
                 }
             }
         }

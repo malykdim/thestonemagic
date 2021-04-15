@@ -168,7 +168,8 @@ code {
                 
                 
                 :focus {
-                    transform: scale(.5);
+                    transform: scale(.8);
+                    border: 1px solid transparent;
                 }
             }
             
@@ -256,6 +257,47 @@ code {
             font-weight: 500;
             letter-spacing: .03em;
             padding: 2rem 0;
+        }    
+        
+        .AppLink {
+            color: $color-dark;
+            margin: .8em;
+        }
+    }
+}
+
+@media all and (max-width: 600px) {
+    .AppMain {
+        margin: 0;
+        height: 68vh;
+        min-height: 63vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        
+        h2 {
+            font-size: calc(10px + 2vmin);
+            color: $color-dark;
+            line-height: 1.5em;
+            font-weight: 600;
+            letter-spacing: .03em;
+            margin: 0;
+            padding: 3rem 0 2rem;
+            
+            span {
+                font-weight: 600;
+                font-size: calc(10px + 2vmin);
+            }
+        }
+        
+        p {
+            font-size: calc(8px + 1.5vmin);
+            color: $color-dark;
+            line-height: 1.0em;
+            font-weight: 500;
+            letter-spacing: .03em;
+            padding: 0 0 1rem 0;
         }    
         
         .AppLink {
