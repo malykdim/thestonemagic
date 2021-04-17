@@ -17,7 +17,7 @@ class Contact extends Component {
     render() {
         return (
             <main className="AppMain">
-                <h2>Contact Page</h2>
+                {/* <h2>Contact Page</h2> */}
                 
                 <section className="content">
                     <ContactForm />

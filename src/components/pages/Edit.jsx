@@ -87,6 +87,8 @@ class Edit extends Component {
         // console.log(JSON.stringify(this.state.data));
         console.log(JSON.stringify(obj));
         
+        
+        
         request('/classes/Gallery', 'POST', obj)
                 .then(response => {
                     alert('New Panneaux added to the Gallery')
@@ -102,7 +104,7 @@ class Edit extends Component {
                 sessionStorage.removeItem('username');
                 sessionStorage.removeItem('sessionToken');
                 sessionStorage.removeItem('userId');
-                console.log(response)
+                console.log(response);
             });
         
         this.props.history.push('/');

@@ -10,11 +10,12 @@
         justify-content: center;
         overflow: hidden;
         
+        margin-top: 3rem;
         margin-bottom: 3rem;
         
         border: 1px solid transparent;
         
-        .AppMain-FormContact {
+        .FormContact {
             background: white;
             height: 100%;
             width: 50%;
@@ -45,7 +46,11 @@
 
 @media all and (max-width: 1920px) {
     .AppMain {
-        &-FormContact {
+        .content {
+            
+
+            
+            &-FormContact {
             width: 32%;
             margin: 0 auto;
             display: flex;
@@ -59,24 +64,33 @@
                 margin: .5rem auto
             }
         }
+        }
+        
     }
 }
 
 @media all and (max-width: 600px) {
     .AppMain {
-        &-FormContact {
-            width: 32%;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
+        .content {
+            width: 100%;
+            justify-content: center;
+            margin: 1.5rem;
             
-            input {
-                margin: .2rem;
-            }
-            
-            textarea {
-                margin: .5rem auto
+            .FormContact {
+                width: 90%;
+                margin: 0 auto;
+                display: flex;
+                justify-content: stretch;
+                
+                input {
+                    margin: .2rem;
+                }
+                
+                textarea {
+                    margin: .5rem auto
+                }
             }
         }
+        
     }
 }

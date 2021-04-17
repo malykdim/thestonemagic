@@ -1,5 +1,6 @@
 import { findAllInRenderedTree } from 'react-dom/test-utils';
 import request from '../../services/ajax.js';
+import  './ContactForm.scss';
 
 
 const ContactForm = () => {
@@ -30,7 +31,7 @@ const ContactForm = () => {
     }
     
     return (
-        <form  onSubmit={onSubmitContactHandler} className="AppMain-FormContact form">
+        <form  onSubmit={onSubmitContactHandler} className="FormContact form">
             <h3>Get in touch</h3>
             <fieldset>
                 <label htmlFor="fullName"></label>

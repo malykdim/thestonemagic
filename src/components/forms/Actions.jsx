@@ -3,7 +3,7 @@
 const Actions = () => {
     return (
         // <GalleryContext.Consumer>
-        //     {({data, onSubmitEditHandler, onSubmitAddHandler, onSubmitDeleteHandler}) => {
+        //     {({data, onSubmitAddHandler, onSubmitDeleteHandler}) => {
                 <> 
                     <legend>Actions</legend>
                     <div className="flexRow">
@@ -18,6 +18,7 @@ const Actions = () => {
                             {/* Добави паното в галерията */}
                         </label>
                     </div>
+                    
                     <div className="flexRow">
                         <input /* onSubmit={onSubmitDeleteHandler} */ on type="submit" name="delete" value="Delete" className="cta"/>
                         <label htmlFor="delete">

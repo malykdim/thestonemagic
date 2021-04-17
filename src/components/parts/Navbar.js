@@ -13,7 +13,7 @@ class Navbar extends Component {
             <nav className="AppHeader-Nav">
                 <ul className="AppHeader-Nav-Ul">
                     <li>
-                        <NavLink to="/" >
+                        <NavLink to="/thestonemagic" >
                             <i className={this.props.icon}></i>
                         </NavLink>
                     </li>
