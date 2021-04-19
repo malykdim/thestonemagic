@@ -23,8 +23,6 @@ Virtual gallery for exquisite mosaic panneaux by the authors Vladimir Damyanov a
  * Responsive Web Application with friendly UX
  * GitHub Pages, Back4app
 
-
 ### Social Links
-Learn more about Vladimir Damynov (https://www.facebook.com/vladimir.damynov/).
-Learn more about Damyan Damyanov (https://www.facebook.com/damyan.damyanov.509/).
-
+* Vladimir Damynov (https://www.facebook.com/vladimir.damynov/).
+* Damyan Damyanov (https://www.facebook.com/damyan.damyanov.509/).
