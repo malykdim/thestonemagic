@@ -2,11 +2,14 @@ import React, { Component } from 'react';
 import request from '../../services/ajax.js';
 // import  { logOut } from '../../services/auth';
 import GalleryContext from '../../contexts/GalleryContext';
+
+import InputError from '../utilities/errors/InputError';
 import Info from '../forms/Info';
 import Actions from '../forms/Actions';
 import './EditFunctions';
 import '../main.scss';
 import './Edit.scss';
+
 class Edit extends Component {
     constructor(props) {
         super(props);
@@ -24,10 +27,15 @@ class Edit extends Component {
             context: {
                 data: '',
                 checkBoxHandler: this.checkBoxHandler,
-            }
+            },
+            
+            
         }
         
         this.onSubmitFormHandler = this.onSubmitFormHandler.bind(this);
+        this.onSubmitAddFormHandler = this.onSubmitAddFormHandler.bind(this);
+        this.onSubmitRemoveFormHandler = this.onSubmitRemoveFormHandler.bind(this);
+        
         this.onChangeHandler = this.onChangeHandler.bind(this);
         this.onSelectFileHandler = this.onSelectFileHandler.bind(this);
         this.fileInput = React.createRef();
@@ -64,7 +72,7 @@ class Edit extends Component {
         return this.state.materials;
     };
     
-    onSubmitFormHandler(e) {
+    onSubmitAddFormHandler(e) {
         e.preventDefault();
         
         const p = this.onSelectFileHandler(e);
@@ -73,6 +81,12 @@ class Edit extends Component {
         const w = e.target.width.value;
         const h = e.target.height.value;
         const mat = Object.keys(this.checkBoxHandler(e)).join(', ');
+        
+        if(!p) {
+            this.setState(this.errorMessage = 'Липсва снимка.');
+        } else {
+            this.setState(this.errorMessage = '');
+        }
         
         let obj = {
             picture: `/thestonemagic/images/${p}`,
@@ -84,16 +98,28 @@ class Edit extends Component {
             materials: mat
         }
         
-        // console.log(JSON.stringify(this.state.data));
         console.log(JSON.stringify(obj));
-        
-        
         
         request('/classes/Gallery', 'POST', obj)
                 .then(response => {
                     alert('New Panneaux added to the Gallery')
                     console.log(response)
                 });
+    }
+    
+    onSubmitRemoveFormHandler (e) {
+        e.preventDefault();
+        console.log(e);
+    }
+    
+    onSubmitFormHandler(e) {
+        e.preventDefault();
+        
+        if (this.onSubmitAddFormHandler) {
+            this.onSubmitAddFormHandler(e);
+        } else if (this.onSubmitRemoveFormHandler) {
+            this.onSubmitRemoveFormHandler(e);
+        }  
     }
     
     onClickLogoutHandler() {
@@ -130,6 +156,7 @@ class Edit extends Component {
                         </fieldset>
                     </form>
                 </GalleryContext.Provider>
+                <InputError>{this.state.errorMessage}</InputError>
                 <button onClick={this.onClickLogoutHandler} className="logout">
                     Изход
                 </button>

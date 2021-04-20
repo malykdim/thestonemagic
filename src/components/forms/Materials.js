@@ -17,6 +17,7 @@ const Materials = () => {
                     
                     <input  onClick={values.checkBoxHandler} type="checkbox" id="jasper" name="jasper" value="Jasper" className="material"/>
                     <label htmlFor="jasper">Яспис</label>
+                    <br/>
                     
                     <input  onClick={values.checkBoxHandler} type="checkbox" id="labrador" name="labrador" value="Labrador" className="material"/>
                     <label htmlFor="labrador">Лабрадор</label>
@@ -26,10 +27,10 @@ const Materials = () => {
                     
                     <input  onClick={values.checkBoxHandler} type="checkbox" id="agate" name="agate" value="Аgate" className="material"/>
                     <label htmlFor="agate">Ахат</label>
-                    <br/>                            
                     
                     <input  onClick={values.checkBoxHandler} type="checkbox" id="onyx" name="onyx" value="Onyx" className="material"/>
                     <label htmlFor="onyx">Оникс</label>
+                    <br/>
                     
                     <input  onClick={values.checkBoxHandler} type="checkbox" id="jade" name="jade" value="Jade" className="material"/>
                     <label htmlFor="jade">Нефрит</label>
@@ -39,16 +40,16 @@ const Materials = () => {
                     
                     <input  onClick={values.checkBoxHandler} type="checkbox" id="citrine" name="citrine" value="Citrine"className="material"/>
                     <label htmlFor="citrine">Цитрин</label>
-
+                    
                     <input  onClick={values.checkBoxHandler} type="checkbox" id="obsidian" name="obsidian" value="Obsidian"className="material"/>
                     <label htmlFor="obsidian">Обсидиан</label>
+                    <br/>
                     
                     <input  onClick={values.checkBoxHandler} type="checkbox" id="serpentine" name="serpentine" value="serpentine" className="material"/>
                     <label htmlFor="serpentine">Серпентин</label>
                     
                     <input  onClick={values.checkBoxHandler} type="checkbox" id="quartz" name="quartz" value="quartz" className="material"/>
                     <label htmlFor="quartz">Кварц</label>
-                    <br/>            
                     
                     <input  onClick={values.checkBoxHandler} type="checkbox" id="firestone" name="firestone" value="Firestone" className="material"/>
                     <label htmlFor="firestone">Огнен камък</label>
@@ -56,7 +57,7 @@ const Materials = () => {
                     <input  onClick={values.checkBoxHandler} type="checkbox" id="tiger's eye" name="tiger's eye" value="Tiger'sEye" className="material"/>
                     <label htmlFor="tiger's eye" >Тигрово око</label>
                     
-                    <br/>
+                    
                 </fieldset>
             }
         </GalleryContext.Consumer>

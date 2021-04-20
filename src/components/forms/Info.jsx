@@ -25,14 +25,17 @@ const Info = () => {
                     <label htmlFor="damyan" className="radio">Дамян</label>
             </fieldset>
             
-            <fieldset>
+            <fieldset className="dim">
                 <legend>Размери на паното</legend>
-                <label htmlFor="width" className="dim">Широчина</label>
-                <input type="number" name="width" defaultValue="75" id="width" placeholder="number"/> cm
-                
-                <label htmlFor="height" className="dim">Височина</label>
-                <input type="number" name="height" defaultValue="75" id="height" placeholder="number"/> cm
-                
+                <label htmlFor="width">
+                    Широчина
+                    <input type="number" name="width" defaultValue="" id="width" placeholder=""/> cm                    
+                </label>
+                <br/>
+                <label htmlFor="height">
+                    Височина
+                    <input type="number" name="height" defaultValue="" id="height" placeholder=""/> cm
+                </label>
             </fieldset>
             
             <Materials />
