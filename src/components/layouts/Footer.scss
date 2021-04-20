@@ -71,13 +71,10 @@
     
 }
 
-@media all and (max-width: 599px) {
+@media all and (max-width: 600px) {
     .AppFooter {
-        justify-content: center;
         
-        a {
-            display: none;
-        }
+        display: none;
     }
     
 }

@@ -9,7 +9,7 @@ const Footer = (props) => {
             <p>
                 &copy; All rights reserved
             </p>
-            <Link to="/login" className="Login">
+            <Link to="/login" className="login">
                 {/* Login */}
                 <i className={props.icon}></i>
                                 
