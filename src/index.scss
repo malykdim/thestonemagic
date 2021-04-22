@@ -209,6 +209,49 @@ code {
     }
 }
 
+@media all and (max-width: 600px) {
+    .form {
+        width: 100%;
+        
+        fieldset {
+            margin: 0;
+            
+            input {
+                width: 90%;
+                
+                &::-webkit-input-placeholder  {
+                    
+                    
+                    :focus {
+                        border: 1px solid transparent;
+                    }
+                }
+                
+                &::placeholder {
+                    font-size: large;
+                    
+                    :focus {
+                        transform: scale(.5);
+                    }
+                }
+            }
+            
+            button {
+                width: 90%;
+            }
+            
+            textarea {
+                width: 90%;
+            }
+        }
+        
+        a {
+            display: inline-block;
+        }
+    }
+    
+}
+
 /* Utilities */
 /* Grid-Gallery */
 .w-1 {grid-column: span 1;}
