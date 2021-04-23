@@ -1,7 +1,6 @@
 @import '../main.scss';
 
 .AppMain {
-    min-height: 80vh;
     .App-logo {
         height: 40vmin;
         pointer-events: none;
@@ -25,21 +24,16 @@
     .AppMain {        
         .App-logo {
             height: 30vmin;
-            pointer-events: none;
             margin: 1.5rem 0;
         }
     }
 }
 
-@media all and (max-width: 900px) {
+@media all and (max-width: 1024px) {
     .AppMain {
-        height: 68vh;
-        margin-top: 2rem;
-        margin-bottom: 0;
+        
         .App-logo {
             height: 35vmin;
-            pointer-events: none;
-            margin: 1.5rem 0;
         }
     }
 }
@@ -48,8 +42,6 @@
     .AppMain {
         
         .App-logo {
-            height: 35vmin;
-            pointer-events: none;
             margin: 0;
         }
     }

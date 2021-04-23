@@ -1,12 +1,6 @@
 @import '../main.scss';
 
 .AppFooter {
-    min-height: 6vh;
-    padding-top: .8rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-left: 2rem;
     
     p {
         font-style: italic;
@@ -42,39 +36,4 @@
         font-size: calc(10px + 2vmin);
         color: $color-dark;
     }
-}
-
-@media all and (max-width: 1920px) {
-    .AppFooter {
-        max-height: 6vh;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    
-}
-
-@media all and (max-width: 1200px) {
-    .AppFooter {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    
-}
-
-@media all and (max-width: 900px) {
-    .AppFooter {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        height: 10vh;
-    }
-    
-}
-
-@media all and (max-width: 600px) {
-    .AppFooter {
-        
-        display: none;
-    }
-    
 }

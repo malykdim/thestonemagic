@@ -56,14 +56,47 @@
             display: flex;
             flex-direction: column;
             
-            input {
-                margin: .2rem;
+            
+            
+            fieldset {
+                input {
+                    margin: .2rem;
+                }
+                
+                textarea {
+                    margin: .5rem 0
+                }
             }
             
-            textarea {
-                margin: .5rem auto
-            }
         }
+        }
+        
+    }
+}
+
+@media all and (max-width: 1024px) {
+    .AppMain {
+        .content {
+            width: 100%;
+            justify-content: center;
+            margin: 1.5rem;
+            
+            .FormContact {
+                width: 100%;
+                margin: 0 auto;
+                display: flex;
+                justify-content: stretch;
+                
+                fieldset {
+                    input {
+                        margin: .2rem auto;
+                    }
+                    
+                    textarea {
+                        margin: .5rem auto;
+                    }
+                }
+            }
         }
         
     }

@@ -2,5 +2,133 @@
 
 .App {
     text-align: center;
+    
+    .AppHeader {
+        min-height: 10vh;
+        padding-bottom: .4rem;
+        
+        font-size: calc(8px + 2vmin);
+        
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .AppMain {
+        min-height: 80vh;
+        margin: 0;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .AppFooter {
+        min-height: 6vh;
+        padding-top: .8rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 2rem;
+    }
 }
 
+@media all and (max-width: 1920px) {
+    .App {
+        .AppHeader {
+            max-height: 7vh;
+            font-size: calc(6px + 2vmin);
+        }
+    }
+}
+
+
+@media all and (max-width: 1024px) {
+    .App {
+        .AppHeader {
+            max-height: 12vh;
+            padding-bottom: .6rem;
+        }
+        
+        .AppMain {
+            max-height: 75vh;
+            height: 68vh;
+            margin-top: 2rem;
+            margin-bottom: 0;
+        }     
+    }
+}
+
+@media all and (max-width: 950px) {
+    .App {
+        .AppHeader {
+            height: 25vh;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 2.5vh;
+        }
+        
+        .AppMain {
+            margin: 0;
+            height: 58vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            
+            
+            p {
+                font-weight: 500;
+                padding: 1rem 0;
+            }    
+            
+        }
+        
+        .AppFooter {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            height: 5vh;
+            padding-top: 0;
+        }
+    }
+}
+
+@media all and (max-width: 600px) {
+    .App {
+        .AppHeader {
+            height: 25vh;
+            max-height: 30vh;
+            
+            flex-direction: column;
+            align-items: space-between;
+            justify-content: stretch;
+            margin-bottom: .5rem;
+        }
+        
+        .AppMain {
+            margin: 0;
+            height: 68vh;
+            min-height: 63vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            &-Panneaux {
+                .PanneauxDescriptionContainer {
+                    p {
+                        display: none;
+                    }
+                }
+            }
+            
+        }
+        
+        .AppFooter {
+            display: none;
+        }
+    }
+}

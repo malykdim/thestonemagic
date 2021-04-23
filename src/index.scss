@@ -1,4 +1,6 @@
 @import './components/main.scss';
+
+/* ************************** */
 /* Base*/
 body {
     margin: 0;
@@ -13,87 +15,18 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-.App {
-    text-align: center;
-}
-
-/* Base*/
 *, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-}
-
-/* Animations */
-@keyframes App-logo-spin {
-    from {
-        transform: skew(0deg);
-    }
-    to {
-        transform: skew(30deg, 20deg);
-    }
-}
-
-@keyframes move-down {
-    0% {
-        top: 40%;
-    }
-    50% {
-        top: 65%;
-    }
-    100% {
-        top: 89%;
-    }
-}
-
-@keyframes hover {
-    0% {
-        background-color: white;
-    }
-    20% {
-    }
-    50% {
-    }
-    80% {
-    }
-    100% {
-        background-color: $color-light;
-    }
-}
-/* Typography */
-
 /* ************************** */
-/* Abstracts */
-
-
-/* Mixins */
-
-/* Functions */
-
-/* *** Components: *********************** */
+/* Typography */
 
 /* ************************** */
 /* Layout - Header, Footer - in each separate scss component* */
 .AppMain {
-    margin: 0;
-    min-height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
     
     h2, h3 {
         font-size: calc(10px + 2vmin);
@@ -127,14 +60,52 @@ code {
     }
 }
 
-/* ************************** */
-/* Pages - in each separate scss component */
-/* Home *//* Gallery *//* Contact *//* Login *//* Edit *//* Error 404 *//* etc */
+@media all and (max-width: 1024px) {
+    .AppMain {
+        
+        span {
+            font-size: calc(10px + 2vmin);
+        }
+        
+        p {
+            font-weight: 500;
+            padding: .1rem 0;
+        }    
+    }
+}
+
+@media all and (max-width: 600px) {
+    .AppMain {
+        
+        span {
+            font-size: calc(10px + 2vmin);
+            font-weight: 600;
+        }
+        
+        p {
+            font-weight: 500;
+            padding: 0 0 0 0;
+        }    
+    }
+}
 
 /* ************************** */
-/* Parts - in each separate scss component */
-/* Logo *//* Navbar *//* Card */
+/* Grid-Gallery */
+.w-1 {grid-column: span 1;}
+.w-2 {grid-column: span 2;}
+.w-3 {grid-column: span 3;}
+.w-4 {grid-column: span 4;}
+.w-5 {grid-column: span 5;}
+.w-6 {grid-column: span 6;}
+.h-1 {grid-row: span 1;}
+.h-2 {grid-row: span 2;}
+.h-3 {grid-row: span 3;}
+.h-4 {grid-row: span 4;}
+.h-5 {grid-row: span 5;}
+.h-6 {grid-row: span 6;}
 
+/* ************************** */
+/* Forms */
 .form {
     width: 750px;
     margin: 0 auto 3rem;
@@ -252,111 +223,58 @@ code {
     
 }
 
-/* Utilities */
-/* Grid-Gallery */
-.w-1 {grid-column: span 1;}
-.w-2 {grid-column: span 2;}
-.w-3 {grid-column: span 3;}
-.w-4 {grid-column: span 4;}
-.w-5 {grid-column: span 5;}
-.w-6 {grid-column: span 6;}
-.h-1 {grid-row: span 1;}
-.h-2 {grid-row: span 2;}
-.h-3 {grid-row: span 3;}
-.h-4 {grid-row: span 4;}
-.h-5 {grid-row: span 5;}
-.h-6 {grid-row: span 6;}
 /* ************************** */
-/* Media Queries - in each separate scss component */
-/* TV / Huge *//* Desktop / 1920 */
-@media all and (max-width: 900px) {
-    .AppMain {
-        margin: 0;
-        min-height: 80vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        
-        h2 {
-            font-size: calc(10px + 2vmin);
-            color: $color-dark;
-            line-height: 1.5em;
-            font-weight: 600;
-            letter-spacing: .03em;
-            margin: 0;
-            padding: 3rem 0 2rem;
-            
-            span {
-                font-weight: 600;
-                font-size: calc(10px + 2vmin);
-            }
-        }
-        
-        p {
-            font-size: calc(8px + 1.5vmin);
-            color: $color-dark;
-            line-height: 1.0em;
-            font-weight: 500;
-            letter-spacing: .03em;
-            padding: 2rem 0;
-        }    
-        
-        .AppLink {
-            color: $color-dark;
-            margin: .8em;
-        }
+/* Animations */
+@keyframes App-logo-spin {
+    from {
+        transform: skew(0deg);
+    }
+    to {
+        transform: skew(30deg, 20deg);
     }
 }
 
-@media all and (max-width: 600px) {
-    .AppMain {
-        margin: 0;
-        height: 68vh;
-        min-height: 63vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        
-        h2 {
-            font-size: calc(10px + 2vmin);
-            color: $color-dark;
-            line-height: 1.5em;
-            font-weight: 600;
-            letter-spacing: .03em;
-            margin: 0;
-            padding: 3rem 0 2rem;
-            
-            span {
-                font-weight: 600;
-                font-size: calc(10px + 2vmin);
-            }
-        }
-        
-        p {
-            font-size: calc(8px + 1.5vmin);
-            color: $color-dark;
-            line-height: 1.0em;
-            font-weight: 500;
-            letter-spacing: .03em;
-            padding: 0 0 1rem 0;
-        }    
-        
-        .AppLink {
-            color: $color-dark;
-            margin: .8em;
-        }
+@keyframes move-down {
+    0% {
+        top: 40%;
+    }
+    50% {
+        top: 65%;
+    }
+    100% {
+        top: 89%;
     }
 }
-/* Laptop / 1200 *//* Tablet / 900 *//* Phone / 600 */
+
+@keyframes hover {
+    0% {
+        background-color: white;
+    }
+    20% {
+    }
+    50% {
+    }
+    80% {
+    }
+    100% {
+        background-color: $color-light;
+    }
+}
+
+/* ************************** */
+/* Media Queries - Layout - Header, Main, Footer - in App.scss */
+/* Media Queries - in each separate scss component */
+/* TV / Huge */
+/* Desktop / 1920 */
+/* Laptop / 1200 */
+/* Tablet / 900 */
+/* Phone / 600 */
 
 /* ************************** */
 /* Themes - Light, Dark, Custom */
 
 /* ************************** */
 /* Vendors */
-
 /*** Bootstrap - not using in this project ***/
 /*** An Icon System ***/
 @import url('https://use.fontawesome.com/releases/v5.15.1/css/all.css');

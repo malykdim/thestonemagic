@@ -73,7 +73,8 @@
     }
 }
 
-@media all and (max-width: 600px) {
+
+@media all and (max-width: 1025px) {
     .AppMain {
         align-items: stretch;
         justify-content: stretch;
@@ -88,7 +89,7 @@
             
             
             .PanneauxImageContainer {
-                height: 50vh;
+                height: 60vh;
                 width: 100%;
                 overflow: hidden;
                 
@@ -128,7 +129,7 @@
                 }
                 
                 p {
-                    padding: 2rem 1.2rem .4rem ;
+                    padding: 0 1.2rem 0 ;
                     color: white;
                 }
             }
@@ -143,7 +144,7 @@
             }
             
             .positionBottom {
-                top: 75%;
+                top: 90%;
                 left: 0%;
                 
                 p {
@@ -151,6 +152,24 @@
                     padding-bottom: 0.5rem;
                 }
             }
+        }
+    }
+}
+
+@media all and (max-width: 900px) {
+    .AppMain {
+        align-items: stretch;
+        justify-content: stretch;
+        &-Panneaux {
+            width: 100%;
+            min-width: 100%; 
+            height: 68vh;
+            min-height: 63vh;
+            // overflow: hidden;    
+            padding: 0 0;
+            position: relative;
+            
+            
         }
     }
 }
