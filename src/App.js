@@ -24,12 +24,12 @@ class App extends Component {
                 <Suspense fallback={Loader}>
                     <Switch>
                         <Route path="/" exact component={Home}/>
-                        <Route path="/thestonemagic" component={Home} />
-                        <Route path="/gallery" exact component={Gallery}/>
-                        <Route path="/gallery/:url" exact component={Panneaux} />
-                        <Route path="/contact" component={Contact} />
-                        <Route path="/login" component={Login} />
-                        <Route path="/edit" component={isAuth(Edit)} />
+                        <Route path="/thestonemagic" exact component={Home} />
+                        <Route path="/thestonemagic/gallery" exact component={Gallery}/>
+                        <Route path="/thestonemagic/gallery/:url"  component={Panneaux} />
+                        <Route path="/thestonemagic/contact" exact component={Contact} />
+                        <Route path="/thestonemagic/login" exact component={Login} />
+                        <Route path="/thestonemagic/edit" exact component={isAuth(Edit)} />
                         <Route render={(props) => <Error {...props}/>} /> 
                     </Switch>          
                 </Suspense>
