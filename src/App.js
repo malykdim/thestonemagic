@@ -25,8 +25,8 @@ class App extends Component {
                     <Switch>
                         <Route path="/" exact component={Home}/>
                         <Route path="/thestonemagic" component={Home} />
-                        <Route path="/gallery" component={Gallery}/>
-                        <Route path="/gallery/:url" exact component={Panneaux} />
+                        <Route path="/gallery" exact component={Gallery}/>
+                        <Route path="/gallery/:url" component={Panneaux} />
                         <Route path="/contact" component={Contact} />
                         <Route path="/login" component={Login} />
                         <Route path="/edit" component={isAuth(Edit)} />
