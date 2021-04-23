@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/thestonemagic/static/css/main.adeebd7f.chunk.css",
-    "main.js": "/thestonemagic/static/js/main.d296448b.chunk.js",
-    "main.js.map": "/thestonemagic/static/js/main.d296448b.chunk.js.map",
+    "main.js": "/thestonemagic/static/js/main.dede3473.chunk.js",
+    "main.js.map": "/thestonemagic/static/js/main.dede3473.chunk.js.map",
     "runtime-main.js": "/thestonemagic/static/js/runtime-main.0c2bff90.js",
     "runtime-main.js.map": "/thestonemagic/static/js/runtime-main.0c2bff90.js.map",
     "static/js/2.ca441caa.chunk.js": "/thestonemagic/static/js/2.ca441caa.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.0c2bff90.js",
     "static/js/2.ca441caa.chunk.js",
     "static/css/main.adeebd7f.chunk.css",
-    "static/js/main.d296448b.chunk.js"
+    "static/js/main.dede3473.chunk.js"
   ]
 }
