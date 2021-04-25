@@ -109,7 +109,16 @@ class Edit extends Component {
     
     onSubmitRemoveFormHandler (e) {
         e.preventDefault();
-        console.log(e);
+        const result = [];
+        request('/classes/Gallery', 'Get')
+                .then(response => {
+                    alert('New Panneaux added to the Gallery')
+                    console.log(response);
+                    result = response;
+                    console.log(response);
+                });
+                
+        console.log()
     }
     
     onSubmitFormHandler(e) {
