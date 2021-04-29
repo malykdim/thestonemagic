@@ -36,7 +36,7 @@ function getOptions(method = 'GET', body = '') {
             'X-Parse-REST-API-Key': 'KRF2hY6NahfOt0hsmtO2LlqxZ9xn13TJZmyWmVA5'
         }
     };
-
+    
     let sessionToken = sessionStorage.getItem('sessionToken');
 
     if (sessionToken !== null) {
@@ -52,3 +52,54 @@ function getOptions(method = 'GET', body = '') {
 }
 
 export default request;
+/* ****************************************************** */
+// export async function get(url) {
+//     return await request(url, getOptions());
+// }
+
+// export async function post(url, data) {
+//     return await request(url, getOptions('post', data));
+// }
+
+// export async function put(url, data) {
+//     return await request(url, getOptions('put', data));
+// }
+
+// export async function del(url) {
+//     return await request(url, getOptions('delete'));
+// }
+/* ****************************************************** */
+// export async function login(username, password) {
+//     const result = await post(settings.host + '/login', {username, password});
+    
+//     sessionStorage.setItem('username', username);
+//     sessionStorage.setItem('authToken', result.sessionToken);
+//     sessionStorage.setItem('userId', result.objectId);
+    
+//     return result;
+// }
+
+// export async function register(email, username, password) {
+//     const result = await post(settings.host + '/users', {email, username, password});
+    
+//     sessionStorage.setItem('username', username);
+//     sessionStorage.setItem('authToken', result.sessionToken);
+//     sessionStorage.setItem('userId', result.objectId);
+    
+//     return result;
+// }
+
+// export async function logout() {
+//     const result = await post(settings.host + '/logout', {});
+    
+//     sessionStorage.removeItem('username');
+//     sessionStorage.removeItem('authToken');
+//     sessionStorage.removeItem('userId');
+    
+//     return result;
+// }
+/* ****************************************************** */
+//  const token = sessionStorage.getItem('authToken');
+// if (token != null) {
+//     options.headers['X-Authorization'] = token;
+// }

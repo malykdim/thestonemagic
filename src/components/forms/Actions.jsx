@@ -3,7 +3,7 @@
 const Actions = () => {
     return (
         // <GalleryContext.Consumer>
-        //     {({data, onSubmitAddHandler, onSubmitDeleteHandler}) => {
+        ({/* data, onSubmitAddHandler, onSubmitRemoveFormHandler */}) => {
                 <> 
                     <legend>Действия</legend>
                     <div className="flexRow">
@@ -13,17 +13,17 @@ const Actions = () => {
                         </label>
                     </div>
                     <div className="flexRow">
-                        <input /* onSubmit={onSubmitAddHandler} */ type="submit" name="add" value="Добавяне" className="cta"/>
+                        <input type="submit" name="add" value="Добавяне" className="cta"/>
                         <label htmlFor="add"></label>
                     </div>
                     
                     <div className="flexRow">
-                        <input /* onSubmit={onSubmitDeleteHandler} */ on type="submit" name="delete" value="Изтриване" className="cta"/>
+                        <input /* onSubmit={this.context.onSubmitRemoveFormHandler}  */type="submit" name="delete" value="Изтриване" className="cta"/>
                         <label htmlFor="delete"></label>
                     </div>
                 </>                
-             // }}
-        // </GalleryContext.Consumer>     */}
+            }
+        // </GalleryContext.Consumer>
     );
 }
 

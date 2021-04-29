@@ -27,18 +27,19 @@ class Edit extends Component {
             context: {
                 data: '',
                 checkBoxHandler: this.checkBoxHandler,
+                onSubmitRemoveFormHandler: this.onSubmitRemoveFormHandler
             },
             
             
         }
         
-        this.onSubmitFormHandler = this.onSubmitFormHandler.bind(this);
-        this.onSubmitAddFormHandler = this.onSubmitAddFormHandler.bind(this);
+        // this.onSubmitFormHandler = this.onSubmitFormHandler.bind(this);
+        // this.onSubmitAddFormHandler = this.onSubmitAddFormHandler.bind(this);
         this.onSubmitRemoveFormHandler = this.onSubmitRemoveFormHandler.bind(this);
         
         this.onChangeHandler = this.onChangeHandler.bind(this);
-        this.onSelectFileHandler = this.onSelectFileHandler.bind(this);
-        this.fileInput = React.createRef();
+        // this.onSelectFileHandler = this.onSelectFileHandler.bind(this);
+        // this.fileInput = React.createRef();
         this.onClickLogoutHandler = this.onClickLogoutHandler.bind(this);
     }
     
@@ -48,14 +49,14 @@ class Edit extends Component {
         this.setState({[e.target.name]: e.target.value});
     };
     
-    onSelectFileHandler = (e) => {
+/*     onSelectFileHandler = (e) => {
         e.preventDefault();
         
         let filename = this.fileInput.current.files[0].name;
         
         return filename;
     };
-    
+ */    
     checkBoxHandler = (e) => {
         // console.log('event', e);
         this.setState(oldState => ({
@@ -72,7 +73,7 @@ class Edit extends Component {
         return this.state.materials;
     };
     
-    onSubmitAddFormHandler(e) {
+/*     onSubmitAddFormHandler(e) {
         e.preventDefault();
         
         const p = this.onSelectFileHandler(e);
@@ -106,22 +107,28 @@ class Edit extends Component {
                     console.log(response)
                 });
     }
-    
+ */    
     onSubmitRemoveFormHandler (e) {
         e.preventDefault();
-        const result = [];
+        
+        
+        
         request('/classes/Gallery', 'Get')
-                .then(response => {
-                    alert('New Panneaux added to the Gallery')
-                    console.log(response);
-                    result = response;
-                    console.log(response);
-                });
+            .then(response => {
+                console.log(response);
+                let result = [];
+                result = response;
+                console.log(result);
+                        
+                let mosaic = e.target.panneauxName.value;
+                console.log(mosaic);
+                // alert(`${mosaic} successfully removed from Gallery!`);
+            });
                 
         console.log()
     }
     
-    onSubmitFormHandler(e) {
+    /* onSubmitFormHandler(e) {
         e.preventDefault();
         
         if (this.onSubmitAddFormHandler) {
@@ -129,7 +136,7 @@ class Edit extends Component {
         } else if (this.onSubmitRemoveFormHandler) {
             this.onSubmitRemoveFormHandler(e);
         }  
-    }
+    } */
     
     onClickLogoutHandler() {
         // logOut();
