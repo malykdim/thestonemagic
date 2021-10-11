@@ -11,12 +11,12 @@ Virtual gallery for exquisite mosaic panneaux by the authors Vladimir Damyanov a
   * Social links
 
 ## Private part (available for registered users)
- * The registration and login page is meant for authors only. 
- * After successful authentication, an internal gallery update page is accessed.
+ * The registration/login pages are meant for authors only. 
+ * After successful authentication, an internal gallery update panel is accessed.
 
 ### Functionality
  * New panneaux can be added to the gallery.
- * Mosaic panneaux can be removed from the gallery.
+ * Mosaic panneaux can be edited or removed from the gallery.
  
 ### Technical information
  * HTML5, Sass, JavaScript, React
