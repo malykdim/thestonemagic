@@ -36,10 +36,10 @@ class Panneaux extends Component {
                     
                     <div className="PanneauxDescriptionContainer w-1 h-4 positionBottom">
                         <h3 className="caption">{this.state.mosaic.caption}</h3>
-                        <span>|</span>
+                        <span>by</span>
                         <h3 className="author">{this.state.mosaic.author}</h3>
-                        <p className="dimensions">{this.state.mosaic.width} x {this.state.mosaic.height}</p>
-                        <p className="materials">{this.state.mosaic.materials}</p>
+                        <p className="dimensions">{this.state.mosaic.width}cm x {this.state.mosaic.height}cm</p>
+                        <p className="materials">Made by: \\n{this.state.mosaic.materials}</p>
                     </div>
                     
                 </section>
