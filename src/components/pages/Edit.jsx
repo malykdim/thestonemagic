@@ -156,12 +156,12 @@ class Edit extends Component {
 
         return (
             <main className="AppMain">
-                    <h2>Редакция на галерията</h2>
+                    <h2>Update Gallery</h2>
                 <GalleryContext.Provider value={this.state.context}>
                     <form className="FormEdit" onSubmit={this.onSubmitFormHandler}>
                         <fieldset className="left w-1 h-3">                        
-                            <legend>Снимка</legend>
-                            <label htmlFor="upload-picture">Избор на снимка</label>
+                            <legend>Image</legend>
+                            <label htmlFor="upload-picture">Choose an image</label>
                             <input ref={this.fileInput} type="file" id="picture" name="upload-picture" />  
                         </fieldset>
                         <div className="info">
@@ -174,7 +174,7 @@ class Edit extends Component {
                 </GalleryContext.Provider>
                 <InputError>{this.state.errorMessage}</InputError>
                 <button onClick={this.onClickLogoutHandler} className="logout">
-                    Изход
+                    Logout
                 </button>
                 
             </main>

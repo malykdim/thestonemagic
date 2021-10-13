@@ -5,7 +5,7 @@ const Info = () => {
     return (
         <> 
             <fieldset className="right">
-                <legend>Име на паното</legend>
+                <legend>Panneau Name</legend>
                     <label htmlFor="panneauxName"></label>
                     <input 
                         type="text" 
@@ -16,24 +16,24 @@ const Info = () => {
             </fieldset>
             
             <fieldset className="inline">
-                <legend>Автор</legend>
+                <legend>Author</legend>
                                                 
                     <input type="radio" id="vladimir" name="author" value="Vladimir" />                        
-                    <label htmlFor="vladimir" className="radio">Владимир</label>
+                    <label htmlFor="vladimir" className="radio">Vladimir</label>
                                                     
                     <input type="radio" id="damyan" name="author" value="Damyan" />
-                    <label htmlFor="damyan" className="radio">Дамян</label>
+                    <label htmlFor="damyan" className="radio">Damyan</label>
             </fieldset>
             
             <fieldset className="dim">
-                <legend>Размери на паното</legend>
+                <legend>Dimensions</legend>
                 <label htmlFor="width">
-                    Широчина
+                    Width
                     <input type="number" name="width" defaultValue="" id="width" placeholder=""/> cm                    
                 </label>
                 <br/>
                 <label htmlFor="height">
-                    Височина
+                    Height
                     <input type="number" name="height" defaultValue="" id="height" placeholder=""/> cm
                 </label>
             </fieldset>
