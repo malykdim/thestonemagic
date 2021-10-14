@@ -8,10 +8,9 @@ Virtual gallery for exquisite mosaic panneaux by the authors Vladimir Damyanov a
   * Home page with navigation to the gallery and the contact page.
   * Gallery with all available exquisite mosaic panneaux, where each panneaux can be accessed separately with details.
   * The Contact page consists of form for sending messages.
-  * Social links
 
 ## Private part (available for registered users)
- * The registration/login pages are meant for authors only. 
+ * The login page is meant for authors only. 
  * After successful authentication, an internal gallery update panel is accessed.
 
 ### Functionality
