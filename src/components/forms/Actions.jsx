@@ -5,20 +5,20 @@ const Actions = () => {
         // <GalleryContext.Consumer>
         ({/* data, onSubmitAddHandler, onSubmitRemoveFormHandler */}) => {
                 <> 
-                    <legend>Действия</legend>
+                    <legend>Actions</legend>
                     <div className="flexRow">
-                        <input type="reset" name="reset" value="Изчистване" className="cta"/>
+                        <input type="reset" name="reset" value="Reset" className="cta"/>
                         <label htmlFor="reset">
                             {/*  */}
                         </label>
                     </div>
                     <div className="flexRow">
-                        <input type="submit" name="add" value="Добавяне" className="cta"/>
+                        <input type="submit" name="add" value="Add" className="cta"/>
                         <label htmlFor="add"></label>
                     </div>
                     
                     <div className="flexRow">
-                        <input /* onSubmit={this.context.onSubmitRemoveFormHandler}  */type="submit" name="delete" value="Изтриване" className="cta"/>
+                        <input /* onSubmit={this.context.onSubmitRemoveFormHandler}  */type="submit" name="delete" value="Remove" className="cta"/>
                         <label htmlFor="delete"></label>
                     </div>
                 </>                
