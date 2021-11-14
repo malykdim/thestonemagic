@@ -1,7 +1,11 @@
-import React from 'react';
+import { createContext } from 'react';
 
-const GalleryContext = React.createContext();
+const GalleryContext = createContext();
 
 GalleryContext.displayName = "GalleryContext";
 
 export default GalleryContext;
+
+// export function GalleryProvider() {
+    
+// }

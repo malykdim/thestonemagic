@@ -1,7 +1,16 @@
-import React from 'react';
+import { createContext } from 'react';
 
-const UserContext = React.createContext();
+const UserContext = createContext();
 
 UserContext.displayName = 'UserContext';
 
-export default UserContext;
+export function UserProvider({ children }) {
+    
+    
+    
+    return (
+        <UserContext.Provider value={{ user: null}}>
+            {children}
+        </UserContext.Provider>
+    )
+}
