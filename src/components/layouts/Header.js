@@ -1,8 +1,14 @@
+import { useContext } from 'react';
+
+import { useTheme } from '../../hooks/useTheme';
+
 // import Logo from './Logo.js';
 import Navbar from '../parts/Navbar.js';
+
 import  './Header.scss';
 
 const Header = (props) => {
+    const { color } = useTheme();
     
     return (
         <header className="AppHeader">
