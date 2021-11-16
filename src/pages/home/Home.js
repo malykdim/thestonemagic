@@ -1,19 +1,12 @@
-import { Component } from 'react';
-import logo from './logo.svg';
-import  './Home.scss';
+import { useState } from 'react';
+import logo from '../../assets/logo.svg';
+import styles from './Home.scss';
 
-class Home extends Component {
-    constructor(props) {
-        super(props);
-        
-        this.state = {
-            mosaics: [],
-        }
-    }
+export default function Home() {
+    const [gallery, setGallery] = useState([]);
     
-    render() {
-        return (
-            <main className="AppMain">
+    return (
+        <main className="AppMain">
                 <h2>
                     Exquisite Mosaic Panneaux
                 </h2>
@@ -27,9 +20,6 @@ class Home extends Component {
                     <span>Damyan Damyanov</span>
                     </a>
                 </p>   
-            </main>    
-        )
-    }
+            </main>
+    );
 }
-
-export default Home;

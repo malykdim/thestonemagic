@@ -1,8 +1,8 @@
-@import '../main.scss';
+@import '../../main.scss';
 
 .AppHeader {
     background-color: white;
-    color: $color-dark;
+    color: $color-dark;    
         
     h1 {
         color: $color-dark;
@@ -26,11 +26,11 @@
     }
 }
 
-@media all and (max-width: 1024px) {
-    .AppHeader {
-        // min-height: 12vh;
-    }
-}
+// @media all and (max-width: 1024px) {
+//     .AppHeader {
+//         // min-height: 12vh;
+//     }
+// }
 
 @media all and (max-width: 900px) {
     .AppHeader {
@@ -43,8 +43,8 @@
     }
 }
 
-@media all and (max-width: 600px) {
-    .AppHeader {
-        // height: 25vh;
-    }
-}
+// @media all and (max-width: 600px) {
+//     .AppHeader {
+//         // height: 25vh;
+//     }
+// }

@@ -1,9 +1,9 @@
-// import GalleryContext from '../../contexts/GalleryContext';
+// import GalleryContext from '../../context/GalleryContext';
 
 const Actions = () => {
     return (
         // <GalleryContext.Consumer>
-        ({/* data, onSubmitAddHandler, onSubmitRemoveFormHandler */}) => {
+        // ({/* data, onSubmitAddHandler, onSubmitRemoveFormHandler */}) => {
                 <> 
                     <legend>Actions</legend>
                     <div className="flexRow">
@@ -18,11 +18,11 @@ const Actions = () => {
                     </div>
                     
                     <div className="flexRow">
-                        <input /* onSubmit={this.context.onSubmitRemoveFormHandler}  */type="submit" name="delete" value="Remove" className="cta"/>
+                        <input /* onSubmit={this.context.onSubmitRemoveFormHandler}  */ type="submit" name="delete" value="Remove" className="cta"/>
                         <label htmlFor="delete"></label>
                     </div>
                 </>                
-            }
+            // }
         // </GalleryContext.Consumer>
     );
 }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import request from '../../services/ajax.js';
 // import  { logOut } from '../../services/auth';
-import GalleryContext from '../../contexts/GalleryContext';
+import GalleryContext from '../../context/GalleryContext';
 
 import InputError from '../utilities/errors/InputError';
 import Info from '../forms/Info';

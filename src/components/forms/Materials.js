@@ -1,4 +1,4 @@
-import GalleryContext from '../../contexts/GalleryContext';
+import GalleryContext from '../../context/GalleryContext';
 
 const Materials = () => {
     return(
