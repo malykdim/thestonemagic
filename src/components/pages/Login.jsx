@@ -7,7 +7,7 @@ import { setSession } from '../../services/auth';
 import '../main.scss';
 import './Login.scss';
 
-const Login = () => {
+export default function Login () {
     
     const history = useHistory();
     
@@ -60,11 +60,9 @@ const Login = () => {
             </div>  
             
             <p>
-                Please lonin to gain access to Edit page.
+                Please login to gain access to Edit page.
             </p>            
             
         </main>
     )
 }
-
-export default Login;
