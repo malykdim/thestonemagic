@@ -38,7 +38,7 @@ class App extends Component {
                             <Route render={(props) => <Error {...props}/>} /> 
                         </Switch>          
                     </Suspense>
-                    <Footer icon="fas fa-sign-in-alt"/>
+                    <Footer title="The Stone Magic" loginIcon="fas fa-sign-in-alt"  logoutIcon="fas fa-sign-out-alt"/>
                 </Router>        
             </div>
         );

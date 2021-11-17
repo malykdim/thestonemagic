@@ -2,7 +2,7 @@ import { useState } from 'react';
 import request from '../../services/ajax';
 import Card from '../../components/parts/Card';
 
-import styles from './Gallery.module.scss';
+import './Gallery.scss';
 
 export default function Gallery() {
     const [gallery, setGallery] = useState([]);

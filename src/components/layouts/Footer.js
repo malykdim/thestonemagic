@@ -1,21 +1,22 @@
 import Logo from  '../parts/Logo';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import  './Footer.scss';
 
-const Footer = (props) => {
+export default function Footer({ title, loginIcon, logoutIcon }) {
     return (
         <footer  className="AppFooter">
             {<Logo />}
-            <p>
-                &copy; All rights reserved
-            </p>
-            <Link to="/login" className="login">
+            <NavLink to="/login" className="login">
                 {/* Login */}
-                <i className={props.icon}></i>
-                                
-            </Link>   
+                <i className={loginIcon}></i>                                
+            </NavLink>   
+            <p>
+               {title} &copy; All rights reserved
+            </p>
+            <NavLink to="/login" className="login">
+                {/* Login */}
+                <i className={logoutIcon}></i>                                
+            </NavLink>   
         </footer>    
     )
 }
-
-export default Footer;
