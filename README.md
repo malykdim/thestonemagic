@@ -25,3 +25,15 @@ Virtual gallery for exquisite mosaic panneaux by the authors Vladimir Damyanov a
 ### Social Links
 * Vladimir Damynov (https://www.facebook.com/vladimir.damynov/)
 * Damyan Damyanov (https://www.facebook.com/damyan.damyanov.509/)
+
+## Screenshots
+
+![home](https://user-images.githubusercontent.com/38568843/189418798-bf97d5fa-db0a-4da1-8e35-945a01a7f376.jpg)
+
+![gallery](https://user-images.githubusercontent.com/38568843/189418857-0d16c482-8d90-4d63-a123-73812c8c3ade.jpg)
+
+![single](https://user-images.githubusercontent.com/38568843/189418882-e3634fb6-ca63-4e01-b2d6-efd5bd48b610.jpg)
+
+![contact](https://user-images.githubusercontent.com/38568843/189418948-3b43ffeb-9b4d-480e-8c72-abc879233a77.jpg)
+
+![single-mobile](https://user-images.githubusercontent.com/38568843/189419030-a8bc9fed-9d30-4f71-914e-a7ce9783a714.jpg)
